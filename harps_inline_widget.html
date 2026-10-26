@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harps Inline Widget — NFT Harps of God Raffle &amp; Golden Plates Simulators</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --background: #020617;
+      --card: #0f172a;
+      --foreground: #f8fafc;
+      --muted-foreground: #94a3b8;
+      --border: #1e293b;
+      --primary: #f59e0b;
+      --primary-foreground: #020617;
+      --secondary: #1e293b;
+      --secondary-foreground: #f8fafc;
+    }
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 md:p-6 select-none min-h-screen">
+  <!-- Top Return Navigation Banner -->
+  <div class="max-w-5xl mx-auto mb-4 flex flex-wrap items-center justify-between gap-2 text-xs">
+    <a href="./index.html" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-amber-500/40 text-amber-300 font-semibold hover:bg-slate-800 transition">
+      ← Back to Digital Golden Plates Master Portal
+    </a>
+    <div class="flex items-center gap-2">
+      <a href="./nft_harps_presentation.html" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition">16-Slide Harps Deck</a>
+      <a href="./prismatic_architecture.html" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition">Prismatic Architecture Video (20 Slides)</a>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-xl p-4 md:p-6 shadow-xl">
+    <!-- Top Header & Mode Tabs -->
+    <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-[var(--border)]">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 text-xs font-semibold rounded bg-[var(--secondary)] text-amber-400 border border-amber-500/30">GOOD FAITH PARADIGM</span>
+          <h1 class="text-[var(--foreground)] font-bold text-base md:text-lg">Harps Inline Widget — NFT Harps of God Raffle &amp; Golden Plates Deck</h1>
+        </div>
+        <p class="text-[var(--muted-foreground)] text-xs mt-0.5">Interactive 16-Slide Presentation + Live Physical-to-Digital Overlay Simulators (YouTube: YWelJDhywu0)</p>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <button id="tab-slides" onclick="switchTab('slides')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] transition">16-Slide Deck</button>
+        <button id="tab-plates" onclick="switchTab('plates')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--secondary)] text-[var(--foreground)] border border-[var(--border)] transition">Golden Plates Lab</button>
+        <button id="tab-mnemonic" onclick="switchTab('mnemonic')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--secondary)] text-[var(--foreground)] border border-[var(--border)] transition">9 Cosmic Analogies</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: 16-SLIDE PRESENTATION EXPLORER -->
+    <div id="view-slides" class="block">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-stretch">
+        <!-- Visual Canvas Card (5 cols) -->
+        <div class="md:col-span-5 bg-[var(--background)] border border-[var(--border)] rounded-lg p-3 flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-1.5">
+            <span id="slide-badge" class="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-[var(--secondary)] text-amber-400">SLIDE 01 / 16</span>
+            <span id="slide-time" class="text-xs font-mono text-[var(--muted-foreground)]">Video @ 00:00–00:10</span>
+          </div>
+          <div id="slide-graphic" class="my-1 flex items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--card)] p-2" style="height: 200px;">
+            <!-- Dynamic SVG rendered per slide -->
+          </div>
+          <div id="slide-caption" class="text-xs text-[var(--muted-foreground)] text-center mt-1">
+            "Let's Evolve to a Type 1 Civilization" — Omega Point Convergence
+          </div>
+        </div>
+
+        <!-- Slide Content & GFP Enhancement (7 cols) -->
+        <div class="md:col-span-7 bg-[var(--background)] border border-[var(--border)] rounded-lg p-4 flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono uppercase tracking-wider text-cyan-400" id="slide-kicker">I. CIVILIZATIONAL TELEOLOGY</div>
+            <h3 id="slide-title" class="text-base font-bold text-[var(--foreground)] mt-0.5">Title &amp; Mission: Evolving to a Type I Civilization</h3>
+            
+            <div class="mt-3 space-y-2.5">
+              <div class="p-3 rounded bg-[var(--card)] border border-[var(--border)]">
+                <div class="text-xs font-semibold text-amber-400">🎥 Video Demonstration (YWelJDhywu0):</div>
+                <p id="slide-video-desc" class="text-xs text-[var(--muted-foreground)] mt-1 leading-relaxed"></p>
+              </div>
+              <div class="p-3 rounded bg-[var(--card)] border border-[var(--border)]">
+                <div class="text-xs font-semibold text-cyan-400">✨ Good Faith Paradigm Enhancement:</div>
+                <p id="slide-gfp-desc" class="text-xs text-[var(--muted-foreground)] mt-1 leading-relaxed"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-3 mt-3 border-t border-[var(--border)]">
+            <div class="flex items-center gap-1.5">
+              <button onclick="prevSlide()" class="px-3 py-1.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--foreground)] border border-[var(--border)] hover:opacity-80">← Prev</button>
+              <button onclick="nextSlide()" class="px-3 py-1.5 rounded text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90">Next →</button>
+              <button id="btn-tts" onclick="toggleSpeech()" class="px-3 py-1.5 rounded text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500">🔊 Narrate</button>
+            </div>
+            <select id="slide-select" onchange="goToSlide(parseInt(this.value))" class="text-xs rounded px-2.5 py-1.5 bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)]">
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: INTERACTIVE GOLDEN PLATES & SPHINX-PYRAMID LAB -->
+    <div id="view-plates" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Demo A: Golden Plate III (2000 -> 2001 Harp Overlay) -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-4">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs font-bold text-[var(--foreground)]">1. Golden Plate III: 2000 → 2001 Card Synergy (10:45–11:20)</span>
+            <span id="plate-year-badge" class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[var(--primary)] text-[var(--primary-foreground)]">YEAR: 2000</span>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] mb-3">Slide the <strong>Y-Harps of God</strong> card across the solid-gold plate to cover the zero on <code>$100</code>, transforming <strong>2000</strong> into <strong>2001</strong>:</p>
+          
+          <!-- Plate Visual Container -->
+          <div class="relative rounded-lg border-2 border-yellow-600/70 bg-gradient-to-br from-yellow-500/20 via-amber-500/15 to-yellow-700/25 p-3 overflow-hidden" style="height: 140px;">
+            <div class="text-xs font-mono font-bold tracking-widest opacity-80">PLATE III // SOLID GOLD + EMERALD &amp; SAPPHIRE INLAY</div>
+            <div class="mt-3 flex items-baseline justify-between font-serif font-bold">
+              <div class="text-xl tracking-wider">ART <span class="text-amber-400 underline decoration-dotted">$20</span></div>
+              <div class="text-xl tracking-wider mr-2">MYSTERY $<span id="num-1" class="text-amber-400 underline">1</span><span id="num-00" class="text-amber-400">00</span></div>
+            </div>
+            <div class="mt-2 text-xs font-mono opacity-80">MULTIVERSE PROOF: (1<sup>∞</sup> = 1<sup>∞</sup>)<sup>∞</sup> ⇔ (α<sup>∞</sup> = ω<sup>∞</sup>)<sup>∞</sup></div>
+            <!-- Movable Harp Card Overlay -->
+            <div id="harp-overlay-card" class="absolute top-8 rounded border border-emerald-500 bg-[var(--card)] px-2.5 py-2 shadow-md transition-all duration-300" style="left: 12px; width: 96px;">
+              <div class="text-xs font-mono font-bold text-emerald-400 leading-none">y8 design</div>
+              <div class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-none">Harp of God</div>
+            </div>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between gap-2">
+            <input id="harp-slider" type="range" min="0" max="100" value="0" oninput="updatePlateOverlay(this.value)" class="w-full accent-amber-500 cursor-pointer" />
+            <button onclick="togglePlateOverlay()" class="px-3 py-1.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--foreground)] border border-[var(--border)] whitespace-nowrap">Toggle 2000 / 2001</button>
+          </div>
+        </div>
+
+        <!-- Demo B: $1 Bill Unfinished Pyramid + Rorschach Sphinx (08:45–09:55) -->
+        <div class="bg-[var(--background)] border border-[var(--border)] rounded-lg p-4">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs font-bold text-[var(--foreground)]">2. $1 Unfinished Pyramid + Sphinx Capstone (08:45–09:55)</span>
+            <span id="sphinx-dist-badge" class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-[var(--secondary)] text-amber-400 border border-[var(--border)]">0.0 mi</span>
+          </div>
+          <p class="text-xs text-[var(--muted-foreground)] mb-3">Place the Rorschach <strong>Sphinx / Phoenix</strong> over the $1 Unfinished Pyramid and count 3 seconds at <strong>2,000,000 mph</strong>:</p>
+          
+          <div class="relative rounded-lg border border-[var(--border)] bg-[var(--card)] p-2 flex items-center justify-around" style="height: 140px;">
+            <svg width="220" height="108" viewBox="0 0 220 108">
+              <!-- Unfinished Pyramid Base -->
+              <polygon points="45,98 175,98 145,44 75,44" fill="none" stroke="currentColor" stroke-width="2" opacity="0.75"/>
+              <line x1="55" y1="84" x2="165" y2="84" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <line x1="62" y1="70" x2="158" y2="70" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <line x1="68" y1="57" x2="152" y2="57" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+              <text x="110" y="94" text-anchor="middle" font-size="12" font-family="monospace" fill="currentColor">IN GOD WE TRUST</text>
+              <!-- Sphinx Capstone Group -->
+              <g id="sphinx-capstone" transform="translate(0, -28)" opacity="0.35">
+                <polygon points="75,42 145,42 110,8" fill="#eab308" fill-opacity="0.25" stroke="#eab308" stroke-width="2"/>
+                <circle cx="110" cy="28" r="8" fill="#10b981"/>
+                <text x="110" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#eab308">SPHINX</text>
+              </g>
+            </svg>
+            <div class="text-xs space-y-1 pr-2">
+              <div class="font-semibold text-[var(--foreground)]">Galactic Speed:</div>
+              <div class="font-mono text-xs text-amber-400">2,000,000 mph</div>
+              <div class="text-xs text-[var(--muted-foreground)]" id="sphinx-timer-text">Click below to crown pyramid &amp; count 3s</div>
+            </div>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between gap-2">
+            <button onclick="runSphinxCount()" class="w-full py-1.5 px-3 rounded text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90">Crown Pyramid &amp; Count "1-1000, 2-1000, 3-1000" (1,666.7 Miles)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: 9-STAGE COSMIC MNEMONIC EXPLORER -->
+    <div id="view-mnemonic" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+        <div class="md:col-span-5 grid grid-cols-3 gap-2" id="mnemonic-buttons">
+          <!-- 9 buttons populated via JS -->
+        </div>
+        <div class="md:col-span-7 bg-[var(--background)] border border-[var(--border)] rounded-lg p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between">
+              <span id="mnem-step" class="text-xs font-mono font-bold text-amber-400">STAGE 01 OF 09</span>
+              <span id="mnem-time" class="text-xs font-mono text-[var(--muted-foreground)]">Video @ 04:00</span>
+            </div>
+            <h4 id="mnem-title" class="text-base font-bold text-[var(--foreground)] mt-1">1. Time Zero — The Beginning of the Universe</h4>
+            <p id="mnem-video" class="text-xs text-[var(--muted-foreground)] mt-2 leading-relaxed"></p>
+            <div class="mt-3 p-3 rounded bg-[var(--card)] border border-[var(--border)]">
+              <span class="text-xs font-semibold text-cyan-400">Scriptural &amp; Physics Resonance: </span>
+              <span id="mnem-scripture" class="text-xs text-[var(--muted-foreground)]"></span>
+            </div>
+          </div>
+          <div class="text-xs font-mono text-[var(--muted-foreground)] pt-3 mt-3 border-t border-[var(--border)]">
+            Revelation 15:2 — "Stand on the sea of glass mingled with fire, having the Harps of God."
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const SLIDES = [
+      {
+        num: "01", time: "00:00–00:10", kicker: "I. CIVILIZATIONAL TELEOLOGY",
+        title: "Title & Mission: Evolving to a Type I Civilization",
+        caption: "\"Let's Evolve to a Type 1 Civilization\" (4/5 Stars) — Good Faith Paradigm",
+        video: "Opens with the 4-of-5 star banner 'Let's Evolve to a Type 1 Civilization' before Jason Sprouse introduces the Good Faith Paradigm Raffle.",
+        gfp: "Integrates Pierre Teilhard de Chardin's Noosphere (Geosphere → Biosphere → Noosphere) and Frank Tipler's Omega Point with the Mayan Fifth Sun ('Job Ajaw'), governed by the core axiom: The Light (Photons/QED) > The Word (Dogma).",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="10" y="12" width="200" height="116" rx="10" fill="none" stroke="currentColor" stroke-opacity="0.3"/><text x="110" y="48" text-anchor="middle" font-size="16" font-weight="bold" fill="currentColor">Let's Evolve</text><text x="110" y="76" text-anchor="middle" font-size="18" fill="#eab308">★ ★ ★ ★ ☆</text><text x="110" y="102" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.8">to a Type 1 Civilization</text></svg>`
+      },
+      {
+        num: "02", time: "00:12–00:35", kicker: "II. THE ECONOMIC ARK RAFFLE",
+        title: "2 oz Gold, 2 oz Silver & 2 oz Copper Medallions",
+        caption: "Physical 2 oz Gold, Silver & Copper Medallions held in protective cases",
+        video: "Jason displays the physical raffle prizes: two-ounce Gold, two-ounce Silver, and two-ounce Copper medallions encased in protective plastic.",
+        gfp: "Restores Utnapishtim's 'Economic Ark' from the Epic of Gilgamesh (Tablet XI) and Atrahasis—where Silver, Gold ('Secure Collateral'), and skilled craftsmen (techne) are loaded alongside biological life to rebuild civilization.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><circle cx="52" cy="70" r="30" fill="#eab308" fill-opacity="0.25" stroke="#eab308" stroke-width="2.5"/><text x="52" y="67" text-anchor="middle" font-size="12" font-weight="bold" fill="#eab308">2 oz</text><text x="52" y="82" text-anchor="middle" font-size="12" fill="#eab308">GOLD</text><circle cx="112" cy="70" r="30" fill="#94a3b8" fill-opacity="0.25" stroke="#94a3b8" stroke-width="2.5"/><text x="112" y="67" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">2 oz</text><text x="112" y="82" text-anchor="middle" font-size="12" fill="currentColor">SILVER</text><circle cx="172" cy="70" r="30" fill="#d97706" fill-opacity="0.25" stroke="#d97706" stroke-width="2.5"/><text x="172" y="67" text-anchor="middle" font-size="12" font-weight="bold" fill="#d97706">2 oz</text><text x="172" y="82" text-anchor="middle" font-size="12" fill="#d97706">COPPER</text></svg>`
+      },
+      {
+        num: "03", time: "00:26–01:18", kicker: "III. NUMISMATIC THEOLOGY",
+        title: "Medallion Blueprint: Masculine & Feminine Duality",
+        caption: "Front: 'IN GOD WE TRUST / 2013' | Back: 'E PLURIBUS UNOM / 11 11'",
+        video: "Shows how the medallions feature two complementary obverse designs—a Masculine relief and a Feminine relief—paired with the four vertical pillars on the reverse.",
+        gfp: "Links to the Trillion Dollar Coin ('Creatio ex nihilo' sovereign collateral) and the Declaration of Independence Tripartite Pledge: Our Lives (Biological Ark), Our Fortunes (Economic Ark), and Our Sacred Honor (Covenant).",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><circle cx="65" cy="70" r="42" fill="none" stroke="#eab308" stroke-width="2"/><path d="M62,42 C72,42 75,55 68,65 C76,75 72,95 58,98 C55,82 55,58 62,42 Z" fill="#eab308" opacity="0.6"/><text x="65" y="22" text-anchor="middle" font-size="12" fill="currentColor">OBVERSE (M/F)</text><circle cx="155" cy="70" r="42" fill="none" stroke="currentColor" stroke-width="2"/><rect x="136" y="46" width="6" height="48" fill="currentColor"/><rect x="145" y="46" width="6" height="48" fill="currentColor"/><rect x="159" y="46" width="6" height="48" fill="currentColor"/><rect x="168" y="46" width="6" height="48" fill="currentColor"/><text x="155" y="22" text-anchor="middle" font-size="12" fill="currentColor">REVERSE (11:11)</text></svg>`
+      },
+      {
+        num: "04", time: "00:36–01:17", kicker: "IV. PHENOMENOLOGICAL PROMPT",
+        title: "'The Miracles of The Holy Spirit' (2005 Aquarium Photos)",
+        caption: "2005 Aquarium Reflections: Burning Bush Pillar, Womb Silhouette & 11:11",
+        video: "Jason displays the sheet of 'The Miracles of The Holy Spirit' photographs that inspired the medallion reliefs and combines religious and scientific analogies.",
+        gfp: "Analyzed via Quantum Electrodynamics (QED) and the Double-Slit Observer Effect: the camera lens collapses the quantum wave function into a sustained theophany with Zero Local Entropy Change (ΔS_local = 0), echoing Osiris & Isis.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="14" y="18" width="90" height="104" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5"/><line x1="32" y1="112" x2="58" y2="28" stroke="#ef4444" stroke-width="2"/><line x1="48" y1="112" x2="74" y2="28" stroke="#ef4444" stroke-width="2"/><circle cx="82" cy="58" r="14" fill="none" stroke="#ef4444" stroke-width="2"/><rect x="116" y="18" width="90" height="104" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5"/><rect x="165" y="75" width="6" height="35" stroke="#ef4444" fill="none"/><rect x="174" y="75" width="6" height="35" stroke="#ef4444" fill="none"/><rect x="186" y="75" width="6" height="35" stroke="#ef4444" fill="none"/><text x="110" y="135" text-anchor="middle" font-size="12" fill="currentColor">ΔS_local = 0 (Sustained Theophany)</text></svg>`
+      },
+      {
+        num: "05", time: "00:35–01:10", kicker: "V. BIOLOGICAL THEOPHANY",
+        title: "Embryology in the Womb & The Week-7 SRY Gene Catalyst",
+        caption: "Weeks 0–6 Indifferent Female Baseline → Week 7 SRY Pneumatic Spark",
+        video: "Jason explains that in the womb, every human embryo begins development with female origins before testosterone or estrogen fulfills its differentiated blueprint.",
+        gfp: "For 6 weeks, XX and XY embryos share an indifferent female baseline (Divine Feminine / Mater). At Week 7, the SRY gene fires Testis-Determining Factor (TDF)—a biological type of the Holy Spirit (Pneuma) differentiating the soul.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><line x1="20" y1="75" x2="105" y2="75" stroke="#94a3b8" stroke-width="3"/><path d="M105,75 Q145,35 198,30" fill="none" stroke="#3b82f6" stroke-width="3"/><path d="M105,75 Q145,110 198,115" fill="none" stroke="#ec4899" stroke-width="3"/><circle cx="105" cy="75" r="6" fill="#eab308"/><text x="60" y="65" text-anchor="middle" font-size="12" fill="currentColor">Weeks 0–6</text><text x="115" y="55" font-size="12" font-weight="bold" fill="#eab308">SRY Spark (Wk 7)</text><text x="175" y="24" font-size="12" fill="#3b82f6">XY Catalyst</text><text x="175" y="130" font-size="12" fill="#ec4899">XX Base</text></svg>`
+      },
+      {
+        num: "06", time: "01:18–01:42", kicker: "VI. SCRIPTURAL & WEB3 ARTIFACTS",
+        title: "The Harps of God Digital Twin NFTs (G-Harps & Y-Harps)",
+        caption: "Rarible Token IDs #490643 (G-Harps) & #492856 (Y-Harps) — Rev 15:2",
+        video: "Introduces the Harps of God cards and quotes Revelation 15:2: those victorious over the beast standing on a sea of glass mingled with fire, holding the Harps of God.",
+        gfp: "Immortalized on-chain as Rarible NFTs: G-Harps (#490643) unites 7 world religions under the Dove of the Holy Spirit; Y-Harps (#492856) encodes the y8 cosmic harp ('IT'S A CELEBRATION') and Psalm 84:11 / Isaiah 60:19–20.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="16" y="22" width="84" height="96" rx="6" fill="none" stroke="#eab308" stroke-width="2"/><text x="58" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#eab308">G-HARPS</text><text x="58" y="72" text-anchor="middle" font-size="12" fill="currentColor">7 Faiths + Dove</text><text x="58" y="96" text-anchor="middle" font-size="12" font-family="monospace" fill="currentColor">#490643</text><rect x="120" y="22" width="84" height="96" rx="6" fill="none" stroke="#10b981" stroke-width="2"/><text x="162" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#10b981">Y-HARPS</text><text x="162" y="72" text-anchor="middle" font-size="12" fill="currentColor">y8 Cosmic Harp</text><text x="162" y="96" text-anchor="middle" font-size="12" font-family="monospace" fill="currentColor">#492856</text></svg>`
+      },
+      {
+        num: "07", time: "01:43–02:22", kicker: "VII. COSMOLOGICAL ARCHITECTURE",
+        title: "The Cosmic Mnemonic: 9 Scientific Analogies of Creation",
+        caption: "On-Screen Overlay: 'Mnemonic' — Mind Memorization Map of the Cosmos",
+        video: "With the 'Mnemonic' title overlay, Jason explains how the Harps of God serve as a memory technique mapping celestial objects from the Big Bang to today.",
+        gfp: "Codifies the 9-Stage Cosmological Sequence in 'The Physics of Theophany' §1.9: (1) Time Zero, (2) Cosmic Dark Ages, (3) First Stars, (4) Supermassive Black Hole, (5) Galactic Arm, (6) Quasar, (7) Aurora Borealis, (8) Dark Matter, (9) Graviton.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="15" y="15" width="190" height="110" rx="8" fill="none" stroke="#3b82f6" stroke-width="2"/><text x="110" y="45" text-anchor="middle" font-size="16" font-weight="bold" fill="#3b82f6">MNEMONIC</text><text x="110" y="70" text-anchor="middle" font-size="12" fill="currentColor">9 Stages of Cosmic History</text><text x="110" y="95" text-anchor="middle" font-size="12" font-family="monospace" fill="#eab308">Time Zero → Sea of Glass</text></svg>`
+      },
+      {
+        num: "08", time: "02:23–03:15", kicker: "VIII. PLANETARY & RELATIVISTIC MOTION",
+        title: "Examples 1 & 2: Aurora Borealis & Our 2,000,000 MPH Flight",
+        caption: "Aurora Borealis Crown + Moving 2,000,000 MPH Through Space-Time",
+        video: "Demonstrates how the Y-Harps card crowns an Earth globe like the Aurora Borealis, and recites the poem 'No sea or sky, just a mind in flight' while moving at 2,000,000 mph.",
+        gfp: "Compares stationary galactic drift (2,000,000 mph) with a car (+40 mph), jet (+600 mph), and ISS (+17,500 mph), illustrating local Earth magnetosphere QED excitation alongside macrocosmic motion.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><circle cx="70" cy="82" r="34" fill="#3b82f6" fill-opacity="0.25" stroke="#3b82f6" stroke-width="2"/><path d="M35,52 Q70,20 105,52" fill="none" stroke="#10b981" stroke-width="5"/><path d="M42,45 Q70,15 98,45" fill="none" stroke="#a855f7" stroke-width="3"/><text x="158" y="55" text-anchor="middle" font-size="12" font-weight="bold" fill="#10b981">AURORA</text><text x="158" y="80" text-anchor="middle" font-size="14" font-family="monospace" font-weight="bold" fill="#eab308">2,000,000</text><text x="158" y="96" text-anchor="middle" font-size="12" fill="currentColor">MPH Flight</text></svg>`
+      },
+      {
+        num: "09", time: "04:00–04:55", kicker: "IX. STELLAR GENESIS & QUANTUM GRAVITY",
+        title: "Examples 3, 4 & 5: Early Universe, First Star & The Graviton",
+        caption: "Overlay: 'Early Universe' — H/He/Li Gas Vortexes, Fusion & Graviton",
+        video: "Highlights the 'Early Universe' circles on the card: after the Big Bang and cooling, H, He, and Li gas accumulated in vortexes until fusion ignited the First Star, plus the Graviton dot.",
+        gfp: "Aligns the ignition of the first stars with Genesis 1:3 ('Let there be light') and pairs the massless Graviton with the Higgs Field ('The God Particle') as the mechanism by which spiritual probability acquires physical mass.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><circle cx="75" cy="70" r="32" fill="none" stroke="#a855f7" stroke-width="2.5" stroke-dasharray="4 2"/><circle cx="75" cy="70" r="12" fill="#eab308"/><circle cx="150" cy="48" r="14" fill="none" stroke="#10b981" stroke-width="2"/><circle cx="150" cy="48" r="4" fill="#10b981"/><text x="75" y="118" text-anchor="middle" font-size="12" fill="currentColor">1st Star Fusion</text><text x="155" y="85" text-anchor="middle" font-size="12" fill="#10b981">Graviton Boson</text></svg>`
+      },
+      {
+        num: "10", time: "04:58–06:45", kicker: "X. GRAVITATIONAL SINGULARITIES",
+        title: "Examples 6 & 7: Supermassive Black Holes, 3 Earths & Quasars",
+        caption: "Black Hole Suspending 3 Earths + 'Quasar' Event Horizon Siphon",
+        video: "Places the card's dark vortex over the 3-Earth diagram to show a Supermassive Black Hole (and rogue black holes) rotating masses, then beside a star to show a Quasar siphoning gas.",
+        gfp: "Connects the Event Horizon to the Holographic Principle (3D universe projected from a 2D boundary surface) and active galactic nuclei (Quasars) outshining hundreds of galaxies as a sustained cosmic note.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><ellipse cx="95" cy="70" rx="28" ry="38" fill="#581c87" fill-opacity="0.5" stroke="#a855f7" stroke-width="2.5"/><circle cx="160" cy="50" r="16" fill="#eab308"/><path d="M144,50 Q120,40 105,65" fill="none" stroke="#eab308" stroke-width="3"/><text x="110" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#eab308">QUASAR &amp; BLACK HOLE VORTEX</text></svg>`
+      },
+      {
+        num: "11", time: "06:48–07:30", kicker: "XI. GALACTIC ESCHATOLOGY",
+        title: "Example 8: The Milky Way Galactic Arm & 'Sea of Glass'",
+        caption: "Milky Way Dust Remnants = The Strings of the Harps of God (Rev 15:2)",
+        video: "With the Milky Way galaxy displayed in the corner, Jason holds the Y-Harps card horizontally to show how its green/purple band and dust lanes mirror our Galactic Arm.",
+        gfp: "Decodes Revelation 15:2 ('a sea of glass mingled with fire') as the Milky Way Galactic Plane illuminated by its core, where interstellar dust filaments form the vibrating strings of the Harps of God (NASA sonification).",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="20" y="38" width="180" height="58" rx="6" fill="#064e3b" fill-opacity="0.4" stroke="#10b981" stroke-width="2"/><line x1="30" y1="52" x2="190" y2="52" stroke="#eab308" stroke-width="1.5" opacity="0.8"/><line x1="30" y1="67" x2="190" y2="67" stroke="#a855f7" stroke-width="2.5"/><line x1="30" y1="82" x2="190" y2="82" stroke="#eab308" stroke-width="1.5" opacity="0.8"/><text x="110" y="26" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor">MILKY WAY GALACTIC ARM</text><text x="110" y="116" text-anchor="middle" font-size="12" fill="#eab308">"Sea of Glass Mingled with Fire"</text></svg>`
+      },
+      {
+        num: "12", time: "03:18–03:55 & 08:01–08:25", kicker: "XII. FESTIVAL ORIGINS & TIMELINE",
+        title: "Example 9: Music Festival Origins & Framed 2000 / 2001 Flyers",
+        caption: "Originally Designed to Fund a Free Music Festival ('IT'S A CELEBRATION')",
+        video: "Shows the framed 2000 and 2001 music festival flyers, explaining how the Harps of God were designed to pair physical cards with digital displays to fund a free music festival.",
+        gfp: "Anchors the GFP historical timeline: 2000 NDE Awakening & first festival → 2001 second festival → 2005 Aquarium Theophany Photos → 2012/2013 Fifth Sun Revelations → 2026 Web3 & Spatial Computing.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="25" y="20" width="75" height="95" rx="4" fill="none" stroke="#eab308" stroke-width="2"/><text x="62" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#eab308">2000</text><text x="62" y="78" text-anchor="middle" font-size="12" fill="currentColor">Flyer I</text><rect x="120" y="20" width="75" height="95" rx="4" fill="none" stroke="#06b6d4" stroke-width="2"/><text x="157" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#06b6d4">2001</text><text x="157" y="78" text-anchor="middle" font-size="12" fill="currentColor">Flyer II</text></svg>`
+      },
+      {
+        num: "13", time: "08:35–09:55", kicker: "XIII. PROJECTIVE COGNITION & GREAT SEAL",
+        title: "Examples 10 & 11: Rorschach Sphinx & The $1 Bill Pyramid",
+        caption: "Rorschach Phoenix/Sphinx Crowning the $1 Bill Unfinished Pyramid",
+        video: "Shows the 'ink blot test / rorschach' overlay (Phoenix body + Sphinx head) and places the Sphinx over the $1 bill Unfinished Pyramid while counting '1-1000, 2-1000, 3-1000'.",
+        gfp: "At 2,000,000 mph, a 3-second count measures ~1,666.67 miles of cosmic travel by the Great Sphinx—illustrating the transition from localized Psychikos perception to non-local Pneumatikos awareness.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><polygon points="55,115 165,115 140,60 80,60" fill="none" stroke="currentColor" stroke-width="2"/><polygon points="80,56 140,56 110,20" fill="#eab308" fill-opacity="0.3" stroke="#eab308" stroke-width="2"/><text x="110" y="48" text-anchor="middle" font-size="12" font-weight="bold" fill="#eab308">SPHINX</text><text x="110" y="102" text-anchor="middle" font-size="12" font-family="monospace" fill="currentColor">3s = 1,666.7 Miles</text></svg>`
+      },
+      {
+        num: "14", time: "10:00–10:42", kicker: "XIV. PRECIOUS METAL & GEMSTONE RELICS",
+        title: "Example 12: Solid-Gold Golden Plates & Multiverse Proof Equation",
+        caption: "Solid Gold Plates Inlaid with Emeralds, Sapphires & Diamonds + Onyx Harps",
+        video: "Displays the carved wooden prototype of the 3 Golden Plates, detailing plans to cast them in solid gold inlaid with emeralds, sapphires, and diamonds, plus Harps in onyx and emerald.",
+        gfp: "Plate I etches the Multiverse Proof: (1^∞ = 1^∞)^∞ ⇔ (α^∞ = ω^∞)^∞, uniting the Big Bang origin boundary (1^∞ / α^∞) and Big Rip terminal boundary (1^∞ / ω^∞) across infinite universes.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="16" y="18" width="90" height="104" rx="4" fill="#eab308" fill-opacity="0.18" stroke="#eab308" stroke-width="2"/><text x="61" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#eab308">UNIVERSE</text><text x="61" y="68" text-anchor="middle" font-size="12" font-family="monospace" fill="currentColor">1^∞ = 1^∞</text><text x="61" y="98" text-anchor="middle" font-size="12" font-family="monospace" fill="#eab308">(1^∞=1^∞)^∞</text><rect x="114" y="18" width="90" height="48" rx="4" fill="#eab308" fill-opacity="0.18" stroke="#eab308" stroke-width="2"/><text x="159" y="46" text-anchor="middle" font-size="12" fill="currentColor">ADVISOR #1</text><rect x="114" y="74" width="90" height="48" rx="4" fill="#eab308" fill-opacity="0.18" stroke="#eab308" stroke-width="2"/><text x="159" y="102" text-anchor="middle" font-size="12" fill="currentColor">ART $20 $100</text></svg>`
+      },
+      {
+        num: "15", time: "10:43–11:38", kicker: "XV. SERENDIPITOUS NUMERICAL CONVERGENCE",
+        title: "Example 13: The 2000 → 2001 Golden Plate & Harp Overlay",
+        caption: "Covering the Zero on 'ART $20 MYSTERY $100' Transforms 2000 into 2001",
+        video: "Demonstrates how '$20' and '$100' on Plate III form '2000', and sliding the Harp of God card over the zero reveals the '1' to form '2001'—tying serendipitously to 2000 & 2001.",
+        gfp: "Supported by the Calculus of Convergence (Slide 04 of The Sacred Blueprint): joint stochastic probability P = 2.50 × 10^-24 (78.40 bits Shannon information, Bayes Factor 3.96 × 10^23).",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="18" y="25" width="184" height="90" rx="8" fill="#eab308" fill-opacity="0.15" stroke="#eab308" stroke-width="2"/><text x="110" y="60" text-anchor="middle" font-size="15" font-weight="bold" fill="currentColor">ART $20 + $100 = 2000</text><text x="110" y="92" text-anchor="middle" font-size="14" font-family="monospace" font-weight="bold" fill="#10b981">Harp Overlay → 2001</text></svg>`
+      },
+      {
+        num: "16", time: "11:40–12:26", kicker: "XVI. MUSEUM TOUR & PRAXIS",
+        title: "Example 14: Traveling Museum Tour Pass & The 8 Revelations",
+        caption: "Raffle NFTs Grant One-Time VIP Museum Tour Entry + 8 Revelations",
+        video: "Concludes with plans for a Museum Tour displaying the solid-gold, gem-inlaid Golden Plates and Harps of God, where Raffle NFT holders receive a one-time museum admission pass.",
+        gfp: "Culminates in the 8 Newfound Revelations & 2 Directives, the 63-Day Metanoia neural rewiring cycle (Gethsemane glucose regulation), and the Axolotl Metanoia—becoming one with the Uncreated Light.",
+        svg: `<svg width="220" height="140" viewBox="0 0 220 140"><rect x="24" y="24" width="172" height="92" rx="10" fill="none" stroke="#eab308" stroke-width="2"/><text x="110" y="55" text-anchor="middle" font-size="14" font-weight="bold" fill="#eab308">VIP MUSEUM PASS</text><text x="110" y="78" text-anchor="middle" font-size="12" fill="currentColor">Solid Gold &amp; Gem Plates</text><text x="110" y="98" text-anchor="middle" font-size="12" font-family="monospace" fill="#10b981">8 Revelations + 2 Directives</text></svg>`
+      }
+    ];
+
+    const MNEMONICS = [
+      { id: 1, name: "1. Time Zero", time: "04:00", title: "1. Time Zero — The Beginning of the Universe", video: "Represents the earliest hot, dense post-Big Bang boundary ('Time Zero')—metaphorically the first plucking of the cosmic harp from which space, time, matter, and energy unfold.", scripture: "Genesis 1:1 / Multiverse Proof Left Boundary (1^∞ / α^∞)." },
+      { id: 2, name: "2. Dark Ages", time: "04:06", title: "2. The Cosmic Dark Ages (H, He, Li Cooling)", video: "After the early universe cooled enough for hydrogen, helium, and lithium to form, an interval of darkness existed before any stars ignited—silence before the first audible note.", scripture: "Genesis 1:2 — The void prior to stellar ignition." },
+      { id: 3, name: "3. First Star", time: "04:20", title: "3. Gas Vortexes & Birth of the First Stars", video: "Expansion in the vacuum created swirling vortexes where primordial gas aggregated until mass and pressure ignited nuclear fusion—the birth of the First Star.", scripture: "Genesis 1:3 — 'Let there be light' & Psalm 84:11 ('The Lord God is a sun and a shield')." },
+      { id: 4, name: "4. Black Hole", time: "05:00", title: "4. Supermassive & Rogue Black Holes", video: "Demonstrated with 3 Earth globes on the table: the dark purple vortex on the card represents a Supermassive Black Hole suspending and rotating stars and planetary systems.", scripture: "Holographic Principle — 3D reality encoded on the 2D boundary horizon." },
+      { id: 5, name: "5. Galactic Arm", time: "06:50", title: "5. The Galactic Arm (Milky Way Remnants)", video: "Compared directly with a photograph of the Milky Way: the luminous band and dark dust streaks on the card match the dust and gas remnants of our Galactic Arm.", scripture: "Revelation 15:2 — 'A sea of glass mingled with fire... having the Harps of God.'" },
+      { id: 6, name: "6. Quasar", time: "06:25", title: "6. Quasar — The Brightest Cosmic Beacon", video: "Placing the card beside a star near the black hole's Event Horizon illustrates a Quasar siphoning stellar gas to shine brighter than hundreds of galaxies combined.", scripture: "Isaiah 60:19–20 — 'The Lord shall be unto thee an everlasting light.'" },
+      { id: 7, name: "7. Aurora", time: "02:24", title: "7. Aurora Borealis — Local Planetary Light", video: "Holding the Y-Harps card over an Earth-like planet shows how its green and purple brush strokes form the glowing polar curtains of the Aurora Borealis.", scripture: "Local QED photon emission via Earth's protective magnetic shield." },
+      { id: 8, name: "8. Dark Matter", time: "05:15", title: "8. Dark Matter — The Invisible Harp Frame", video: "Constituting ~85% of universal matter, Dark Matter does not emit or reflect light directly but organizes galaxies through gravity—the silent structural frame of the harp.", scripture: "Romans 1:20 — The invisible things of Him clearly seen through creation." },
+      { id: 9, name: "9. Graviton", time: "04:45", title: "9. The Graviton — Force Carrier of Gravity", video: "Pointed out as the discrete circular particle element on the card: the hypothetical massless elementary boson mediating gravity at the speed of light.", scripture: "Paired with the Photon (QED) and Higgs Boson ('God Particle') in GFP physics." }
+    ];
+
+    let curSlide = 0;
+
+    function init() {
+      const sel = document.getElementById('slide-select');
+      SLIDES.forEach((s, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `${s.num}: ${s.title.substring(0, 28)}...`;
+        sel.appendChild(opt);
+      });
+
+      const mnemGrid = document.getElementById('mnemonic-buttons');
+      MNEMONICS.forEach((m, idx) => {
+        const btn = document.createElement('button');
+        btn.id = `mnem-btn-${idx}`;
+        btn.onclick = () => selectMnemonic(idx);
+        btn.className = "p-2 rounded text-xs font-semibold text-left border border-[var(--border)] transition";
+        btn.textContent = m.name;
+        mnemGrid.appendChild(btn);
+      });
+
+      renderSlide();
+      selectMnemonic(0);
+    }
+
+    function renderSlide() {
+      const s = SLIDES[curSlide];
+      document.getElementById('slide-badge').textContent = `SLIDE ${s.num} / 16`;
+      document.getElementById('slide-time').textContent = `Video @ ${s.time}`;
+      document.getElementById('slide-kicker').textContent = s.kicker;
+      document.getElementById('slide-title').textContent = s.title;
+      document.getElementById('slide-caption').textContent = s.caption;
+      document.getElementById('slide-video-desc').textContent = s.video;
+      document.getElementById('slide-gfp-desc').textContent = s.gfp;
+      document.getElementById('slide-graphic').innerHTML = s.svg;
+      document.getElementById('slide-select').value = curSlide;
+    }
+
+    function prevSlide() {
+      curSlide = (curSlide - 1 + SLIDES.length) % SLIDES.length;
+      renderSlide();
+    }
+
+    function nextSlide() {
+      curSlide = (curSlide + 1) % SLIDES.length;
+      renderSlide();
+    }
+
+    function goToSlide(idx) {
+      curSlide = idx;
+      renderSlide();
+    }
+
+    function toggleSpeech() {
+      if (!('speechSynthesis' in window)) return;
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        document.getElementById('btn-tts').textContent = '🔊 Narrate';
+        return;
+      }
+      const s = SLIDES[curSlide];
+      const u = new SpeechSynthesisUtterance(`${s.title}. Video demonstration: ${s.video} Good Faith Paradigm enhancement: ${s.gfp}`);
+      u.onend = () => { document.getElementById('btn-tts').textContent = '🔊 Narrate'; };
+      document.getElementById('btn-tts').textContent = '⏹ Stop';
+      window.speechSynthesis.speak(u);
+    }
+
+    function switchTab(tab) {
+      ['slides', 'plates', 'mnemonic'].forEach(t => {
+        document.getElementById(`view-${t}`).className = (t === tab) ? 'block' : 'hidden';
+        const btn = document.getElementById(`tab-${t}`);
+        if (t === tab) {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] transition";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--secondary)] text-[var(--foreground)] border border-[var(--border)] transition";
+        }
+      });
+    }
+
+    function updatePlateOverlay(val) {
+      const card = document.getElementById('harp-overlay-card');
+      const badge = document.getElementById('plate-year-badge');
+      const leftPx = 12 + (val / 100) * 195;
+      card.style.left = `${leftPx}px`;
+      if (val > 72) {
+        badge.textContent = "YEAR: 2001 (1 Revealed!)";
+      } else {
+        badge.textContent = "YEAR: 2000 ($20 + $100)";
+      }
+    }
+
+    function togglePlateOverlay() {
+      const slider = document.getElementById('harp-slider');
+      slider.value = slider.value > 50 ? 0 : 90;
+      updatePlateOverlay(slider.value);
+    }
+
+    let sphinxInterval = null;
+    function runSphinxCount() {
+      if (sphinxInterval) clearInterval(sphinxInterval);
+      const cap = document.getElementById('sphinx-capstone');
+      const badge = document.getElementById('sphinx-dist-badge');
+      const txt = document.getElementById('sphinx-timer-text');
+      cap.setAttribute('transform', 'translate(0, 0)');
+      cap.setAttribute('opacity', '1');
+      let sec = 0;
+      badge.textContent = "0.0 mi";
+      txt.textContent = "Counting: 0s...";
+      sphinxInterval = setInterval(() => {
+        sec += 1;
+        const miles = (2000000 / 3600 * sec).toFixed(1);
+        badge.textContent = `${miles} mi`;
+        txt.textContent = `${sec}-one-thousand (${sec}s @ 2M mph = ${miles} miles)`;
+        if (sec >= 3) {
+          clearInterval(sphinxInterval);
+          txt.textContent = "3s Complete: Sphinx traveled 1,666.7 miles in space!";
+        }
+      }, 900);
+    }
+
+    function selectMnemonic(idx) {
+      MNEMONICS.forEach((_, i) => {
+        const b = document.getElementById(`mnem-btn-${i}`);
+        if (i === idx) {
+          b.className = "p-2 rounded text-xs font-semibold text-left bg-[var(--primary)] text-[var(--primary-foreground)] transition";
+        } else {
+          b.className = "p-2 rounded text-xs font-semibold text-left bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] transition";
+        }
+      });
+      const m = MNEMONICS[idx];
+      document.getElementById('mnem-step').textContent = `STAGE 0${m.id} OF 09`;
+      document.getElementById('mnem-time').textContent = `Video @ ${m.time}`;
+      document.getElementById('mnem-title').textContent = m.title;
+      document.getElementById('mnem-video').textContent = m.video;
+      document.getElementById('mnem-scripture').textContent = m.scripture;
+    }
+
+    init();
+  </script>
+</body>
+</html>

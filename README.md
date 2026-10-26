@@ -1,22 +1,28 @@
 # Digital Golden Plates — NFT Harps of God Raffle & Good Faith Paradigm Presentations
 
-> **Interactive 16-Slide Web Presentation & 20-Slide Prismatic Architecture Video Synthesis**  
-> **Source Video**: [NFT Harps of God Raffle Presentation (`YWelJDhywu0`)](https://www.youtube.com/watch?v=YWelJDhywu0)  
-> **Organization**: **Good Faith Paradigm (`GFP`)** — *Let's Evolve to a Type I Civilization*
+> 🌐 **Live Published Web Deployment (GitHub Pages)**: **[https://jasonsprouse.github.io/digital-golden-plates/](https://jasonsprouse.github.io/digital-golden-plates/)**  
+> 🎥 **Source Video**: [NFT Harps of God Raffle Presentation (`YWelJDhywu0`)](https://www.youtube.com/watch?v=YWelJDhywu0)  
+> 🏛️ **Organization**: **Good Faith Paradigm (`GFP`)** — *Let's Evolve to a Type I Civilization*
 
 ---
 
-## 🚀 Quick Start & Live Interactive Presentation
+## 🚀 Live Published Presentations & Direct Links
 
-- **Interactive HTML5 Slide Deck (16 Slides + Built-In Web Speech Narration)**: Open [`index.html`](./index.html) directly in any modern browser (or host via **GitHub Pages** from the root of the `main` branch).
-- **Full-HD Narrated Video Presentation (20 Slides, `1920x1080`, `10:11.8` runtime)**: [`Prismatic_Architecture_Presentation.mp4`](./Prismatic_Architecture_Presentation.mp4)
-- **Markdown Presentation Decks**:
-  - [`docs/nft_harps_of_god_raffle_presentation.md`](./docs/nft_harps_of_god_raffle_presentation.md) — Complete 16-slide breakdown of the YouTube presentation (`YWelJDhywu0`) paired with expanded Good Faith Paradigm archival canon.
-  - [`docs/prismatic_architecture_video_presentation.md`](./docs/prismatic_architecture_video_presentation.md) — Complete 20-slide *Prismatic Architecture: The Light Over The Word* slide deck, timecodes, and studio narration transcript.
+All three deliverables from the Good Faith Paradigm presentation suite are published and live on **GitHub Pages**:
+
+| # | Published Artifact | Live Web Deployment URL | Repository Source File |
+| :---: | :--- | :--- | :--- |
+| **🌟** | **Master Presentation Portal (All 3 Artifacts Unified)** | **[`jasonsprouse.github.io/digital-golden-plates/`](https://jasonsprouse.github.io/digital-golden-plates/)** | [`index.html`](./index.html) |
+| **1** | **NFT Harps of God Raffle Presentation — Good Faith Paradigm (16-Slide Deck)** | **[`.../nft_harps_presentation.html`](https://jasonsprouse.github.io/digital-golden-plates/nft_harps_presentation.html)** | [`nft_harps_presentation.html`](./nft_harps_presentation.html) • [`docs/nft_harps_of_god_raffle_presentation.md`](./docs/nft_harps_of_god_raffle_presentation.md) |
+| **2** | **Harps Inline Widget (Golden Plates Lab, Sphinx Counter & 9 Cosmic Analogies)** | **[`.../harps_inline_widget.html`](https://jasonsprouse.github.io/digital-golden-plates/harps_inline_widget.html)** | [`harps_inline_widget.html`](./harps_inline_widget.html) |
+| **3** | **Prismatic Architecture: The Light Over The Word — Full-HD Video Presentation (1080p MP4 + 20-Slide Studio Deck)** | **[`.../prismatic_architecture.html`](https://jasonsprouse.github.io/digital-golden-plates/prismatic_architecture.html)** | [`prismatic_architecture.html`](./prismatic_architecture.html) • [`Prismatic_Architecture_Presentation.mp4`](./Prismatic_Architecture_Presentation.mp4) • [`Prismatic_Architecture.pdf`](./Prismatic_Architecture.pdf) • [`docs/prismatic_architecture_video_presentation.md`](./docs/prismatic_architecture_video_presentation.md) |
 
 ---
 
-## 🏛️ Part I: NFT Harps of God Raffle & Digital Golden Plates (16-Slide Deck)
+## 🏛️ 1. NFT Harps of God Raffle Presentation — Good Faith Paradigm (16-Slide Deck)
+
+🔗 **Launch Live Interactive 16-Slide Presentation**: **[https://jasonsprouse.github.io/digital-golden-plates/nft_harps_presentation.html](https://jasonsprouse.github.io/digital-golden-plates/nft_harps_presentation.html)**  
+📄 **Read Full Markdown Edition**: **[`docs/nft_harps_of_god_raffle_presentation.md`](./docs/nft_harps_of_god_raffle_presentation.md)**
 
 | Slide | Timestamp | Title | Video Example (`YWelJDhywu0`) | GFP Archival Enhancement |
 | :---: | :---: | :--- | :---: | :---: |
@@ -39,7 +45,25 @@
 
 ---
 
-## 🌈 Part II: Prismatic Architecture — The Light Over The Word (20-Slide Video Deck)
+## 🧪 2. Harps Inline Widget — Interactive Simulators & 9 Cosmic Analogies
+
+🔗 **Launch Live Interactive Widget**: **[https://jasonsprouse.github.io/digital-golden-plates/harps_inline_widget.html](https://jasonsprouse.github.io/digital-golden-plates/harps_inline_widget.html)**
+
+Includes three interactive modes:
+1. **16-Slide Interactive SVG & Voiceover Explorer**: Compact schematic diagrams paired with video vs. GFP synthesis and browser speech synthesis.
+2. **Interactive Golden Plates & Sphinx-Pyramid Lab**:
+   - **Golden Plate III (`2000 → 2001` Card Synergy)**: Drag the `Y-Harps of God` card across `ART $20 MYSTERY $100` to cover the zero and transform `2000` into `2001`.
+   - **\$1 Unfinished Pyramid + Rorschach Sphinx Capstone**: Crown the Great Seal's Unfinished Pyramid with the Rorschach Sphinx and count 3 seconds (`1,666.7 miles` traveled through space-time at `2,000,000 mph`).
+3. **9-Stage Cosmic Mnemonic Explorer**: Step through *1. Time Zero*, *2. Cosmic Dark Ages*, *3. First Star*, *4. Supermassive Black Hole*, *5. Galactic Arm*, *6. Quasar*, *7. Aurora Borealis*, *8. Dark Matter*, and *9. The Graviton*.
+
+---
+
+## 🌈 3. Prismatic Architecture: The Light Over The Word — Full-HD Video Presentation
+
+🔗 **Launch Live Video Theater & 20-Slide Studio Deck**: **[https://jasonsprouse.github.io/digital-golden-plates/prismatic_architecture.html](https://jasonsprouse.github.io/digital-golden-plates/prismatic_architecture.html)**  
+🎬 **Direct Full-HD (`1920x1080`) MP4 Video**: **[`Prismatic_Architecture_Presentation.mp4`](./Prismatic_Architecture_Presentation.mp4)** (`68.92 MB`, `10:11.8` runtime)  
+📄 **Original 20-Slide PDF Deck**: **[`Prismatic_Architecture.pdf`](./Prismatic_Architecture.pdf)**  
+📘 **Markdown Transcript & Timecode Guide**: **[`docs/prismatic_architecture_video_presentation.md`](./docs/prismatic_architecture_video_presentation.md)**
 
 | Slide | Timecode | Slide Title | Preview |
 | :---: | :---: | :--- | :---: |
@@ -63,20 +87,3 @@
 | **18** | `08:51 – 09:18` | **Clinical Pathology: PTSD & Insomnia Restoration** | ![Slide 18](./slides_prismatic/slide_18.png) |
 | **19** | `09:18 – 09:45` | **Diagnostic Matrix: Theological Principles & Clinical Outcomes** | ![Slide 19](./slides_prismatic/slide_19.png) |
 | **20** | `09:45 – 10:12` | **The Transition of the Fifth Sun & The Pneumatic Age** | ![Slide 20](./slides_prismatic/slide_20.png) |
-
----
-
-## 📂 Repository Structure
-
-```text
-digital-golden-plates/
-├── index.html                                    # Standalone 16-slide interactive HTML5 presentation
-├── README.md                                     # Project overview, slide index, and visual gallery
-├── Prismatic_Architecture_Presentation.mp4       # Full-HD (1920x1080) narrated 20-slide video (10m 12s)
-├── docs/
-│   ├── nft_harps_of_god_raffle_presentation.md   # 16-slide NFT Harps of God Raffle Markdown deck
-│   └── prismatic_architecture_video_presentation.md # 20-slide Prismatic Architecture Markdown deck
-├── assets/                                       # Curated video frames, Golden Plates, Medallions & GFP diagrams
-├── slides_prismatic/                             # 20 Full-HD (1920x1080) PNG slides (slide_01.png .. slide_20.png)
-└── audio_prismatic/                              # 20 studio neural MP3 voiceover tracks (slide_01.mp3 .. slide_20.mp3)
-```

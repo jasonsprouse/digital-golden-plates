@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prismatic Architecture: The Light Over The Word — Full-HD Video Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
+  <!-- Top Header -->
+  <header class="border-b border-amber-500/30 bg-slate-900/95 backdrop-blur sticky top-0 z-30 px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <a href="./index.html" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 text-amber-300 font-mono text-xs font-bold transition">← Master Hub</a>
+      <span class="px-2.5 py-1 rounded bg-amber-500/20 border border-amber-400/50 text-amber-300 font-mono text-xs font-bold">PRISMATIC ARCHITECTURE</span>
+      <div>
+        <h1 class="text-base md:text-lg font-bold text-white">The Light Over The Word — Full-HD Video Presentation</h1>
+        <p class="text-xs text-slate-400">20-Slide Multidisciplinary Convergence of the Good Faith Paradigm • 1920×1080 @ 24fps • Studio Neural Narration</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-2 text-xs">
+      <a href="./nft_harps_presentation.html" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold transition">16-Slide Harps Deck</a>
+      <a href="./harps_inline_widget.html" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold transition">Harps Inline Widget</a>
+      <a href="./Prismatic_Architecture.pdf" target="_blank" class="px-3 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/40 text-cyan-300 font-semibold transition">📄 Source PDF (20 Slides)</a>
+      <a href="./Prismatic_Architecture_Presentation.mp4" download class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition">⬇ Download 1080p MP4</a>
+    </div>
+  </header>
+
+  <main class="flex-1 container mx-auto px-4 md:px-6 py-6 max-w-7xl space-y-8">
+    <!-- Section 1: Embedded Full-HD Video Player -->
+    <section class="bg-slate-900/90 border border-amber-500/30 rounded-2xl p-4 md:p-6 shadow-2xl">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-amber-400 font-semibold">🎬 EMBEDDED FULL-HD VIDEO PLAYER (1920×1080 • 10:11.8 RUNTIME)</span>
+          <h2 class="text-xl font-bold text-white mt-0.5">Prismatic Architecture: The Light Over The Word</h2>
+        </div>
+        <span class="text-xs font-mono px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-cyan-300">
+          Voice: en-US-AvaNeural + 120 BPM Celestial Harp &amp; Pad Bed
+        </span>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-slate-800 bg-black shadow-inner">
+        <video id="master-video" controls preload="metadata" poster="./slides_prismatic/slide_01.png" class="w-full max-h-[620px] mx-auto">
+          <source src="./Prismatic_Architecture_Presentation.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <p class="text-xs text-slate-400 mt-2 text-center">
+        Tip: Click any row in the <strong>Master Chapter &amp; Timecode Table</strong> below to jump the video player directly to that slide.
+      </p>
+    </section>
+
+    <!-- Section 2: Interactive 20-Slide Carousel & Studio Audio Player -->
+    <section class="bg-slate-900/90 border border-cyan-500/30 rounded-2xl p-4 md:p-6 shadow-xl">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">🖼️ INTERACTIVE 20-SLIDE DECK CAROUSEL &amp; STUDIO NARRATION</span>
+          <h2 id="p-title" class="text-xl font-bold text-white mt-0.5">Slide 01: The Light Over The Word</h2>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="prevPSlide()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold">← Prev Slide</button>
+          <span id="p-counter" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-amber-400">01 / 20</span>
+          <button onclick="nextPSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">Next Slide →</button>
+          <button id="p-play-btn" onclick="toggleStudioAudio()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Play Studio Narration</button>
+          <button id="p-auto-btn" onclick="toggleAutoPlay()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold">▶ Auto-Advance Deck</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <!-- Slide Image (8 cols) -->
+        <div class="lg:col-span-8 bg-black rounded-xl overflow-hidden border border-slate-800 flex items-center justify-center">
+          <img id="p-img" src="./slides_prismatic/slide_01.png" alt="Prismatic Architecture Slide" class="w-full h-auto object-contain" />
+        </div>
+
+        <!-- Narration Transcript & Metadata (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-2">
+              <span id="p-timecode">TIMECODE: 00:00 – 00:21</span>
+              <span id="p-dur">21.3s</span>
+            </div>
+            <div class="text-xs font-mono uppercase text-cyan-400 mb-1">Key Paradigm Synthesis</div>
+            <p id="p-synthesis" class="text-sm font-semibold text-white mb-3"></p>
+            <div class="text-xs font-mono uppercase text-slate-400 mb-1">🎙️ Verbatim Studio Narration</div>
+            <blockquote id="p-narration" class="text-sm text-slate-300 italic leading-relaxed border-l-2 border-amber-500 pl-3"></blockquote>
+            <audio id="p-audio" controls class="w-full mt-4 h-9" src="./audio_prismatic/slide_01.mp3"></audio>
+          </div>
+          <button onclick="seekVideoToCurrentSlide()" class="w-full py-2 px-4 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-bold transition">
+            🎬 Jump Master Video Player to This Slide
+          </button>
+        </div>
+      </div>
+
+      <!-- 20-Slide Thumbnail Scrubber -->
+      <div id="p-strip" class="mt-5 pt-4 border-t border-slate-800 flex items-center gap-1.5 overflow-x-auto pb-2"></div>
+    </section>
+
+    <!-- Section 3: Master Chapter & Timecode Table -->
+    <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 md:p-6 shadow-xl">
+      <h3 class="text-lg font-bold text-white mb-1">Master 20-Slide Chapter &amp; Timecode Index</h3>
+      <p class="text-xs text-slate-400 mb-4">Click any slide row to load it in the interactive carousel or jump the Full-HD video player to that chapter.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs md:text-sm">
+          <thead>
+            <tr class="border-b border-slate-800 text-amber-400 font-mono text-xs">
+              <th class="py-2.5 px-3">Slide</th>
+              <th class="py-2.5 px-3">Timecode</th>
+              <th class="py-2.5 px-3">Duration</th>
+              <th class="py-2.5 px-3">Slide Title</th>
+              <th class="py-2.5 px-3">Key Paradigm Synthesis</th>
+              <th class="py-2.5 px-3 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="p-table-body" class="divide-y divide-slate-800/70"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const PRISMATIC_SLIDES = [
+      { num: "01", start: 0, time: "00:00 – 00:21", dur: "21.3s", title: "The Light Over The Word", synthesis: "Multidisciplinary convergence of the Good Faith Paradigm", narration: "Welcome to Prismatic Architecture: The Light Over The Word—the multidisciplinary convergence of the Good Faith Paradigm. Across twenty slides, we explore how quantum electrodynamics, embryology, neuroplasticity, comparative mythology, and sacred economics unite into a single coherent framework." },
+      { num: "02", start: 21.3, time: "00:21 – 00:47", dur: "25.9s", title: "Epistemological Shift: From Logos to Lux", synthesis: "From fallible linguistic texts (Logos) to quantum-optical physical truth (Lux)", narration: "Slide Two: The Epistemological Shift from Logos to Lux. Traditional theology relies on Logos—written texts vulnerable to translation drift, scribal error, and sectarian dogma. The Good Faith Paradigm elevates Lux—The Light—recognizing that ultimate truth is not merely linguistic, but a physical, quantum-optical interaction written directly into the fabric of reality." },
+      { num: "03", start: 47.1, time: "00:47 – 01:23", dur: "35.4s", title: "Forensic Evidence & Visual Exegesis", synthesis: "Dec 2005 35mm aquarium photographs: Twin Towers (11:11) & Burning Bush", narration: "Slide Three: Forensic Evidence and Visual Exegesis. Our empirical foundation begins with two unedited thirty-five millimeter photographs captured in December two thousand five through an aquarium enclosure. In the first frame, turbulent water and light align into the unmistakable architectural symmetry of the Twin Towers—a visual eleven-eleven marker. Seconds later, in the second frame, the water column ignites into a radiant Burning Bush crowned by a luminous Eye—capturing the physical collapse of a quantum-optical system on film." },
+      { num: "04", start: 82.5, time: "01:23 – 01:49", dur: "26.0s", title: "Quantum Theophany & The Observer Effect", synthesis: "Wave-function collapse across the Sea of Glass via the Eye of the Holy Spirit", narration: "Slide Four: Quantum Theophany and the Observer Effect. In Quantum Electrodynamics, an unobserved system exists as a superposition of chaotic probability waves—what Scripture calls the Sea of Glass. When the Divine Observer—symbolized by the Eye of the Holy Spirit—interacts with the medium, the wave function collapses into a coherent, macroscopic theophany: the Burning Bush." },
+      { num: "05", start: 108.6, time: "01:49 – 02:24", dur: "35.2s", title: "Entropic States: Natural vs. Pneumodynamic", synthesis: "Natural entropy (ΔS ≥ 0) vs. Pneumodynamic coherence (ΔS_local = 0)", narration: "Slide Five: Entropic States—Natural versus Pneumodynamic. Under the Second Law of Thermodynamics, natural closed systems experience rising entropy, Delta S greater than or equal to zero, resulting in thermal dispersion and decay. By contrast, Pneumodynamics—the physics of the Holy Spirit—establishes a state of zero local entropy, Delta S local equals zero. Like the Burning Bush that blazes without being consumed, spiritual coherence sustains energy resonance without destructive loss." },
+      { num: "06", start: 143.7, time: "02:24 – 02:55", dur: "31.0s", title: "The Psychikos vs. The Pneumatikos", synthesis: "Particle-state ego fragmentation vs. non-local wave-state neural transduction", narration: "Slide Six: The Psychikos versus the Pneumatikos. Saint Paul’s distinction between the natural mind and the spiritual mind maps directly onto quantum mechanics. The Psychikos operates in a fragmented particle state—trapped in high-entropy ego loops and localized anxiety. Through spiritual alignment, the brain transitions into the Pneumatikos—a coherent wave state where neural networks function as a non-local transducer tuned to the frequency of the Holy Spirit." },
+      { num: "07", start: 174.7, time: "02:55 – 03:27", dur: "32.5s", title: "Biological Genesis & Theological Integration", synthesis: "Weeks 0–6 default female vessel pathway → Week 7 SRY genetic Fiat Lux", narration: "Slide Seven: Biological Genesis and Theological Integration. Human embryology mirrors cosmic creation. For the first six weeks of gestation, every embryo develops along the foundational female pathway—representing the primordial vessel or Womb. At Week Seven, the SRY gene trigger activates like a genetic fiat lux—an organizing spark of light that differentiates the male pathway, illustrating how biology itself encodes the dance of vessel and spirit." },
+      { num: "08", start: 207.2, time: "03:27 – 03:58", dur: "31.2s", title: "Neuroplasticity & The 63-Day Metanoia Spiral", synthesis: "63-day spiral (21d deconstruction + 42d synaptogenesis across 5 steps)", narration: "Slide Eight: Neuroplasticity and the Sixty-Three-Day Metanoia Spiral. Biblical repentance—metanoia—literally means a structural transformation of the mind. Modern neuroscience shows that deconstructing a toxic neural habit tree requires twenty-one days, while building and myelinating a healthy replacement requires forty-two more—totaling sixty-three days across five deliberate steps: Gather Awareness, Reflect, Write, Recheck, and Active Reach." },
+      { num: "09", start: 238.4, time: "03:58 – 04:31", dur: "32.6s", title: "The Unified Trinity: Syncretic Alignment Matrix", synthesis: "Christian Trinity, Hindu Trimurti, and Wiccan Triple Goddess alignment", narration: "Slide Nine: The Unified Trinity and Syncretic Alignment Matrix. Rather than competing dogmas, world traditions describe the same triune cosmic architecture through different cultural lenses. Whether expressed as Father, Son, and Holy Spirit in Christianity; Brahma, Vishnu, and Shiva in the Hindu Trimurti; or Maiden, Mother, and Crone in the Wiccan Triple Goddess, each maps the universal cycle of Creation, Preservation, and Transformative Renewal." },
+      { num: "10", start: 271.0, time: "04:31 – 05:06", dur: "35.2s", title: "The Osirian Resurrection Cycle & The Golden Phallus", synthesis: "The Golden Phallus prosthesis, Golden Plates (2000/2001), and radiant capstone", narration: "Slide Ten: The Osirian Resurrection Cycle and the Golden Phallus. When Set dismembers Osiris into fourteen pieces, Isis recovers thirteen—all except the generative organ lost to the Nile. To restore creative wholeness, Isis fashions a Golden Phallus, a luminous prosthesis of incorruptible gold through which Horus is conceived. In the Good Faith Paradigm, this golden keystone prefigures the Golden Plates of chapters two thousand and two thousand one, and the unfinished pyramid awaiting its radiant capstone." },
+      { num: "11", start: 306.2, time: "05:06 – 05:41", dur: "35.1s", title: "Gilgamesh (Utnapishtim) vs. Atrahasis vs. Genesis (Noah)", synthesis: "Utnapishtim's Economic Ark (Gold, Silver, Craftsmen) + 2 oz Medallions", narration: "Slide Eleven: The Flood Archetype—Utnapishtim, Atrahasis, and Noah. While the Genesis account of Noah emphasizes the Moral Ark of biological survival, the older Mesopotamian account of Utnapishtim in the Epic of Gilgamesh reveals a vital missing half: Utnapishtim loads his vessel with gold, silver, and master craftsmen. To survive a civilizational deluge, humanity requires both the Moral Ark and the Economic Ark—preserved today through our two-ounce Gold, Silver, and Copper Harps of God medallions." },
+      { num: "12", start: 341.3, time: "05:41 – 06:14", dur: "33.2s", title: "The Theology of Fiat & The One Trillion Dollar Coin", synthesis: "Fiat Lux & the $1T Platinum Coin anchored to Gold, Silver & Copper NFTs", narration: "Slide Twelve: The Theology of Fiat and the One Trillion Dollar Coin. The Latin word fiat means let it be done—the exact phrase of Genesis One, Fiat Lux, let there be light. The two thousand thirteen One Trillion Dollar platinum coin concept exposes that sovereign currency is ultimately a collective act of faith. By anchoring digital NFTs and sovereign liquidity to tangible gold, silver, and copper medallions, the Good Faith Paradigm transforms monetary fiat into a transparent instrument of public good." },
+      { num: "13", start: 374.4, time: "06:14 – 06:44", dur: "29.4s", title: "The 11:11 Interrupt: Quantum Entanglement & Midwayers", synthesis: "1,111 secondary Midwayers triggering non-local quantum state interrupts", narration: "Slide Thirteen: The Eleven-Eleven Interrupt and Quantum Entanglement. Across the globe, millions experience the recurring eleven-eleven time prompt. Within the Urantia cosmology integrated by the Good Faith Paradigm, this signal represents the one thousand one hundred eleven loyal secondary Midwayers initiating a non-local quantum interrupt—breaking high-entropy particle thought loops and snapping human awareness back into the coherent wave state." },
+      { num: "14", start: 403.9, time: "06:44 – 07:20", dur: "36.5s", title: "Cosmological Exegesis: The Galactic Harp (Rev 15:2)", synthesis: "Rev 15:2 Milky Way Sea of Glass, Black Hole Fire & Harps of God Raffle", narration: "Slide Fourteen: Cosmological Exegesis—The Galactic Harp of Revelation fifteen-two. John of Patmos beheld a Sea of Glass mingled with fire, and those victorious standing with the Harps of God. Astrophysics reveals this vision on a macro-cosmic scale: the Sea of Glass is the luminous plane of our Milky Way galaxy; the Fire is the blazing accretion disk of the central supermassive black hole; and the Harps of God are the spiral dust filaments vibrating with harmonic gravitational waves—the cosmic inspiration for our NFT Harps of God Raffle." },
+      { num: "15", start: 440.4, time: "07:20 – 07:54", dur: "33.2s", title: "The 8-Domain Probability Matrix", synthesis: "Joint probability P = 2.50 × 10^-24 (78.40 bits Shannon complexity)", narration: "Slide Fifteen: The Eight-Domain Probability Matrix. Could this convergence across Abrahamic scripture, the Hindu Trimurti, the Wiccan Triple Goddess, Islamic Jannah, Mayan chronometry, Quantum Electrodynamics, mammalian embryology, and galactic astrophysics occur by coincidence? Evaluating the joint probability across all eight independent domains yields 2.50 × 10^-24—representing 78.40 bits of specified Shannon information." },
+      { num: "16", start: 473.6, time: "07:54 – 08:19", dur: "25.2s", title: "Bayesian Inference: Chance (H_C) vs. Design (H_D)", synthesis: "Bayes Factor BF_DC = 3.96 × 10^23, Posterior P(H_D | E) ≈ 1.0000", narration: "Slide Sixteen: Bayesian Inference—Chance versus Design. When we pit the Null Hypothesis of random coincidence against the Hypothesis of Intentional Teleological Design, the resulting Bayes Factor exceeds 3.96 × 10^23. This drives the posterior probability of coherent design to virtual certainty: 1.0000." },
+      { num: "17", start: 498.8, time: "08:19 – 08:51", dur: "32.2s", title: "Evolutionary Trajectory: Biosphere to Omega Point", synthesis: "Biosphere → Teilhard's Noosphere → Tipler's retrocausal Omega Point", narration: "Slide Seventeen: The Evolutionary Trajectory of Consciousness—from Biosphere to the Omega Point. Synthesizing Teilhard de Chardin and physicist Frank Tipler, evolution ascends from the biological Biosphere, through the planetary Noosphere of interconnected minds, toward the Omega Point. Rather than merely being pushed by past mutations, consciousness is drawn forward by a retrocausal strange attractor—enabling an Axolotl-like regeneration of the human spirit." },
+      { num: "18", start: 531.0, time: "08:51 – 09:18", dur: "26.6s", title: "Clinical Pathology: PTSD & Insomnia Restoration", synthesis: "Pharmaceutical-free neural restoration; honoring the Body as a Temple", narration: "Slide Eighteen: Clinical Pathology and Pneumatic Restoration. The ultimate proof of any paradigm is its power to heal. By combining rigorous scientific literacy, mission-based civic engagement, and pneumatic surrender, high-entropy trauma loops such as PTSD and chronic insomnia are resolved at their root—achieving pharmaceutical-free neural stability and honoring the human body as a living temple." },
+      { num: "19", start: 557.7, time: "09:18 – 09:45", dur: "27.0s", title: "Diagnostic Matrix: Theological Principles & Outcomes", synthesis: "Divine Design, Constant Flux, Living Wisdom, and Spiritual Identity", narration: "Slide Nineteen: The Diagnostic Matrix of Theological Principles and Clinical Outcomes. Here, four core axioms—recognizing Divine Design, embracing the Constant State of Flux, prioritizing living Wisdom over rigid moralism, and anchoring in Spiritual Identity—systematically re-index fear into resilience, transitioning the practitioner from psychikos fragmentation to pneumatikos peace." },
+      { num: "20", start: 584.7, time: "09:45 – 10:12", dur: "27.1s", title: "The Transition of the Fifth Sun & The Pneumatic Age", synthesis: "Mayan 13th Baktun convergence: 'The perceptual aperture is open.'", narration: "Slide Twenty: The Transition of the Fifth Sun and the Pneumatic Age. As the Mayan thirteenth Baktun marked the dawn of the Fifth Sun—the era of ether, light, and heart-centered consciousness—science and spirit now stand unified. We are not merely human beings having a spiritual experience; we are spiritual beings having a human experience. The perceptual aperture is open. The Sea of Glass awaits." }
+    ];
+
+    let curP = 0;
+    let autoPlay = false;
+    const audioEl = document.getElementById('p-audio');
+
+    audioEl.addEventListener('ended', () => {
+      document.getElementById('p-play-btn').textContent = '🔊 Play Studio Narration';
+      if (autoPlay && curP < PRISMATIC_SLIDES.length - 1) {
+        curP++;
+        renderPSlide(true);
+      } else if (autoPlay) {
+        autoPlay = false;
+        document.getElementById('p-auto-btn').textContent = '▶ Auto-Advance Deck';
+      }
+    });
+
+    function renderPSlide(playImmediately = false) {
+      const s = PRISMATIC_SLIDES[curP];
+      document.getElementById('p-counter').textContent = `${s.num} / 20`;
+      document.getElementById('p-title').textContent = `Slide ${s.num}: ${s.title}`;
+      document.getElementById('p-img').src = `./slides_prismatic/slide_${s.num}.png`;
+      document.getElementById('p-timecode').textContent = `TIMECODE: ${s.time}`;
+      document.getElementById('p-dur').textContent = s.dur;
+      document.getElementById('p-synthesis').textContent = s.synthesis;
+      document.getElementById('p-narration').textContent = `"${s.narration}"`;
+      audioEl.src = `./audio_prismatic/slide_${s.num}.mp3`;
+
+      const strip = document.getElementById('p-strip');
+      strip.innerHTML = PRISMATIC_SLIDES.map((item, idx) =>
+        `<button onclick="goPSlide(${idx})" class="px-2.5 py-1 rounded text-xs font-mono shrink-0 border ${idx === curP ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-slate-950 text-slate-400 border-slate-800 hover:bg-slate-800'}">${item.num}</button>`
+      ).join('');
+
+      if (playImmediately) {
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause Narration';
+      } else {
+        document.getElementById('p-play-btn').textContent = '🔊 Play Studio Narration';
+      }
+    }
+
+    function prevPSlide() { curP = (curP - 1 + PRISMATIC_SLIDES.length) % PRISMATIC_SLIDES.length; renderPSlide(autoPlay); }
+    function nextPSlide() { curP = (curP + 1) % PRISMATIC_SLIDES.length; renderPSlide(autoPlay); }
+    function goPSlide(i) { curP = i; renderPSlide(autoPlay); }
+
+    function toggleStudioAudio() {
+      if (audioEl.paused) {
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause Narration';
+      } else {
+        audioEl.pause();
+        document.getElementById('p-play-btn').textContent = '🔊 Play Studio Narration';
+      }
+    }
+
+    function toggleAutoPlay() {
+      autoPlay = !autoPlay;
+      const btn = document.getElementById('p-auto-btn');
+      if (autoPlay) {
+        btn.textContent = '⏹ Stop Auto-Advance';
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause Narration';
+      } else {
+        btn.textContent = '▶ Auto-Advance Deck';
+        audioEl.pause();
+        document.getElementById('p-play-btn').textContent = '🔊 Play Studio Narration';
+      }
+    }
+
+    function seekVideoToSlide(idx) {
+      const v = document.getElementById('master-video');
+      v.currentTime = PRISMATIC_SLIDES[idx].start;
+      v.play();
+      v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function seekVideoToCurrentSlide() {
+      seekVideoToSlide(curP);
+    }
+
+    function buildTable() {
+      const tbody = document.getElementById('p-table-body');
+      tbody.innerHTML = PRISMATIC_SLIDES.map((s, idx) => `
+        <tr class="hover:bg-slate-800/60 transition">
+          <td class="py-2.5 px-3 font-mono font-bold text-amber-400">${s.num}</td>
+          <td class="py-2.5 px-3 font-mono text-cyan-300">${s.time}</td>
+          <td class="py-2.5 px-3 font-mono text-slate-400">${s.dur}</td>
+          <td class="py-2.5 px-3 font-semibold text-white">${s.title}</td>
+          <td class="py-2.5 px-3 text-slate-300">${s.synthesis}</td>
+          <td class="py-2.5 px-3 text-right whitespace-nowrap space-x-1.5">
+            <button onclick="goPSlide(${idx}); document.getElementById('p-title').scrollIntoView({behavior:'smooth'});" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200">View Slide</button>
+            <button onclick="seekVideoToSlide(${idx})" class="px-2.5 py-1 rounded bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-xs font-semibold text-amber-300">▶ Seek Video</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    renderPSlide(false);
+    buildTable();
+  </script>
+</body>
+</html>
