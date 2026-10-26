@@ -1,0 +1,11 @@
+# Temporary video/audio rendering intermediates
+frames_prismatic/
+segments_prismatic/
+audio_prismatic/*.wav
+prismatic_combined_voice.mp4
+prismatic_harmonic_bed.wav
+prismatic_segments.txt
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
