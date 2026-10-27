@@ -3,179 +3,1474 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Golden Plates — NFT Harps of God Raffle, Harps Inline Widget &amp; Prismatic Architecture Video</title>
+  <title>Digital Golden Plates — NFT Harps of God Raffle &amp; Prismatic Architecture Storefront</title>
+  <meta name="description" content="Acquire the G-Harps (#490643) and Y-Harps (#492856) Digital Twin NFTs on Rarible to enter the 2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallion Raffle and unlock VIP admission to the Solid-Gold Golden Plates Museum Tour." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 18px rgba(245, 158, 11, 0.25); }
+      50% { box-shadow: 0 0 32px rgba(245, 158, 11, 0.55); }
+    }
+    @keyframes pulseEmerald {
+      0%, 100% { box-shadow: 0 0 18px rgba(16, 185, 129, 0.25); }
+      50% { box-shadow: 0 0 32px rgba(16, 185, 129, 0.55); }
+    }
+    .glow-gold { animation: pulseGlow 4s infinite ease-in-out; }
+    .glow-emerald { animation: pulseEmerald 4s infinite ease-in-out; }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
-  <!-- Master Portal Top Navigation Bar -->
-  <header class="border-b border-amber-500/30 bg-slate-900/95 backdrop-blur sticky top-0 z-40 px-4 md:px-6 py-3">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+<body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP STICKY NAVIGATION & LIVE NFT RAFFLE BAR -->
+  <header class="sticky top-0 z-40 border-b border-amber-500/30 bg-slate-950/95 backdrop-blur-md">
+    <!-- Top Raffle Ticker Strip -->
+    <div class="bg-gradient-to-r from-amber-500/20 via-emerald-500/15 to-cyan-500/20 border-b border-slate-800/80 px-4 py-1.5 text-xs">
+      <div class="max-w-[1880px] mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-mono font-extrabold text-[11px] uppercase tracking-wider">LIVE WEB3 RAFFLE</span>
+          <span class="text-slate-200 font-medium">
+            Acquire <strong class="text-amber-300">G-Harps (#490643)</strong> or <strong class="text-emerald-300">Y-Harps (#492856)</strong> NFTs for entry into the
+            <strong class="text-amber-300">2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallion Raffle</strong> + <strong class="text-cyan-300">VIP Museum Tour Pass</strong>
+          </span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="px-2.5 py-0.5 rounded bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/50 text-amber-300 font-mono font-bold transition">
+            🕊️ Buy G-Harps #490643 ↗
+          </a>
+          <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="px-2.5 py-0.5 rounded bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/50 text-emerald-300 font-mono font-bold transition">
+            🌌 Buy Y-Harps #492856 ↗
+          </a>
+          <button onclick="openVaultModal()" class="px-2.5 py-0.5 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold transition">
+            ⚡ Raffle &amp; Checkout Vault
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation & Mode Switcher Bar -->
+    <div class="max-w-[1880px] mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-3">
-        <span class="px-2.5 py-1 rounded bg-amber-500/20 border border-amber-400/50 text-amber-300 font-mono text-xs font-bold">DIGITAL GOLDEN PLATES</span>
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-emerald-500 flex items-center justify-center text-slate-950 font-black font-mono text-sm shadow-lg">
+          Y8
+        </div>
         <div>
-          <h1 class="text-base md:text-lg font-bold text-white leading-tight">Good Faith Paradigm — Master Presentation Portal</h1>
-          <p class="text-xs text-slate-400">1. NFT Harps of God Raffle Presentation • 2. Harps Inline Widget • 3. Prismatic Architecture Full-HD Video</p>
+          <div class="flex items-center gap-2">
+            <h1 class="text-sm md:text-base font-extrabold text-white tracking-tight">DIGITAL GOLDEN PLATES &amp; HARPS OF GOD</h1>
+            <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-slate-900 border border-amber-500/40 text-amber-300 font-mono text-[11px] font-semibold">GOOD FAITH PARADIGM</span>
+          </div>
+          <p class="text-[11px] text-slate-400">Interactive Presentation Suite • Rarible Digital Twin Storefront • Solid-Gold &amp; Gemstone Relics</p>
         </div>
       </div>
 
-      <!-- Mode Switcher Tabs -->
-      <div class="flex flex-wrap items-center gap-1.5">
-        <button id="nav-all" onclick="setView('all')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 transition">
-          🌟 All 3 Published Artifacts
+      <!-- Center Presentation Mode Switcher -->
+      <div class="flex flex-wrap items-center gap-1.5 bg-slate-900/90 p-1 rounded-xl border border-slate-800">
+        <button id="mode-btn-harps" onclick="setPresentationMode('harps')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 transition">
+          🎴 1. Harps of God Deck (16 Slides)
         </button>
-        <button id="nav-harps" onclick="setView('harps')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-          1. NFT Harps Presentation (16 Slides)
+        <button id="mode-btn-widget" onclick="setPresentationMode('widget')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">
+          🎛️ 2. Golden Plates Lab &amp; Widget
         </button>
-        <button id="nav-widget" onclick="setView('widget')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-          2. Harps Inline Widget (Labs &amp; 9 Analogies)
+        <button id="mode-btn-prismatic" onclick="setPresentationMode('prismatic')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">
+          🎬 3. Prismatic 1080p Video (20 Slides)
         </button>
-        <button id="nav-prismatic" onclick="setView('prismatic')" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition">
-          3. Prismatic Architecture (1080p Video &amp; 20 Slides)
+        <button id="mode-btn-all" onclick="setPresentationMode('all')" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition">
+          🏛️ All-In-One View
         </button>
-        <a href="https://github.com/jasonsprouse/digital-golden-plates" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-950 hover:bg-slate-800 text-cyan-300 border border-cyan-500/30 transition">
-          GitHub Repo ↗
-        </a>
+      </div>
+
+      <!-- Right Action Buttons -->
+      <div class="flex items-center gap-2">
+        <button onclick="openVaultModal()" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-extrabold text-xs shadow-lg transition flex items-center gap-1.5">
+          <span>🛒 Acquire NFTs &amp; Enter Raffle</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 md:px-6 py-6 space-y-8">
-    <!-- Quick Launch Cards Banner -->
-    <div id="hero-cards" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-slate-900/90 border border-amber-500/30 rounded-xl p-4 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1">
-            <span>ARTIFACT 01 • 16 SLIDES</span>
-            <span>YWelJDhywu0 + GFP</span>
+  <!-- MAIN 3-COLUMN WIDESCREEN STAGE: [LEFT G-HARPS RAIL] — [CENTER PRESENTATION STAGE] — [RIGHT Y-HARPS RAIL] -->
+  <div class="flex-1 max-w-[1880px] w-full mx-auto px-3 sm:px-5 py-5">
+    <div class="grid grid-cols-1 xl:grid-cols-12 gap-5 items-start">
+
+      <!-- ===================================================================== -->
+      <!-- LEFT SCREEN MARKETING RAIL: G-HARPS OF GOD NFT (TOKEN ID #490643)     -->
+      <!-- ===================================================================== -->
+      <aside class="xl:col-span-2 order-2 xl:order-1 xl:sticky xl:top-28 space-y-4">
+        <div class="bg-slate-900/95 border-2 border-amber-500/50 rounded-2xl p-3.5 shadow-2xl glow-gold">
+          <!-- Rail Header -->
+          <div class="flex items-center justify-between gap-1 mb-2">
+            <span class="px-2 py-0.5 rounded bg-amber-500/20 border border-amber-400/50 text-amber-300 font-mono text-[10px] font-bold uppercase">
+              LEFT WING • G-HARPS
+            </span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-emerald-400 font-mono text-[10px] font-semibold">
+              ● ERC-1155 #490643
+            </span>
           </div>
-          <h2 class="text-base font-bold text-white">NFT Harps of God Raffle Presentation — Good Faith Paradigm</h2>
-          <p class="text-xs text-slate-400 mt-1">Side-by-side YouTube video demonstrations paired with expanded Good Faith Paradigm archival blueprints and voice narration.</p>
+
+          <h2 class="text-base font-extrabold text-white leading-tight">G-Harps of God NFT</h2>
+          <p class="text-[11px] text-amber-300/90 font-medium mt-0.5">Dove of the Holy Spirit &amp; 7 World Faiths</p>
+
+          <!-- Interactive Front / Back Artwork Showcase -->
+          <div class="mt-2.5 relative group rounded-xl overflow-hidden border border-amber-500/40 bg-black aspect-[4/5] flex items-center justify-center cursor-pointer" onclick="openLightbox(document.getElementById('g-harp-rail-img').src, 'G-Harps of God NFT (Token ID #490643) — Front & Back Digital Twin Artwork')">
+            <img id="g-harp-rail-img" src="./assets/asset_g_harps_front.jpg" alt="G-Harps of God NFT #490643" class="w-full h-full object-contain transition duration-300 group-hover:scale-105" />
+            <div class="absolute bottom-2 inset-x-2 bg-slate-950/85 backdrop-blur px-2 py-1 rounded-lg border border-slate-800 flex items-center justify-between text-[10px]">
+              <span id="g-harp-side-label" class="font-mono text-amber-300 font-bold">FRONT: DOVE OF LIGHT</span>
+              <span class="text-slate-400">🔍 Zoom</span>
+            </div>
+          </div>
+
+          <!-- Flip Front / Back Buttons -->
+          <div class="grid grid-cols-2 gap-1.5 mt-2">
+            <button id="g-btn-front" onclick="flipGHarp('front')" class="py-1 px-2 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] transition">
+              🕊️ Front (Dove)
+            </button>
+            <button id="g-btn-back" onclick="flipGHarp('back')" class="py-1 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] border border-slate-700 transition">
+              ☸️ Back (7 Faiths)
+            </button>
+          </div>
+
+          <!-- Dynamic Slide Sync Context Box -->
+          <div class="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30">
+            <div class="text-[10px] font-mono uppercase tracking-wider text-amber-400 font-bold flex items-center justify-between">
+              <span>⚡ ACTIVE SLIDE CONNECTION</span>
+              <span id="g-sync-slide-num">SLIDE 01</span>
+            </div>
+            <p id="g-harp-context-text" class="text-[11px] text-slate-200 mt-1 leading-snug">
+              Anchors the Type I Civilization Photocentrism Axiom: "The Light &gt; The Word" across 7 world religions.
+            </p>
+          </div>
+
+          <!-- Collector Utility Checklist -->
+          <ul class="mt-3 space-y-1.5 text-[11px] text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <span class="text-amber-400 font-bold">🥇</span>
+              <span><strong>Medallion Raffle Entry:</strong> Win 2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallions</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-amber-400 font-bold">🏛️</span>
+              <span><strong>VIP Museum Pass:</strong> 1-Time Admission to the Solid-Gold Golden Plates Tour</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-amber-400 font-bold">🕊️</span>
+              <span><strong>Sacred Seal:</strong> "Beyond all the complex perspectives, life is pure and simple."</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-amber-400 font-bold">🌊</span>
+              <span><strong>Web3 &amp; XR Key:</strong> Unlocks Y8 Wallet &amp; The-Beach WebXR Oasis</span>
+            </li>
+          </ul>
+
+          <!-- Primary & Secondary Purchase CTAs -->
+          <div class="mt-3.5 space-y-2">
+            <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg transition">
+              <span>🛒 Buy G-Harps on Rarible</span>
+              <span>↗</span>
+            </a>
+            <button onclick="openVaultModal('g')" class="w-full py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-amber-500/40 text-amber-300 font-bold text-xs transition">
+              ⚡ Raffle Prize &amp; Contract Info
+            </button>
+          </div>
+
+          <!-- Medallion Mini Preview -->
+          <div class="mt-3 pt-2.5 border-t border-slate-800 flex items-center gap-2.5">
+            <img src="./assets/vid_02_raffle_medallions.jpg" alt="2 oz Gold, Silver, Copper Medallions" class="w-11 h-11 rounded-lg object-cover border border-amber-500/40 shrink-0 cursor-pointer" onclick="openLightbox('./assets/vid_02_raffle_medallions.jpg', '2 oz Gold, 2 oz Silver & 2 oz Copper Medallions — Good Faith Paradigm Raffle Prizes')" />
+            <div class="text-[10px] text-slate-400 leading-tight">
+              <div class="text-slate-200 font-bold">Backed by Physical Relics</div>
+              2 oz Gold, Silver &amp; Copper + Solid Onyx &amp; Emerald Harps
+            </div>
+          </div>
         </div>
-        <div class="mt-3 pt-3 border-t border-slate-800 flex items-center justify-between gap-2 text-xs">
-          <button onclick="setView('harps')" class="px-3 py-1.5 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold">Focus View</button>
-          <a href="./nft_harps_presentation.html" target="_blank" class="text-amber-300 hover:underline font-mono">Open Standalone ↗</a>
+      </aside>
+
+      <!-- ===================================================================== -->
+      <!-- CENTER PRESENTATION STAGE (8 COLS ON XL SCREENS)                      -->
+      <!-- ===================================================================== -->
+      <main class="xl:col-span-8 order-1 xl:order-2 space-y-6">
+
+        <!-- ***************************************************************** -->
+        <!-- MODULE 1: 16-SLIDE NFT HARPS OF GOD RAFFLE PRESENTATION           -->
+        <!-- ***************************************************************** -->
+        <section id="section-harps" class="bg-slate-900/95 border border-amber-500/40 rounded-2xl p-4 sm:p-6 shadow-2xl">
+          <!-- Deck Header Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-800">
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-amber-300 font-mono text-xs font-bold" id="h-slide-badge">SLIDE 01 / 16</span>
+                <span class="px-2.5 py-0.5 rounded bg-slate-950 border border-slate-800 text-cyan-400 font-mono text-xs" id="h-slide-time">Video @ 00:00–00:10</span>
+                <span class="text-xs font-mono uppercase tracking-wider text-amber-400/90 font-semibold" id="h-slide-cat">I. Civilizational Teleology</span>
+              </div>
+              <h2 id="h-slide-title" class="text-xl sm:text-2xl font-extrabold text-white mt-1">Let's Evolve to a Type I Civilization</h2>
+              <p id="h-slide-subtitle" class="text-xs sm:text-sm text-slate-400">Good Faith Paradigm — NFT Harps of God Raffle &amp; Golden Plates Presentation</p>
+            </div>
+
+            <!-- Slide Controls -->
+            <div class="flex flex-wrap items-center gap-1.5">
+              <button onclick="prevHSlide()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold transition" title="Previous Slide (Left Arrow)">← Prev</button>
+              <select id="h-slide-select" onchange="goHSlide(parseInt(this.value))" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-amber-300 font-mono"></select>
+              <button onclick="nextHSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition" title="Next Slide (Right Arrow)">Next →</button>
+              <button id="h-tts-btn" onclick="toggleHSpeech()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition">🔊 Narrate</button>
+              <button id="h-auto-btn" onclick="toggleHAutoPlay()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition">▶ Auto-Play</button>
+            </div>
+          </div>
+
+          <!-- Dual Visual Showcase (Click any image for Full-Screen Lightbox) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+            <!-- Left Frame: YouTube / Physical Evidence -->
+            <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between group">
+              <div class="px-3 py-2 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between text-xs">
+                <span class="font-mono font-bold text-amber-400">🎥 PRIMARY ARTIFACT / VIDEO FRAME</span>
+                <span class="text-[11px] text-slate-400">Click image to zoom 🔍</span>
+              </div>
+              <div class="p-2 flex items-center justify-center bg-black h-64 sm:h-72 cursor-pointer overflow-hidden" onclick="openLightbox(document.getElementById('h-img1').src, document.getElementById('h-cap1').textContent)">
+                <img id="h-img1" src="./assets/vid_01_evolve_type1.jpg" alt="Primary Slide Evidence" class="max-h-full max-w-full object-contain transition duration-300 group-hover:scale-105" />
+              </div>
+              <div id="h-cap1" class="px-3 py-2 bg-slate-900/60 border-t border-slate-800/80 text-xs text-slate-300 text-center font-medium"></div>
+            </div>
+
+            <!-- Right Frame: Good Faith Paradigm Sacred Blueprint Enhancement -->
+            <div class="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden flex flex-col justify-between group">
+              <div class="px-3 py-2 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between text-xs">
+                <span class="font-mono font-bold text-cyan-400">✨ GOOD FAITH PARADIGM ENHANCEMENT</span>
+                <span class="text-[11px] text-slate-400">Click image to zoom 🔍</span>
+              </div>
+              <div class="p-2 flex items-center justify-center bg-black h-64 sm:h-72 cursor-pointer overflow-hidden" onclick="openLightbox(document.getElementById('h-img2').src, document.getElementById('h-cap2').textContent)">
+                <img id="h-img2" src="./assets/slice_01_sacred_blueprint.png" alt="GFP Enhancement Slide" class="max-h-full max-w-full object-contain transition duration-300 group-hover:scale-105" />
+              </div>
+              <div id="h-cap2" class="px-3 py-2 bg-slate-900/60 border-t border-slate-800/80 text-xs text-slate-300 text-center font-medium"></div>
+            </div>
+          </div>
+
+          <!-- Dual Commentary Columns -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-slate-950/90 border border-amber-500/30 rounded-xl p-4">
+              <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold mb-2">
+                🎥 Video Presentation Analysis (YouTube: YWelJDhywu0)
+              </h3>
+              <ul id="h-video-points" class="space-y-2 text-xs sm:text-sm text-slate-200 leading-relaxed list-disc list-inside"></ul>
+            </div>
+
+            <div class="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-4">
+              <h3 class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold mb-2">
+                ✨ Good Faith Paradigm Scientific &amp; Theological Synthesis
+              </h3>
+              <ul id="h-gfp-points" class="space-y-2 text-xs sm:text-sm text-slate-200 leading-relaxed list-disc list-inside"></ul>
+            </div>
+          </div>
+
+          <!-- Contextual Slide-to-NFT Purchase Strip -->
+          <div class="mt-4 p-3 rounded-xl bg-gradient-to-r from-amber-500/15 via-slate-900 to-emerald-500/15 border border-slate-800 flex flex-wrap items-center justify-between gap-3">
+            <div class="text-xs text-slate-200">
+              <span class="font-bold text-amber-300">Own the Artifacts Shown in This Presentation:</span>
+              Every <strong class="text-amber-300">G-Harps (#490643)</strong> and <strong class="text-emerald-300">Y-Harps (#492856)</strong> NFT includes entry into the 2 oz Gold, Silver &amp; Copper Medallion Raffle + VIP Museum Tour Admission.
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition">
+                Buy G-Harps #490643 ↗
+              </a>
+              <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition">
+                Buy Y-Harps #492856 ↗
+              </a>
+              <button onclick="setPresentationMode('widget')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-cyan-300 font-semibold text-xs transition">
+                🎛️ Launch 2000→2001 Plate Lab
+              </button>
+            </div>
+          </div>
+
+          <!-- 16-Slide Thumbnail Scrubber -->
+          <div id="h-thumb-strip" class="mt-4 pt-3 border-t border-slate-800 flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+        </section>
+
+        <!-- ***************************************************************** -->
+        <!-- MODULE 2: HARPS INLINE WIDGET — GOLDEN PLATES LAB & 9 ANALOGIES   -->
+        <!-- ***************************************************************** -->
+        <section id="section-widget" class="hidden bg-slate-900/95 border border-emerald-500/40 rounded-2xl p-4 sm:p-6 shadow-2xl space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800">
+            <div>
+              <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-mono text-xs font-bold">INTERACTIVE SIMULATOR SUITE</span>
+              <h2 class="text-xl font-extrabold text-white mt-1">Harps Inline Widget — Golden Plates Lab &amp; 9 Cosmic Analogies</h2>
+              <p class="text-xs text-slate-400">Hands-on physical-to-digital overlay simulators demonstrated by Jason Sprouse in YouTube: YWelJDhywu0</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="./harps_inline_widget.html" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition">
+                Open Standalone Widget Page ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Simulator Row: Golden Plate III (2000 -> 2001) + $1 Unfinished Pyramid & Sphinx -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <!-- Simulator A: Golden Plate III (2000 -> 2001 Harp Overlay) -->
+            <div class="bg-slate-950 border border-amber-500/40 rounded-xl p-4 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-bold text-amber-300 font-mono">1. GOLDEN PLATE III: 2000 → 2001 OVERLAY (10:45–11:20)</span>
+                  <span id="plate-year-badge" class="px-2.5 py-0.5 rounded text-xs font-mono font-extrabold bg-amber-500 text-slate-950">YEAR: 2000</span>
+                </div>
+                <p class="text-xs text-slate-300 mb-3">
+                  Slide the <strong>Y-Harps of God (#492856)</strong> card across Golden Plate III (<code>ART $20 MYSTERY $100</code>) to cover the zero on <code>$100</code> and transform <strong>2000</strong> into <strong>2001</strong>:
+                </p>
+
+                <!-- Interactive Golden Plate Visual -->
+                <div class="relative rounded-xl border-2 border-yellow-500/70 bg-gradient-to-br from-yellow-500/25 via-amber-600/15 to-yellow-800/30 p-4 overflow-hidden select-none" style="height: 156px;">
+                  <div class="text-[11px] font-mono font-bold tracking-widest text-amber-200/90">
+                    PLATE III // SOLID GOLD + EMERALD, SAPPHIRE &amp; DIAMOND INLAY
+                  </div>
+                  <div class="mt-4 flex items-baseline justify-between font-serif font-extrabold">
+                    <div class="text-2xl tracking-wider text-white">ART <span class="text-amber-300 underline decoration-dotted">$20</span></div>
+                    <div class="text-2xl tracking-wider text-white mr-3">MYSTERY $<span id="num-1" class="text-amber-300 underline">1</span><span id="num-00" class="text-amber-300">00</span></div>
+                  </div>
+                  <div class="mt-3 text-xs font-mono text-amber-200/80">
+                    MULTIVERSE PROOF: (1<sup>∞</sup> = 1<sup>∞</sup>)<sup>∞</sup> ⇔ (α<sup>∞</sup> = ω<sup>∞</sup>)<sup>∞</sup>
+                  </div>
+
+                  <!-- Movable Y-Harps Card Overlay -->
+                  <div id="harp-overlay-card" class="absolute top-9 rounded-lg border-2 border-emerald-400 bg-slate-950/95 px-2.5 py-2 shadow-xl transition-all duration-150 flex items-center gap-2" style="left: 14px; width: 112px;">
+                    <img src="./assets/asset_y_harps_front.jpg" alt="Y-Harps" class="w-8 h-10 object-cover rounded border border-emerald-500/50 shrink-0" />
+                    <div>
+                      <div class="text-[11px] font-mono font-bold text-emerald-400 leading-none">Y-Harps</div>
+                      <div class="text-[10px] text-slate-300 mt-0.5 leading-none">#492856</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 flex items-center justify-between gap-3">
+                <input id="harp-slider" type="range" min="0" max="100" value="0" oninput="updatePlateOverlay(this.value)" class="w-full accent-amber-500 cursor-pointer" />
+                <button onclick="togglePlateOverlay()" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 whitespace-nowrap transition">
+                  Toggle 2000 ↔ 2001
+                </button>
+              </div>
+            </div>
+
+            <!-- Simulator B: $1 Bill Unfinished Pyramid + Rorschach Sphinx Capstone -->
+            <div class="bg-slate-950 border border-cyan-500/40 rounded-xl p-4 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-bold text-cyan-300 font-mono">2. $1 PYRAMID + SPHINX CAPSTONE (08:45–09:55)</span>
+                  <span id="sphinx-dist-badge" class="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-slate-900 text-amber-400 border border-amber-500/40">0.0 mi</span>
+                </div>
+                <p class="text-xs text-slate-300 mb-3">
+                  Place the Rorschach <strong>Sphinx / Phoenix</strong> from the Y-Harps card over the $1 Unfinished Pyramid and count <code>"1-1000, 2-1000, 3-1000"</code> at <strong>2,000,000 mph</strong>:
+                </p>
+
+                <div class="relative rounded-xl border border-slate-800 bg-slate-900/80 p-3 flex items-center justify-around" style="height: 156px;">
+                  <svg width="220" height="120" viewBox="0 0 220 120">
+                    <polygon points="40,108 180,108 148,48 72,48" fill="none" stroke="#94a3b8" stroke-width="2" />
+                    <line x1="50" y1="92" x2="170" y2="92" stroke="#64748b" stroke-width="1" />
+                    <line x1="58" y1="77" x2="162" y2="77" stroke="#64748b" stroke-width="1" />
+                    <line x1="65" y1="62" x2="155" y2="62" stroke="#64748b" stroke-width="1" />
+                    <text x="110" y="103" text-anchor="middle" font-size="11" font-family="monospace" fill="#f8fafc">IN GOD WE TRUST</text>
+                    <g id="sphinx-capstone" transform="translate(0, -28)" opacity="0.35">
+                      <polygon points="72,46 148,46 110,8" fill="#eab308" fill-opacity="0.28" stroke="#eab308" stroke-width="2" />
+                      <circle cx="110" cy="30" r="8" fill="#10b981" />
+                      <text x="110" y="21" text-anchor="middle" font-size="11" font-weight="bold" fill="#fde047">SPHINX</text>
+                    </g>
+                  </svg>
+                  <div class="text-xs space-y-1.5 pr-2">
+                    <div class="font-bold text-white">Galactic Velocity:</div>
+                    <div class="font-mono text-sm font-extrabold text-amber-400">2,000,000 mph</div>
+                    <div class="text-[11px] text-slate-300 leading-snug" id="sphinx-timer-text">Click below to crown pyramid &amp; count 3 seconds</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <button onclick="runSphinxCount()" class="w-full py-2 px-3 rounded-lg text-xs font-extrabold bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 transition shadow">
+                  🦁 Crown Pyramid &amp; Count "1-1000, 2-1000, 3-1000" (1,666.7 Miles)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9-Stage Cosmic Mnemonic Interactive Explorer -->
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <div>
+                <span class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">3. THE 9-STAGE COSMIC MNEMONIC EXPLORER (REVELATION 15:2)</span>
+                <h3 class="text-base font-bold text-white">How the Harps of God Map the Timeline of the Universe</h3>
+              </div>
+              <span class="text-xs font-mono text-amber-400">"Stand on the sea of glass mingled with fire, having the Harps of God."</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-stretch">
+              <div class="md:col-span-5 grid grid-cols-3 gap-2" id="mnemonic-buttons"></div>
+              <div class="md:col-span-7 bg-slate-900/90 border border-slate-800 rounded-xl p-4 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between">
+                    <span id="mnem-step" class="text-xs font-mono font-bold text-amber-400">STAGE 01 OF 09</span>
+                    <span id="mnem-time" class="text-xs font-mono text-cyan-300">Video @ 04:00</span>
+                  </div>
+                  <h4 id="mnem-title" class="text-base font-bold text-white mt-1"></h4>
+                  <p id="mnem-video" class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed"></p>
+                  <div class="mt-3 p-3 rounded-lg bg-slate-950 border border-slate-800">
+                    <span class="text-xs font-bold text-cyan-400">Scriptural &amp; Physics Resonance: </span>
+                    <span id="mnem-scripture" class="text-xs text-slate-300"></span>
+                  </div>
+                </div>
+                <div class="mt-3 pt-2.5 border-t border-slate-800 flex items-center justify-between text-[11px]">
+                  <span class="text-slate-400">Encoded on <strong class="text-emerald-300">Y-Harps of God (#492856)</strong></span>
+                  <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="text-emerald-400 hover:underline font-bold">Acquire Y-Harps NFT on Rarible ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ***************************************************************** -->
+        <!-- MODULE 3: PRISMATIC ARCHITECTURE 1080P VIDEO & 20-SLIDE DECK      -->
+        <!-- ***************************************************************** -->
+        <section id="section-prismatic" class="hidden bg-slate-900/95 border border-cyan-500/40 rounded-2xl p-4 sm:p-6 shadow-2xl space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800">
+            <div>
+              <span class="px-2.5 py-0.5 rounded bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 font-mono text-xs font-bold">FULL-HD 1080P NARRATED PRESENTATION • 20 SLIDES</span>
+              <h2 class="text-xl font-extrabold text-white mt-1">Prismatic Architecture: The Light Over The Word</h2>
+              <p class="text-xs text-slate-400">1920×1080 @ 24fps • 10:11.8 Runtime • Studio Neural Voice (en-US-AvaNeural) + 120 BPM Celestial Harp &amp; Pad Bed</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="./Prismatic_Architecture.pdf" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-cyan-300 text-xs font-semibold transition">📄 Source PDF</a>
+              <a href="./Prismatic_Architecture_Presentation.mp4" download class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition">⬇ Download 1080p MP4</a>
+            </div>
+          </div>
+
+          <!-- Embedded 1080p Master Video Player -->
+          <div class="rounded-xl overflow-hidden border border-slate-800 bg-black shadow-inner">
+            <video id="master-video" controls preload="metadata" poster="./slides_prismatic/slide_01.png" class="w-full max-h-[540px] mx-auto">
+              <source src="./Prismatic_Architecture_Presentation.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+
+          <!-- Interactive 20-Slide Prismatic Deck Carousel -->
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-slate-800">
+              <div>
+                <span class="text-xs font-mono uppercase text-cyan-400 font-bold">🖼️ INTERACTIVE 20-SLIDE STUDIO CAROUSEL</span>
+                <h3 id="p-title" class="text-base sm:text-lg font-bold text-white">Slide 01: The Light Over The Word</h3>
+              </div>
+              <div class="flex flex-wrap items-center gap-1.5">
+                <button onclick="prevPSlide()" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-semibold">← Prev</button>
+                <span id="p-counter" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 font-mono text-xs text-amber-400">01 / 20</span>
+                <button onclick="nextPSlide()" class="px-2.5 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">Next →</button>
+                <button id="p-play-btn" onclick="toggleStudioAudio()" class="px-2.5 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Studio Narration</button>
+                <button id="p-auto-btn" onclick="toggleAutoPlay()" class="px-2.5 py-1 rounded bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold">▶ Auto-Advance</button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+              <div class="lg:col-span-7 bg-black rounded-xl overflow-hidden border border-slate-800 flex items-center justify-center cursor-pointer" onclick="openLightbox(document.getElementById('p-img').src, document.getElementById('p-title').textContent)">
+                <img id="p-img" src="./slides_prismatic/slide_01.png" alt="Prismatic Slide" class="w-full h-auto object-contain" />
+              </div>
+              <div class="lg:col-span-5 space-y-3">
+                <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5">
+                  <div class="flex items-center justify-between text-xs font-mono text-amber-400 mb-1.5">
+                    <span id="p-timecode">TIMECODE: 00:00 – 00:21</span>
+                    <span id="p-dur">21.3s</span>
+                  </div>
+                  <div class="text-[11px] font-mono uppercase text-cyan-400">Key Paradigm Synthesis</div>
+                  <p id="p-synthesis" class="text-xs sm:text-sm font-bold text-white mb-2.5"></p>
+                  <div class="text-[11px] font-mono uppercase text-slate-400">🎙️ Verbatim Studio Narration</div>
+                  <blockquote id="p-narration" class="text-xs text-slate-300 italic leading-relaxed border-l-2 border-amber-500 pl-2.5 mt-1"></blockquote>
+                  <audio id="p-audio" controls class="w-full mt-3 h-8" src="./audio_prismatic/slide_01.mp3"></audio>
+                </div>
+                <button onclick="seekVideoToCurrentSlide()" class="w-full py-2 px-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-bold transition">
+                  🎬 Jump Master 1080p Video Player to This Slide
+                </button>
+              </div>
+            </div>
+
+            <div id="p-strip" class="mt-4 pt-3 border-t border-slate-800 flex items-center gap-1.5 overflow-x-auto pb-1"></div>
+          </div>
+
+          <!-- 20-Slide Chapter & Timecode Table -->
+          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 overflow-x-auto">
+            <h4 class="text-sm font-bold text-white mb-2">Master 20-Slide Chapter &amp; Timecode Index</h4>
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="border-b border-slate-800 text-amber-400 font-mono">
+                  <th class="py-2 px-2">Slide</th>
+                  <th class="py-2 px-2">Timecode</th>
+                  <th class="py-2 px-2">Title</th>
+                  <th class="py-2 px-2">Synthesis</th>
+                  <th class="py-2 px-2 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="p-table-body" class="divide-y divide-slate-800/70"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ***************************************************************** -->
+        <!-- BOTTOM BANNER: DIRECT RARIBLE & MEDALLION RAFFLE SUMMARY          -->
+        <!-- ***************************************************************** -->
+        <section class="bg-gradient-to-r from-amber-500/15 via-slate-900 to-emerald-500/15 border border-amber-500/40 rounded-2xl p-5 shadow-xl">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+            <div class="md:col-span-7 space-y-1.5">
+              <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-amber-300 font-mono text-xs font-bold">
+                🏛️ Utnapishtim's Economic Ark • Real-World Asset (RWA) Backing
+              </div>
+              <h3 class="text-lg sm:text-xl font-extrabold text-white">
+                Acquire Your Harps of God NFT &amp; Enter the Precious Metal Medallion Raffle
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Proceeds directly fund casting the three <strong>Golden Plates</strong> in solid gold inlaid with emeralds, sapphires, and diamonds, plus crafting the <strong>Harps of God</strong> in solid onyx and emerald for the traveling <strong>Museum Tour</strong>.
+              </p>
+            </div>
+            <div class="md:col-span-5 flex flex-wrap sm:flex-nowrap items-center justify-end gap-2.5">
+              <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-lg transition">
+                🕊️ Buy G-Harps (#490643) ↗
+              </a>
+              <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-lg transition">
+                🌌 Buy Y-Harps (#492856) ↗
+              </a>
+              <button onclick="openVaultModal()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-bold text-xs transition">
+                ⚡ View Vault
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ===================================================================== -->
+      <!-- RIGHT SCREEN MARKETING RAIL: Y-HARPS OF GOD NFT (TOKEN ID #492856)    -->
+      <!-- ===================================================================== -->
+      <aside class="xl:col-span-2 order-3 xl:sticky xl:top-28 space-y-4">
+        <div class="bg-slate-900/95 border-2 border-emerald-500/50 rounded-2xl p-3.5 shadow-2xl glow-emerald">
+          <!-- Rail Header -->
+          <div class="flex items-center justify-between gap-1 mb-2">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono text-[10px] font-bold uppercase">
+              RIGHT WING • Y-HARPS
+            </span>
+            <span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-amber-400 font-mono text-[10px] font-semibold">
+              ● ERC-1155 #492856
+            </span>
+          </div>
+
+          <h2 class="text-base font-extrabold text-white leading-tight">Y-Harps of God NFT</h2>
+          <p class="text-[11px] text-emerald-300/90 font-medium mt-0.5">y8 Cosmic Harp, 2000→2001 Key &amp; Sphinx</p>
+
+          <!-- Interactive Front / Back Artwork Showcase -->
+          <div class="mt-2.5 relative group rounded-xl overflow-hidden border border-emerald-500/40 bg-black aspect-[4/5] flex items-center justify-center cursor-pointer" onclick="openLightbox(document.getElementById('y-harp-rail-img').src, 'Y-Harps of God NFT (Token ID #492856) — Front & Back Digital Twin Artwork')">
+            <img id="y-harp-rail-img" src="./assets/asset_y_harps_front.jpg" alt="Y-Harps of God NFT #492856" class="w-full h-full object-contain transition duration-300 group-hover:scale-105" />
+            <div class="absolute bottom-2 inset-x-2 bg-slate-950/85 backdrop-blur px-2 py-1 rounded-lg border border-slate-800 flex items-center justify-between text-[10px]">
+              <span id="y-harp-side-label" class="font-mono text-emerald-300 font-bold">FRONT: Y8 COSMIC HARP</span>
+              <span class="text-slate-400">🔍 Zoom</span>
+            </div>
+          </div>
+
+          <!-- Flip Front / Back Buttons -->
+          <div class="grid grid-cols-2 gap-1.5 mt-2">
+            <button id="y-btn-front" onclick="flipYHarp('front')" class="py-1 px-2 rounded-lg bg-emerald-500 text-slate-950 font-bold text-[11px] transition">
+              🌌 Front (y8 Harp)
+            </button>
+            <button id="y-btn-back" onclick="flipYHarp('back')" class="py-1 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] border border-slate-700 transition">
+              ✨ Back (Celebration)
+            </button>
+          </div>
+
+          <!-- Dynamic Slide Sync Context Box -->
+          <div class="mt-3 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+            <div class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center justify-between">
+              <span>⚡ ACTIVE SLIDE CONNECTION</span>
+              <span id="y-sync-slide-num">SLIDE 01</span>
+            </div>
+            <p id="y-harp-context-text" class="text-[11px] text-slate-200 mt-1 leading-snug">
+              Encodes the 9-Stage Cosmic Mnemonic from Time Zero to the Omega Point and unlocks the 2000→2001 Golden Plate III overlay.
+            </p>
+          </div>
+
+          <!-- Collector Utility Checklist -->
+          <ul class="mt-3 space-y-1.5 text-[11px] text-slate-300">
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">🥇</span>
+              <span><strong>Medallion Raffle Entry:</strong> Win 2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallions</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">🔑</span>
+              <span><strong>Plate III Overlay Key:</strong> Slides over <code>$20 / $100</code> to transform <strong>2000 → 2001</strong></span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">🦁</span>
+              <span><strong>Sphinx Capstone:</strong> Crowns the $1 Pyramid at 2,000,000 mph</span>
+            </li>
+            <li class="flex items-start gap-1.5">
+              <span class="text-emerald-400 font-bold">🏛️</span>
+              <span><strong>VIP Museum Pass:</strong> 1-Time Admission to the Golden Plates Tour</span>
+            </li>
+          </ul>
+
+          <!-- Primary & Secondary Purchase CTAs -->
+          <div class="mt-3.5 space-y-2">
+            <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg transition">
+              <span>🛒 Buy Y-Harps on Rarible</span>
+              <span>↗</span>
+            </a>
+            <button onclick="openVaultModal('y')" class="w-full py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-emerald-500/40 text-emerald-300 font-bold text-xs transition">
+              ⚡ Raffle Prize &amp; Contract Info
+            </button>
+          </div>
+
+          <!-- Golden Plates Mini Preview -->
+          <div class="mt-3 pt-2.5 border-t border-slate-800 flex items-center gap-2.5">
+            <img src="./assets/asset_golden_plates_blueprint.png" alt="Golden Plates Blueprint" class="w-11 h-11 rounded-lg object-cover border border-emerald-500/40 shrink-0 cursor-pointer" onclick="openLightbox('./assets/asset_golden_plates_blueprint.png', 'Blueprint of the 3 Solid-Gold & Gemstone Golden Plates — Multiverse Proof & Art $20 Mystery $100')" />
+            <div class="text-[10px] text-slate-400 leading-tight">
+              <div class="text-slate-200 font-bold">Golden Plates Key</div>
+              Unlocks the 2000→2001 Plate III &amp; Multiverse Proof
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- INTERACTIVE NFT PURCHASE & MEDALLION RAFFLE CHECKOUT MODAL              -->
+  <!-- ======================================================================= -->
+  <div id="nft-vault-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-slate-900 border-2 border-amber-500/50 rounded-2xl max-w-5xl w-full p-4 sm:p-6 shadow-2xl my-auto max-h-[92vh] overflow-y-auto">
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-slate-800">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded bg-amber-500 text-slate-950 font-mono text-xs font-extrabold">OFFICIAL WEB3 &amp; RWA CHECKOUT VAULT</span>
+            <span class="text-xs font-mono text-emerald-400">● Ethereum ERC-1155 Verified</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-1">
+            Acquire the Harps of God NFTs &amp; Enter the Medallion Raffle
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400">
+            Select either Digital Twin NFT below (or collect the complete pair) on Rarible to lock in your raffle entry and Museum Tour VIP pass.
+          </p>
+        </div>
+        <button onclick="closeVaultModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700">
+          ✕ Close
+        </button>
+      </div>
+
+      <!-- Two NFT Cards Side-by-Side -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+        <!-- Left Card: G-Harps #490643 -->
+        <div id="vault-card-g" class="bg-slate-950 border-2 border-amber-500/50 rounded-xl p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-2">
+              <span class="text-amber-400 font-bold">🕊️ G-HARPS OF GOD (LEFT RAIL)</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">Token ID #490643</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 my-2">
+              <img src="./assets/asset_g_harps_front.jpg" alt="G-Harps Front" class="w-full h-40 object-contain bg-black rounded-lg border border-slate-800 cursor-pointer" onclick="openLightbox('./assets/asset_g_harps_front.jpg', 'G-Harps of God (#490643) — Front Artwork')" />
+              <img src="./assets/asset_harps_of_god_both.jpg" alt="Harps Pair & Back" class="w-full h-40 object-contain bg-black rounded-lg border border-slate-800 cursor-pointer" onclick="openLightbox('./assets/asset_harps_of_god_both.jpg', 'G-Harps & Y-Harps Complete Front & Back Pair')" />
+            </div>
+            <h3 class="text-base font-extrabold text-white mt-2">G-Harps of God — Syncretic Dove Edition</h3>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Features the ascending Dove of the Holy Spirit bathed in Uncreated Light and the 7 World Religion symbols with Jason Sprouse's axiom: <em>"Beyond all the complex perspectives, life is pure and simple."</em>
+            </p>
+            <div class="mt-3 space-y-1 text-xs text-slate-300">
+              <div>✅ <strong>Raffle Entry:</strong> 2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallions</div>
+              <div>✅ <strong>Museum Pass:</strong> 1-Time VIP Admission to the Golden Plates Tour</div>
+              <div>✅ <strong>Ecosystem Access:</strong> Y8 Web3 Wallet &amp; The-Beach WebXR Oasis</div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800">
+            <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg transition">
+              <span>🛒 Purchase G-Harps (#490643) on Rarible</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Card: Y-Harps #492856 -->
+        <div id="vault-card-y" class="bg-slate-950 border-2 border-emerald-500/50 rounded-xl p-4 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs font-mono mb-2">
+              <span class="text-emerald-400 font-bold">🌌 Y-HARPS OF GOD (RIGHT RAIL)</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Token ID #492856</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 my-2">
+              <img src="./assets/asset_y_harps_front.jpg" alt="Y-Harps Front" class="w-full h-40 object-contain bg-black rounded-lg border border-slate-800 cursor-pointer" onclick="openLightbox('./assets/asset_y_harps_front.jpg', 'Y-Harps of God (#492856) — Front Artwork')" />
+              <img src="./assets/asset_y_harps_back.jpg" alt="Y-Harps Back" class="w-full h-40 object-contain bg-black rounded-lg border border-slate-800 cursor-pointer" onclick="openLightbox('./assets/asset_y_harps_back.jpg', 'Y-Harps of God (#492856) — Back Artwork (IT\'S A CELEBRATION)')" />
+            </div>
+            <h3 class="text-base font-extrabold text-white mt-2">Y-Harps of God — Cosmic Mnemonic &amp; Plate Key</h3>
+            <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+              Features the <code>y8 design</code> cosmic harp, Supermassive Black Hole vortex, Rorschach Sphinx/Phoenix, and <em>"IT'S A CELEBRATION"</em> Milky Way Galactic Arm strings.
+            </p>
+            <div class="mt-3 space-y-1 text-xs text-slate-300">
+              <div>✅ <strong>Raffle Entry:</strong> 2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallions</div>
+              <div>✅ <strong>Plate III Key:</strong> Unlocks the <code>2000 → 2001</code> Golden Plate transformation</div>
+              <div>✅ <strong>Museum Pass:</strong> 1-Time VIP Admission to the Golden Plates Tour</div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800">
+            <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="w-full py-2.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-2 shadow-lg transition">
+              <span>🛒 Purchase Y-Harps (#492856) on Rarible</span>
+              <span>↗</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="bg-slate-900/90 border border-emerald-500/30 rounded-xl p-4 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between text-xs font-mono text-emerald-400 mb-1">
-            <span>ARTIFACT 02 • INTERACTIVE LAB</span>
-            <span>3 SIMULATORS</span>
+      <!-- Raffle Prizes & On-Chain Verification Row -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 bg-slate-950 border border-slate-800 rounded-xl p-4">
+        <div class="md:col-span-5 flex items-center gap-3">
+          <img src="./assets/asset_medallions_qr_coin.png" alt="Medallions & QR Code" class="w-24 h-24 rounded-lg object-contain bg-black border border-amber-500/40 shrink-0 cursor-pointer" onclick="openLightbox('./assets/asset_medallions_qr_coin.png', 'Medallion Die Blueprint, QR Code & 11:11 Reverse')" />
+          <div class="text-xs space-y-1">
+            <div class="font-bold text-amber-300">Physical Raffle Collateral</div>
+            <p class="text-slate-300 leading-snug">
+              2 oz Gold, 2 oz Silver &amp; 2 oz Copper Medallions struck from the 2005 <em>"Miracles of The Holy Spirit"</em> silhouettes.
+            </p>
           </div>
-          <h2 class="text-base font-bold text-white">Harps Inline Widget — Golden Plates &amp; 9 Cosmic Analogies</h2>
-          <p class="text-xs text-slate-400 mt-1">Interactive 2000 → 2001 Golden Plate III card overlay slider, $1 Unfinished Pyramid + Sphinx 2,000,000 mph counter, and 9-stage mnemonic.</p>
         </div>
-        <div class="mt-3 pt-3 border-t border-slate-800 flex items-center justify-between gap-2 text-xs">
-          <button onclick="setView('widget')" class="px-3 py-1.5 rounded bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold">Focus View</button>
-          <a href="./harps_inline_widget.html" target="_blank" class="text-emerald-300 hover:underline font-mono">Open Standalone ↗</a>
-        </div>
-      </div>
 
-      <div class="bg-slate-900/90 border border-cyan-500/30 rounded-xl p-4 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between text-xs font-mono text-cyan-400 mb-1">
-            <span>ARTIFACT 03 • 1080P VIDEO + 20 SLIDES</span>
-            <span>10:11.8 MP4</span>
+        <div class="md:col-span-7 flex flex-col justify-between space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-900 px-3 py-2 rounded-lg border border-slate-800">
+            <div class="text-xs">
+              <span class="text-slate-400 font-mono">ERC-1155 Contract:</span>
+              <code id="contract-addr" class="text-amber-300 font-mono ml-1">0xd07dc4262bcdbf85190c01c996b4c06a461d2430</code>
+            </div>
+            <button onclick="copyContract()" id="copy-btn" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-mono text-cyan-300 border border-slate-700">
+              📋 Copy Contract
+            </button>
           </div>
-          <h2 class="text-base font-bold text-white">Prismatic Architecture: The Light Over The Word</h2>
-          <p class="text-xs text-slate-400 mt-1">Full-HD (1920×1080) narrated MP4 video presentation, interactive 20-slide studio carousel with MP3 audio, timecode seeker, and PDF deck.</p>
-        </div>
-        <div class="mt-3 pt-3 border-t border-slate-800 flex items-center justify-between gap-2 text-xs">
-          <button onclick="setView('prismatic')" class="px-3 py-1.5 rounded bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold">Focus View</button>
-          <a href="./prismatic_architecture.html" target="_blank" class="text-cyan-300 hover:underline font-mono">Open Standalone ↗</a>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+            <a href="https://y8-web-jason-sprouse.fly.dev" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 font-semibold border border-slate-700">
+              🌐 Y8 Web3 Wallet &amp; Command ↗
+            </a>
+            <a href="https://y8-beach-jason-sprouse.fly.dev" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-300 font-semibold border border-slate-700">
+              🏖️ The-Beach WebXR Oasis ↗
+            </a>
+            <a href="mailto:support@goodfaith.church?subject=Harps%20of%20God%20NFT%20%26%20Medallion%20Raffle%20Inquiry" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-emerald-300 font-semibold border border-slate-700">
+              ✉️ Concierge / PYUSD Desk
+            </a>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- SECTION 1: NFT HARPS OF GOD RAFFLE PRESENTATION (16 SLIDES) -->
-    <section id="sec-harps" class="space-y-3">
-      <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-900/80 border border-amber-500/30 rounded-xl px-4 py-2.5">
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-mono text-xs font-bold">01</span>
-          <h2 class="text-sm md:text-base font-bold text-white">NFT Harps of God Raffle Presentation — Good Faith Paradigm (16-Slide Interactive Deck)</h2>
-        </div>
-        <div class="flex items-center gap-3 text-xs">
-          <a href="./docs/nft_harps_of_god_raffle_presentation.md" target="_blank" class="text-slate-300 hover:text-white font-mono">Markdown Deck ↗</a>
-          <a href="./nft_harps_presentation.html" target="_blank" class="px-2.5 py-1 rounded bg-amber-500/20 border border-amber-500/40 text-amber-300 font-semibold">Full Screen ↗</a>
-        </div>
-      </div>
-      <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-        <iframe src="./nft_harps_presentation.html" title="NFT Harps of God Raffle Presentation" class="w-full border-0" style="height: 860px;"></iframe>
-      </div>
-    </section>
+  <!-- ======================================================================= -->
+  <!-- FULL-SCREEN HIGH-RES IMAGE LIGHTBOX                                     -->
+  <!-- ======================================================================= -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur flex flex-col items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="max-w-6xl w-full flex items-center justify-between text-xs text-slate-300 mb-2 px-2">
+      <span id="lightbox-caption" class="font-bold text-amber-300 text-sm"></span>
+      <button onclick="closeLightbox()" class="px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-white font-bold">✕ Close (ESC)</button>
+    </div>
+    <img id="lightbox-img" src="" alt="Full Screen Artifact" class="max-h-[84vh] max-w-[94vw] object-contain rounded-xl border border-slate-800 shadow-2xl" />
+  </div>
 
-    <!-- SECTION 2: HARPS INLINE WIDGET -->
-    <section id="sec-widget" class="space-y-3">
-      <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-900/80 border border-emerald-500/30 rounded-xl px-4 py-2.5">
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-emerald-500 text-slate-950 font-mono text-xs font-bold">02</span>
-          <h2 class="text-sm md:text-base font-bold text-white">Harps Inline Widget — Interactive Golden Plates Lab, Sphinx Counter &amp; 9 Cosmic Analogies</h2>
-        </div>
-        <div class="flex items-center gap-3 text-xs">
-          <a href="./harps_inline_widget.html" target="_blank" class="px-2.5 py-1 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-semibold">Full Screen ↗</a>
-        </div>
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-5 px-4 text-center text-xs text-slate-500 mt-8">
+    <div class="max-w-[1880px] mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <strong class="text-slate-300">Digital Golden Plates — Good Faith Paradigm</strong> • Curated by Jason Sprouse •
+        <a href="https://github.com/jasonsprouse/digital-golden-plates" target="_blank" rel="noopener" class="text-amber-400 hover:underline">GitHub Repository</a>
       </div>
-      <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-        <iframe src="./harps_inline_widget.html" title="Harps Inline Widget" class="w-full border-0" style="height: 520px;"></iframe>
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="./nft_harps_presentation.html" class="hover:text-slate-300">Standalone 16-Slide Deck</a>
+        <span>•</span>
+        <a href="./harps_inline_widget.html" class="hover:text-slate-300">Standalone Harps Widget</a>
+        <span>•</span>
+        <a href="./prismatic_architecture.html" class="hover:text-slate-300">Standalone Prismatic 1080p Video</a>
       </div>
-    </section>
-
-    <!-- SECTION 3: PRISMATIC ARCHITECTURE VIDEO PRESENTATION (20 SLIDES + 1080P MP4) -->
-    <section id="sec-prismatic" class="space-y-3">
-      <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-900/80 border border-cyan-500/30 rounded-xl px-4 py-2.5">
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-cyan-500 text-slate-950 font-mono text-xs font-bold">03</span>
-          <h2 class="text-sm md:text-base font-bold text-white">Prismatic Architecture: The Light Over The Word — Full-HD Video Presentation &amp; 20-Slide Studio Deck</h2>
-        </div>
-        <div class="flex items-center gap-3 text-xs">
-          <a href="./Prismatic_Architecture.pdf" target="_blank" class="text-cyan-300 hover:underline font-mono">PDF Deck ↗</a>
-          <a href="./Prismatic_Architecture_Presentation.mp4" download class="text-amber-300 hover:underline font-mono">Download MP4 (68.9 MB) ⬇</a>
-          <a href="./prismatic_architecture.html" target="_blank" class="px-2.5 py-1 rounded bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-semibold">Full Screen ↗</a>
-        </div>
-      </div>
-      <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-        <iframe src="./prismatic_architecture.html" title="Prismatic Architecture Full-HD Video Presentation" class="w-full border-0" style="height: 1650px;"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-slate-800 bg-slate-900/80 py-4 px-6 text-center text-xs text-slate-400">
-    Good Faith Paradigm • Digital Golden Plates &amp; NFT Harps of God Raffle Presentation • <a href="https://github.com/jasonsprouse/digital-golden-plates" class="text-amber-400 hover:underline">github.com/jasonsprouse/digital-golden-plates</a>
+    </div>
   </footer>
 
+  <!-- ======================================================================= -->
+  <!-- MASTER INTERACTIVE SCRIPT                                               -->
+  <!-- ======================================================================= -->
   <script>
-    function setView(mode) {
-      const sections = {
-        harps: document.getElementById('sec-harps'),
-        widget: document.getElementById('sec-widget'),
-        prismatic: document.getElementById('sec-prismatic')
-      };
-      const buttons = {
-        all: document.getElementById('nav-all'),
-        harps: document.getElementById('nav-harps'),
-        widget: document.getElementById('nav-widget'),
-        prismatic: document.getElementById('nav-prismatic')
-      };
+    // 1. 16-SLIDE NFT HARPS OF GOD RAFFLE PRESENTATION DATA
+    const HARPS_SLIDES = [
+      {
+        num: "01", time: "00:00–00:10", category: "I. Civilizational Teleology",
+        title: "Let's Evolve to a Type I Civilization",
+        subtitle: "Good Faith Paradigm — NFT Harps of God Raffle & Golden Plates Presentation",
+        img1: "./assets/vid_01_evolve_type1.jpg",
+        cap1: "YouTube Video (00:02): \"Let's Evolve to a Type 1 Civilization\" (4/5 Stars)",
+        img2: "./assets/slice_01_sacred_blueprint.png",
+        cap2: "GFP Enhancement: The Sacred Blueprint — Unified Field Theory of Physics, Neuroscience & Theology",
+        video_points: [
+          "Opens with the 4-of-5 star call to action: \"Let's Evolve to a Type 1 Civilization.\"",
+          "Jason Sprouse introduces the Good Faith Paradigm Raffle for precious metal medallions, Digital Twin NFTs, and the Golden Plates."
+        ],
+        gfp_points: [
+          "Pierre Teilhard de Chardin & Frank Tipler's Omega Point: Evolution accelerates from Geosphere → Biosphere → Noosphere toward infinite computational consciousness.",
+          "Photocentrism Axiom: \"The Light (Photons/QED) > The Word (Logocentrism/Dogma)\"—uniting world religions through objective physical observation."
+        ],
+        g_sync: "Anchors the Type I Civilization Photocentrism Axiom ('The Light > The Word') across 7 world religions on the G-Harps card.",
+        y_sync: "Encodes the 9-Stage Cosmic Mnemonic from Time Zero to the Omega Point on the y8 cosmic harp."
+      },
+      {
+        num: "02", time: "00:12–00:35", category: "II. The Economic Ark Raffle",
+        title: "2 oz Gold, 2 oz Silver & 2 oz Copper Medallions",
+        subtitle: "Tangible Sovereign Collateral Paired with Digital Twin NFTs",
+        img1: "./assets/vid_02_raffle_medallions.jpg",
+        cap1: "YouTube Video (00:17): Jason Sprouse displaying the Gold, Silver & Copper Medallions",
+        img2: "./assets/slice_10_economics_of_salvation.png",
+        cap2: "GFP Enhancement: The Economics of Salvation — Utnapishtim's Economic Ark Collateral",
+        video_points: [
+          "Raffle prizes consist of two-ounce Gold, two-ounce Silver, and two-ounce Copper medallions encased in protective plastic.",
+          "Each medallion carries dual Masculine and Feminine relief designs."
+        ],
+        gfp_points: [
+          "Epic of Gilgamesh (Tablet XI) & Atrahasis: Unlike Genesis (which preserves biological life only), Utnapishtim loads Silver, Gold (\"Secure Collateral\"), and all the craftsmen (techne).",
+          "Gold represents the incorruptible solar/masculine catalyst; Silver represents lunar/feminine redemption; Copper represents planetary conductivity."
+        ],
+        g_sync: "Purchasing G-Harps (#490643) enters you directly into the raffle for these 2 oz Gold, Silver & Copper Medallions.",
+        y_sync: "Purchasing Y-Harps (#492856) enters you directly into the raffle for these 2 oz Gold, Silver & Copper Medallions."
+      },
+      {
+        num: "03", time: "00:26–01:18", category: "III. Numismatic Theology",
+        title: "Medallion Die Blueprint: \"The Miracles of The Holy Spirit\"",
+        subtitle: "Masculine & Feminine Obverse Reliefs + 11:11 Reverse Pillars",
+        img1: "./assets/asset_medallions_qr_coin.png",
+        cap1: "Archival Die Design: Feminine & Masculine Obverse + One Trillion Dollar / 11:11 Reverse",
+        img2: "./assets/slice_11_theology_of_fiat.png",
+        cap2: "GFP Enhancement: The Theology of Fiat & The Tripartite Pledge",
+        video_points: [
+          "The medallions are struck directly from silhouettes captured in the 2005 photographs titled \"The Miracles of The Holy Spirit.\"",
+          "Features a Feminine obverse (maternal womb silhouette) and Masculine obverse (phallic pillar of light) with four vertical columns on the reverse."
+        ],
+        gfp_points: [
+          "The Trillion Dollar Coin Relic: Embodies sovereign value creation (Creatio ex nihilo — \"IN GOD WE TRUST\" / \"E PLURIBUS UNOM\").",
+          "Fulfills the Declaration of Independence Tripartite Pledge: Our Lives (Biological Ark), Our Fortunes (Economic Ark), and Our Sacred Honor (Sacred Covenant)."
+        ],
+        g_sync: "Pairs with the Feminine/Maternal Womb & Dove silhouette struck into the Raffle Medallion obverse.",
+        y_sync: "Pairs with the Masculine Pillar of Light & 11:11 Midwayer Reverse struck into the Raffle Medallions."
+      },
+      {
+        num: "04", time: "00:36–01:17", category: "IV. Phenomenological Prompt",
+        title: "The 2005 Aquarium Reflections: Physics of Theophany",
+        subtitle: "Double-Slit Wave Collapse, Zero Local Entropy & Osirian Reconstruction",
+        img1: "./assets/vid_03_miracles_sheet.jpg",
+        cap1: "The Two 2005 Photographs: \"The Miracles of The Holy Spirit\" (Aquarium Tunnel Reflections)",
+        img2: "./assets/pdf_miracles_of_the_holy_spirit_pair.png",
+        cap2: "GFP Enhancement: Quantum Pneumatology (ΔS_local = 0) & The Double-Slit Observer Effect",
+        video_points: [
+          "Jason holds up the printed sheet of \"The Miracles of The Holy Spirit\" (01:18), explaining that the images encode both religious and scientific analogies."
+        ],
+        gfp_points: [
+          "Quantum Electrodynamics (QED) & Double-Slit Experiment: The camera lens acts as the detector collapsing the probability wave into a visible particle Theophany.",
+          "Burning Bush Physics (ΔS_local = 0): Perfect photon-matter coherence without thermal degradation, paralleling Isis reconstructing Osiris with the Golden Phallus to conceive Horus."
+        ],
+        g_sync: "Manifests the Dove of the Holy Spirit & Uncreated Golden Light captured in the 2005 Theophany photos.",
+        y_sync: "Encodes the zero-entropy quantum wave coherence (ΔS_local = 0) across the Sea of Glass."
+      },
+      {
+        num: "05", time: "00:35–01:10", category: "V. Biological Theophany",
+        title: "Fetal Development in the Womb & The SRY Gene Catalyst",
+        subtitle: "Weeks 0–6 Indifferent Female Baseline to Week-7 Pneumatic Transcription",
+        img1: "./assets/slice_05_sry_gene_catalyst.png",
+        cap1: "YouTube Video (00:45–01:18): Explaining Embryonic Female Origins & Hormonal Blueprints",
+        img2: "./assets/pdf_osirian_resurrection_cycle.png",
+        cap2: "GFP Enhancement: Week-7 SRY Gene Catalyst & Testis-Determining Factor (TDF)",
+        video_points: [
+          "In the womb during the fetal cycle, every human embryo develops first with female origins.",
+          "As testosterone or estrogen takes its pace, it fulfills the differentiated developmental blueprint."
+        ],
+        gfp_points: [
+          "Weeks 0–6 (Indifferent Stage): All mammalian embryos (XX and XY) share an identical female baseline (The Divine Feminine / Mater / Womb of Space).",
+          "Week 7 (SRY Catalyst): The SRY gene on the Y chromosome triggers TDF, Testosterone, and AMH—serving as the biological type of the Holy Spirit (Pneuma) differentiating the soul."
+        ],
+        g_sync: "G-Harps honors the primordial Weeks 0–6 Divine Feminine vessel and unifying maternal baseline.",
+        y_sync: "Y-Harps ('Y' chromosome catalyst) represents the Week-7 SRY genetic Fiat Lux spark."
+      },
+      {
+        num: "06", time: "01:18–01:42", category: "VI. Scriptural & Web3 Artifacts",
+        title: "The Harps of God: G-Harps (#490643) & Y-Harps (#492856)",
+        subtitle: "Revelation 15:2, Psalm 84:11, Isaiah 60:19–20 & Rarible Smart Contracts",
+        img1: "./assets/asset_harps_of_god_both.jpg",
+        cap1: "The Harps of God: G-Harps (Left, Front/Back) & Y-Harps (Right, Front/Back)",
+        img2: "./assets/slice_08_supernatural_symmetry.png",
+        cap2: "GFP Enhancement: Supernatural Symmetry Across World Religions",
+        video_points: [
+          "Cites Revelation 15:2: Those victorious over the beast and the number of his name stand on a sea of glass mingled with fire, holding the Harps of God.",
+          "Displays both physical Harps of God cards paired with their digital twin NFTs."
+        ],
+        gfp_points: [
+          "G-Harps of God (Rarible Token #490643): Features the Dove of the Holy Spirit and 7 world religion emblems with the quote: \"Beyond all the complex perspectives, life is pure and simple.\"",
+          "Y-Harps of God (Rarible Token #492856): Features the y8 design emblem, purple Y vortex, infinity symbol, and \"IT'S A CELEBRATION\" cosmic harp strings."
+        ],
+        g_sync: "FEATURED SLIDE: G-Harps (#490643) is showcased on the Left side of this slide—click 'Buy G-Harps on Rarible' below!",
+        y_sync: "FEATURED SLIDE: Y-Harps (#492856) is showcased on the Right side of this slide—click 'Buy Y-Harps on Rarible' below!"
+      },
+      {
+        num: "07", time: "01:43–02:22", category: "VII. Cosmological Architecture",
+        title: "The Cosmic Mnemonic: 9 Scientific Analogies of the Universe",
+        subtitle: "Intentional Universal Design + Serendipitous Astronomical Discovery",
+        img1: "./assets/vid_04_mnemonic_overlay.jpg",
+        cap1: "YouTube Video (01:45): On-Screen \"Mnemonic\" Overlay as Jason Explains the Memory Technique",
+        img2: "./assets/pdf_galactic_harp_exegesis.png",
+        cap2: "GFP Enhancement: Cosmological Exegesis of the Galactic Harp & 9-Stage Sequence",
+        video_points: [
+          "Defines a \"Mnemonic\" as a mind memorization technique that maps celestial objects across the timeline of the universe using the Harps of God cards.",
+          "Combines elements designed with conscious intent alongside cosmic parallels discovered serendipitously afterward."
+        ],
+        gfp_points: [
+          "Complete 9-Stage Sequence codified in \"The Physics of Theophany\" §1.9: (1) Time Zero, (2) Cosmic Dark Ages, (3) Birth of First Stars, (4) Supermassive Black Hole, (5) Galactic Arm, (6) Quasar, (7) Aurora Borealis, (8) Dark Matter, (9) Graviton."
+        ],
+        g_sync: "Provides the theological lens ('God is a sun and a shield' — Psalm 84:11) for the 9-stage cosmic map.",
+        y_sync: "Every visual layer of Y-Harps (#492856) physically encodes one of the 9 stages of cosmic evolution."
+      },
+      {
+        num: "08", time: "02:23–03:15 & 05:38–06:20", category: "VIII. Planetary & Relativistic Motion",
+        title: "Examples 1 & 2: Aurora Borealis & Our 2,000,000 MPH Flight",
+        subtitle: "\"No Sea or Sky, Just a Mind in Flight, On a Ride Through the Universe\"",
+        img1: "./assets/vid_05_aurora_borealis.jpg",
+        cap1: "YouTube Video (02:28): \"Aurora Borealis\" Overlay & Placing the Harp Card Over Earth",
+        img2: "./assets/vid_19_3d_aurora_globe.jpg",
+        cap2: "3D SketchUp Visualization (Harp_Plates.mp4): Y-Harps Card Crowning Earth's North Pole",
+        video_points: [
+          "Aurora Borealis (02:24): The green/purple arch on the Y-Harps card was originally designed to look like the Aurora Borealis over an Earth-like planet.",
+          "Universal Look & 2,000,000 MPH Motion (02:45 & 05:45): Sitting stationary = 2,000,000 mph; Car = 2,000,040 mph; Plane = 2,000,600 mph; ISS = 2,017,500 mph.",
+          "Recites the inspiring poem: \"No sea or sky, just a mind in flight, on a ride through the universe despite the fact you can't see the Ultimate Reality.\""
+        ],
+        gfp_points: [
+          "Demonstrates how local planetary electromagnetism (solar wind exciting atmospheric atoms via Earth's magnetosphere) mirrors macrocosmic QED photon interactions."
+        ],
+        g_sync: "Connects planetary magnetosphere protection ('sun and a shield') to Psalm 84:11 on the G-Harps card.",
+        y_sync: "The green/purple arch on Y-Harps (#492856) crowns Earth's North Pole as the Aurora Borealis."
+      },
+      {
+        num: "09", time: "04:00–04:55", category: "IX. Stellar Genesis & Quantum Gravity",
+        title: "Examples 3, 4 & 5: Early Universe, First Star & The Graviton",
+        subtitle: "Post-Big Bang H/He/Li Cooling, Primordial Gas Vortexes & Gravity Boson",
+        img1: "./assets/vid_07_early_universe_overlay.jpg",
+        cap1: "YouTube Video (04:00): \"Early Universe\" Overlay with Target Circles on the Card",
+        img2: "./assets/asset_y_harps_front.jpg",
+        cap2: "Close-Up of Y-Harps Front: Swirling Vortexes, First Star Ignition & Graviton Dot",
+        video_points: [
+          "Early Universe & Dark Ages (04:00): After the Big Bang cooled, hydrogen, helium, and lithium filled the expanding vacuum.",
+          "Birth of the First Star (04:20): Vacuum expansion created vortexes where gas accumulated until mass and pressure ignited nuclear fusion.",
+          "The Graviton (04:45): The discrete circular dot on the card represents the theoretical elementary particle mediating the force of gravity."
+        ],
+        gfp_points: [
+          "Theological Analogue: Stellar fusion corresponds to \"Let there be light\" (Genesis 1:3), while the Graviton and Higgs Field (\"The God Particle\") model how spiritual intent acquires physical mass."
+        ],
+        g_sync: "Mirrors Genesis 1:3 ('Let there be light') as the unifying creative spark across all 7 faiths.",
+        y_sync: "Zoom into the Y-Harps (#492856) front artwork on the Right Rail to inspect the First Star & Graviton dot!"
+      },
+      {
+        num: "10", time: "04:58–05:38 & 06:22–06:45", category: "X. Gravitational Singularities",
+        title: "Examples 6 & 7: Supermassive Black Holes, 3 Earths & Quasars",
+        subtitle: "Gravitational Vortexes, Rogue Black Holes & Event Horizon Accretion Beacons",
+        img1: "./assets/vid_09_quasar_overlay.jpg",
+        cap1: "YouTube Video (06:32): \"Quasar\" Overlay & Siphoning Stellar Gas at the Event Horizon",
+        img2: "./assets/vid_20_3d_three_earths_table.jpg",
+        cap2: "3D Table Layout (Harp_Plates.mp4): The 3 Earth Globes & Golden Plates Alignment",
+        video_points: [
+          "Supermassive Black Hole (05:00): Using three Earth representations on the table, the dark purple/black vortex of the card demonstrates a Supermassive Black Hole suspending and rotating stars and planets (plus rogue black holes).",
+          "Quasar (06:25): Placing the card beside a star near the Event Horizon shows the black hole siphoning stellar gas to ignite the brightest object in the universe."
+        ],
+        gfp_points: [
+          "Holographic Principle: All 3D information inside the volume is encoded on the 2D boundary surface of the horizon, linking to ER=EPR quantum entanglement."
+        ],
+        g_sync: "Illustrates Isaiah 60:19–20 ('The Lord shall be unto thee an everlasting light') via the Quasar beacon.",
+        y_sync: "The dark purple 'Y' vortex on Y-Harps (#492856) models the Supermassive Black Hole & Event Horizon."
+      },
+      {
+        num: "11", time: "06:48–07:30", category: "XI. Galactic Eschatology",
+        title: "Example 8: The Milky Way Galactic Arm & \"Sea of Glass\"",
+        subtitle: "Interstellar Dust Lanes as the Vibrating Strings of the Harps of God",
+        img1: "./assets/vid_10_galactic_arm_milky_way.jpg",
+        cap1: "YouTube Video (07:02): Milky Way Galactic Arm Inset Compared with Horizontal Y-Harps Card",
+        img2: "./assets/slice_12_galactic_eschatology.png",
+        cap2: "GFP Enhancement: Galactic Eschatology — The Macrocosmic Temple (Revelation 15:2)",
+        video_points: [
+          "Holds the Y-Harps card horizontally next to a photograph of the Milky Way galaxy (07:02).",
+          "Shows how the green/purple central band and dark dust streaks replicate the leftover dust and gas remnants of our Galactic Arm."
+        ],
+        gfp_points: [
+          "Revelation 15:2 Decoded: The \"Sea of Glass mingled with fire\" is an observational map of the Milky Way Galactic Plane illuminated by its supermassive core.",
+          "NASA Sonification: Astronomical sonification projects convert these vertical dust filaments into musical pitch—literally turning the Galactic Arm into a cosmic harp."
+        ],
+        g_sync: "Fulfils Revelation 15:2: standing victorious on the Sea of Glass holding the Harps of God.",
+        y_sync: "Flip Y-Harps (#492856) to its Back ('IT'S A CELEBRATION') to see the Milky Way Galactic Arm harp strings!"
+      },
+      {
+        num: "12", time: "03:18–03:55 & 08:01–08:25", category: "XII. Festival Origins & Timeline",
+        title: "Example 9: Music Festival Origins & Framed 2000 / 2001 Flyers",
+        subtitle: "Physical-to-Digital Art Synergy Designed to Fund a Free Music Festival",
+        img1: "./assets/vid_11_festival_flyer_fullscreen.jpg",
+        cap1: "YouTube Video (08:15): Fullscreen Overlay of the Original 2000/2001 Event Flyer Artwork",
+        img2: "./assets/vid_12_festival_flyers_framed.jpg",
+        cap2: "YouTube Video (08:16): Jason Holding the Framed 2000 & 2001 Music Festival Flyers",
+        video_points: [
+          "As a music promoter in 2000 and 2001, Jason originally created the Harps of God card so that physical cards placed alongside digital displays would complete a visual synergy.",
+          "Proceeds from selling the art were intended to put on a Music Festival that would be 100% free for attendees (\"IT'S A CELEBRATION\")."
+        ],
+        gfp_points: [
+          "Chronological Anchor: The 2000–2001 events mark the start of the GFP timeline (2000 NDE Awakening → 2005 Aquarium Photos → 2012/2013 Fifth Sun → 2026 Web3 & XR)."
+        ],
+        g_sync: "Preserves the original 2000–2001 Good Faith community celebration mission on the Ethereum blockchain.",
+        y_sync: "Carries the original 'IT'S A CELEBRATION' festival emblem on the reverse of Y-Harps (#492856)."
+      },
+      {
+        num: "13", time: "08:35–09:55", category: "XIII. Projective Cognition & Great Seal",
+        title: "Examples 10 & 11: Rorschach Sphinx & The $1 Bill Pyramid",
+        subtitle: "Phoenix Body, Sphinx Head & Calculating Space-Time Travel Across the Unfinished Pyramid",
+        img1: "./assets/vid_13_rorschach_inkblot.jpg",
+        cap1: "YouTube Video (08:45): \"ink blot test / rorschach\" Overlay on the Y-Harps Card",
+        img2: "./assets/vid_15_sphinx_over_pyramid.jpg",
+        cap2: "YouTube Video (09:35): Crowning the $1 Bill Unfinished Pyramid with the Sphinx",
+        video_points: [
+          "Rorschach Inkblot Test (08:45): The grunge splatter on the Y-Harps card reveals the body of a Phoenix at the bottom and the head of the Sphinx.",
+          "Unfinished Pyramid on the $1 Bill (09:15): Placing the Sphinx over the Unfinished Pyramid on the back of the U.S. $1 bill (\"In God We Trust\") and counting \"1-1000, 2-1000, 3-1000\" calculates the distance the Sphinx travels through space-time!"
+        ],
+        gfp_points: [
+          "Exact Space-Time Math: At 2,000,000 mph (555.56 miles/sec), during a 3-second count the Great Sphinx travels 1,666.67 miles through the cosmos.",
+          "Cognitive Architecture: Shifts perception from localized Psychikos ego particles to non-local Pneumatikos pattern recognition."
+        ],
+        g_sync: "Unites 'IN GOD WE TRUST' on the Great Seal with the 2 oz Gold, Silver & Copper Medallions.",
+        y_sync: "Y-Harps (#492856) contains the Rorschach Phoenix/Sphinx that crowns the $1 Unfinished Pyramid!"
+      },
+      {
+        num: "14", time: "10:00–10:42", category: "XIV. Precious Metal & Gemstone Relics",
+        title: "Example 12: Solid-Gold Golden Plates & Multiverse Proof",
+        subtitle: "Molded in Solid Gold with Emeralds, Sapphires & Diamonds + Harps in Onyx & Emerald",
+        img1: "./assets/asset_golden_plates_blueprint.png",
+        cap1: "Blueprint of the 3 Golden Plates: Universe/Multiverse Proof, Advisor #1, Art $20 Mystery $100",
+        img2: "./assets/vid_16_golden_plates_table.jpg",
+        cap2: "YouTube Video (10:45): Carved Wooden Golden Plates, Medallions & $1 Bill on the Table",
+        video_points: [
+          "Proceeds from the Harps of God NFT raffle will fund molding the three Golden Plates in solid gold inlaid with emeralds, sapphires, and diamonds.",
+          "The Harps of God themselves are planned to be crafted in solid Onyx and Emerald."
+        ],
+        gfp_points: [
+          "The Multiverse Proof Equation on Plate I: (1^∞ = 1^∞) represents a single universe from Big Bang (left boundary) to Big Rip (right boundary).",
+          "Raising to the outer infinity yields (1^∞ = 1^∞)^∞ ⇔ (α^∞ = ω^∞)^∞—modeling eternal kinetic rebirth across the multiverse substrate."
+        ],
+        g_sync: "Proceeds from G-Harps (#490643) directly fund casting the Solid-Gold & Gemstone Golden Plates.",
+        y_sync: "Proceeds from Y-Harps (#492856) fund crafting the physical Harps of God in solid Onyx and Emerald."
+      },
+      {
+        num: "15", time: "10:43–11:38", category: "XV. Serendipitous Numerical Convergence",
+        title: "Example 13: The 2000 → 2001 Golden Plate & Harp Overlay",
+        subtitle: "Sliding the Harp of God Over \"ART $20 MYSTERY $100\" to Reveal 2000 & 2001",
+        img1: "./assets/vid_17_plates_2000_2001_overlay.jpg",
+        cap1: "YouTube Video (11:02): Sliding the Harps of God Over the Golden Plate to Reveal 2000 → 2001",
+        img2: "./assets/vid_21_3d_golden_plates_closeup.jpg",
+        cap2: "3D SketchUp Render (Harp_Plates.mp4): G-Harps & Y-Harps Aligned on the Golden Plates",
+        video_points: [
+          "On the third Golden Plate (\"ART $20 MYSTERY $100\"), the \"20\" and the \"00\" combine visually to form 2000.",
+          "When the Harp of God card is moved to cover the zero on $100 (11:02), it reveals the \"1\"—transforming 2000 into 2001, echoing the 2000 & 2001 events!",
+          "Happened completely serendipitously and fortuitously rather than by conscious planning."
+        ],
+        gfp_points: [
+          "Calculus of Convergence (Sacred Blueprint Slice 04): Independent alignment across these domains yields a joint stochastic probability of 2.50e-24 (78.40 bits Shannon information, Bayes Factor 3.96e23), refuting random chance."
+        ],
+        g_sync: "Aligns on the left side of the 3D Golden Plates assembly in the SketchUp architectural visualization.",
+        y_sync: "Slides across Golden Plate III ('ART $20 MYSTERY $100') to cover the zero and transform 2000 into 2001!"
+      },
+      {
+        num: "16", time: "11:40–12:26", category: "XVI. Museum Tour & Good Faith Praxis",
+        title: "Example 14: Traveling Museum Tour & The 8 Revelations",
+        subtitle: "NFT Raffle Ticket Utility + The Axolotl Metanoia of the Fifth Sun",
+        img1: "./assets/vid_22_pyramid_plates_oasis.jpg",
+        cap1: "Golden Plates & Pyramid Vision Render (Plate_Prymid.mp4)",
+        img2: "./assets/slice_14_eight_principles_fifth_sun.png",
+        cap2: "GFP Enhancement: The 8 Newfound Revelations & 2 Directives of the Fifth Sun",
+        video_points: [
+          "Once the Golden Plates are cast in solid gold with emeralds, sapphires, and diamonds, Good Faith Paradigm plans to take them on a Museum Tour.",
+          "The NFTs sold in the raffle for the 2 oz Gold, Silver, and Copper Medallions can grant holders one-time admission per person to the Museum Tour!"
+        ],
+        gfp_points: [
+          "8 Newfound Revelations & 2 Directives: From (I) \"God is the principal designer of all matter\" to (VI) \"We are spiritual beings having a human experience\" and (VIII) \"Respect for our environment.\"",
+          "The Axolotl Metanoia: Collapsing the aquarium glass between the human observer and the Uncreated Light."
+        ],
+        g_sync: "Holders of G-Harps (#490643) receive a 1-Time VIP Admission Pass to the traveling Museum Tour!",
+        y_sync: "Holders of Y-Harps (#492856) receive a 1-Time VIP Admission Pass to the traveling Museum Tour!"
+      }
+    ];
 
-      Object.keys(sections).forEach(k => {
-        sections[k].style.display = (mode === 'all' || mode === k) ? 'block' : 'none';
-      });
+    // 2. 9-STAGE COSMIC MNEMONIC DATA
+    const MNEMONICS = [
+      { id: 1, name: "1. Time Zero", time: "04:00", title: "1. Time Zero — The Beginning of the Universe", video: "Represents the earliest hot, dense post-Big Bang boundary ('Time Zero')—metaphorically the first plucking of the cosmic harp from which space, time, matter, and energy unfold.", scripture: "Genesis 1:1 / Multiverse Proof Left Boundary (1^∞ / α^∞)." },
+      { id: 2, name: "2. Dark Ages", time: "04:06", title: "2. The Cosmic Dark Ages (H, He, Li Cooling)", video: "After the early universe cooled enough for hydrogen, helium, and lithium to form, an interval of darkness existed before any stars ignited—silence before the first audible note.", scripture: "Genesis 1:2 — The void prior to stellar ignition." },
+      { id: 3, name: "3. First Star", time: "04:20", title: "3. Gas Vortexes & Birth of the First Stars", video: "Expansion in the vacuum created swirling vortexes where primordial gas aggregated until mass and pressure ignited nuclear fusion—the birth of the First Star.", scripture: "Genesis 1:3 — 'Let there be light' & Psalm 84:11 ('The Lord God is a sun and a shield')." },
+      { id: 4, name: "4. Black Hole", time: "05:00", title: "4. Supermassive & Rogue Black Holes", video: "Demonstrated with 3 Earth globes on the table: the dark purple vortex on the card represents a Supermassive Black Hole suspending and rotating stars and planetary systems.", scripture: "Holographic Principle — 3D reality encoded on the 2D boundary horizon." },
+      { id: 5, name: "5. Galactic Arm", time: "06:50", title: "5. The Galactic Arm (Milky Way Remnants)", video: "Compared directly with a photograph of the Milky Way: the luminous band and dark dust streaks on the card match the dust and gas remnants of our Galactic Arm.", scripture: "Revelation 15:2 — 'A sea of glass mingled with fire... having the Harps of God.'" },
+      { id: 6, name: "6. Quasar", time: "06:25", title: "6. Quasar — The Brightest Cosmic Beacon", video: "Placing the card beside a star near the black hole's Event Horizon illustrates a Quasar siphoning stellar gas to shine brighter than hundreds of galaxies combined.", scripture: "Isaiah 60:19–20 — 'The Lord shall be unto thee an everlasting light.'" },
+      { id: 7, name: "7. Aurora", time: "02:24", title: "7. Aurora Borealis — Local Planetary Light", video: "Holding the Y-Harps card over an Earth-like planet shows how its green and purple brush strokes form the glowing polar curtains of the Aurora Borealis.", scripture: "Local QED photon emission via Earth's protective magnetic shield." },
+      { id: 8, name: "8. Dark Matter", time: "05:15", title: "8. Dark Matter — The Invisible Harp Frame", video: "Constituting ~85% of universal matter, Dark Matter does not emit or reflect light directly but organizes galaxies through gravity—the silent structural frame of the harp.", scripture: "Romans 1:20 — The invisible things of Him clearly seen through creation." },
+      { id: 9, name: "9. Graviton", time: "04:45", title: "9. The Graviton — Force Carrier of Gravity", video: "Pointed out as the discrete circular particle element on the card: the hypothetical massless elementary boson mediating gravity at the speed of light.", scripture: "Paired with the Photon (QED) and Higgs Boson ('God Particle') in GFP physics." }
+    ];
 
-      Object.keys(buttons).forEach(k => {
-        if (k === mode) {
-          buttons[k].className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 transition";
+    // 3. 20-SLIDE PRISMATIC ARCHITECTURE DATA
+    const PRISMATIC_SLIDES = [
+      { num: "01", start: 0, time: "00:00 – 00:21", dur: "21.3s", title: "The Light Over The Word", synthesis: "Multidisciplinary convergence of the Good Faith Paradigm", narration: "Welcome to Prismatic Architecture: The Light Over The Word—the multidisciplinary convergence of the Good Faith Paradigm. Across twenty slides, we explore how quantum electrodynamics, embryology, neuroplasticity, comparative mythology, and sacred economics unite into a single coherent framework." },
+      { num: "02", start: 21.3, time: "00:21 – 00:47", dur: "25.9s", title: "Epistemological Shift: From Logos to Lux", synthesis: "From fallible linguistic texts (Logos) to quantum-optical physical truth (Lux)", narration: "Slide Two: The Epistemological Shift from Logos to Lux. Traditional theology relies on Logos—written texts vulnerable to translation drift, scribal error, and sectarian dogma. The Good Faith Paradigm elevates Lux—The Light—recognizing that ultimate truth is not merely linguistic, but a physical, quantum-optical interaction written directly into the fabric of reality." },
+      { num: "03", start: 47.1, time: "00:47 – 01:23", dur: "35.4s", title: "Forensic Evidence & Visual Exegesis", synthesis: "Dec 2005 35mm aquarium photographs: Twin Towers (11:11) & Burning Bush", narration: "Slide Three: Forensic Evidence and Visual Exegesis. Our empirical foundation begins with two unedited thirty-five millimeter photographs captured in December two thousand five through an aquarium enclosure. In the first frame, turbulent water and light align into the unmistakable architectural symmetry of the Twin Towers—a visual eleven-eleven marker. Seconds later, in the second frame, the water column ignites into a radiant Burning Bush crowned by a luminous Eye—capturing the physical collapse of a quantum-optical system on film." },
+      { num: "04", start: 82.5, time: "01:23 – 01:49", dur: "26.0s", title: "Quantum Theophany & The Observer Effect", synthesis: "Wave-function collapse across the Sea of Glass via the Eye of the Holy Spirit", narration: "Slide Four: Quantum Theophany and the Observer Effect. In Quantum Electrodynamics, an unobserved system exists as a superposition of chaotic probability waves—what Scripture calls the Sea of Glass. When the Divine Observer—symbolized by the Eye of the Holy Spirit—interacts with the medium, the wave function collapses into a coherent, macroscopic theophany: the Burning Bush." },
+      { num: "05", start: 108.6, time: "01:49 – 02:24", dur: "35.2s", title: "Entropic States: Natural vs. Pneumodynamic", synthesis: "Natural entropy (ΔS ≥ 0) vs. Pneumodynamic coherence (ΔS_local = 0)", narration: "Slide Five: Entropic States—Natural versus Pneumodynamic. Under the Second Law of Thermodynamics, natural closed systems experience rising entropy, Delta S greater than or equal to zero, resulting in thermal dispersion and decay. By contrast, Pneumodynamics—the physics of the Holy Spirit—establishes a state of zero local entropy, Delta S local equals zero. Like the Burning Bush that blazes without being consumed, spiritual coherence sustains energy resonance without destructive loss." },
+      { num: "06", start: 143.7, time: "02:24 – 02:55", dur: "31.0s", title: "The Psychikos vs. The Pneumatikos", synthesis: "Particle-state ego fragmentation vs. non-local wave-state neural transduction", narration: "Slide Six: The Psychikos versus the Pneumatikos. Saint Paul’s distinction between the natural mind and the spiritual mind maps directly onto quantum mechanics. The Psychikos operates in a fragmented particle state—trapped in high-entropy ego loops and localized anxiety. Through spiritual alignment, the brain transitions into the Pneumatikos—a coherent wave state where neural networks function as a non-local transducer tuned to the frequency of the Holy Spirit." },
+      { num: "07", start: 174.7, time: "02:55 – 03:27", dur: "32.5s", title: "Biological Genesis & Theological Integration", synthesis: "Weeks 0–6 default female vessel pathway → Week 7 SRY genetic Fiat Lux", narration: "Slide Seven: Biological Genesis and Theological Integration. Human embryology mirrors cosmic creation. For the first six weeks of gestation, every embryo develops along the foundational female pathway—representing the primordial vessel or Womb. At Week Seven, the SRY gene trigger activates like a genetic fiat lux—an organizing spark of light that differentiates the male pathway, illustrating how biology itself encodes the dance of vessel and spirit." },
+      { num: "08", start: 207.2, time: "03:27 – 03:58", dur: "31.2s", title: "Neuroplasticity & The 63-Day Metanoia Spiral", synthesis: "63-day spiral (21d deconstruction + 42d synaptogenesis across 5 steps)", narration: "Slide Eight: Neuroplasticity and the Sixty-Three-Day Metanoia Spiral. Biblical repentance—metanoia—literally means a structural transformation of the mind. Modern neuroscience shows that deconstructing a toxic neural habit tree requires twenty-one days, while building and myelinating a healthy replacement requires forty-two more—totaling sixty-three days across five deliberate steps: Gather Awareness, Reflect, Write, Recheck, and Active Reach." },
+      { num: "09", start: 238.4, time: "03:58 – 04:31", dur: "32.6s", title: "The Unified Trinity: Syncretic Alignment Matrix", synthesis: "Christian Trinity, Hindu Trimurti, and Wiccan Triple Goddess alignment", narration: "Slide Nine: The Unified Trinity and Syncretic Alignment Matrix. Rather than competing dogmas, world traditions describe the same triune cosmic architecture through different cultural lenses. Whether expressed as Father, Son, and Holy Spirit in Christianity; Brahma, Vishnu, and Shiva in the Hindu Trimurti; or Maiden, Mother, and Crone in the Wiccan Triple Goddess, each maps the universal cycle of Creation, Preservation, and Transformative Renewal." },
+      { num: "10", start: 271.0, time: "04:31 – 05:06", dur: "35.2s", title: "The Osirian Resurrection Cycle & The Golden Phallus", synthesis: "The Golden Phallus prosthesis, Golden Plates (2000/2001), and radiant capstone", narration: "Slide Ten: The Osirian Resurrection Cycle and the Golden Phallus. When Set dismembers Osiris into fourteen pieces, Isis recovers thirteen—all except the generative organ lost to the Nile. To restore creative wholeness, Isis fashions a Golden Phallus, a luminous prosthesis of incorruptible gold through which Horus is conceived. In the Good Faith Paradigm, this golden keystone prefigures the Golden Plates of chapters two thousand and two thousand one, and the unfinished pyramid awaiting its radiant capstone." },
+      { num: "11", start: 306.2, time: "05:06 – 05:41", dur: "35.1s", title: "Gilgamesh (Utnapishtim) vs. Atrahasis vs. Genesis (Noah)", synthesis: "Utnapishtim's Economic Ark (Gold, Silver, Craftsmen) + 2 oz Medallions", narration: "Slide Eleven: The Flood Archetype—Utnapishtim, Atrahasis, and Noah. While the Genesis account of Noah emphasizes the Moral Ark of biological survival, the older Mesopotamian account of Utnapishtim in the Epic of Gilgamesh reveals a vital missing half: Utnapishtim loads his vessel with gold, silver, and master craftsmen. To survive a civilizational deluge, humanity requires both the Moral Ark and the Economic Ark—preserved today through our two-ounce Gold, Silver, and Copper Harps of God medallions." },
+      { num: "12", start: 341.3, time: "05:41 – 06:14", dur: "33.2s", title: "The Theology of Fiat & The One Trillion Dollar Coin", synthesis: "Fiat Lux & the $1T Platinum Coin anchored to Gold, Silver & Copper NFTs", narration: "Slide Twelve: The Theology of Fiat and the One Trillion Dollar Coin. The Latin word fiat means let it be done—the exact phrase of Genesis One, Fiat Lux, let there be light. The two thousand thirteen One Trillion Dollar platinum coin concept exposes that sovereign currency is ultimately a collective act of faith. By anchoring digital NFTs and sovereign liquidity to tangible gold, silver, and copper medallions, the Good Faith Paradigm transforms monetary fiat into a transparent instrument of public good." },
+      { num: "13", start: 374.4, time: "06:14 – 06:44", dur: "29.4s", title: "The 11:11 Interrupt: Quantum Entanglement & Midwayers", synthesis: "1,111 secondary Midwayers triggering non-local quantum state interrupts", narration: "Slide Thirteen: The Eleven-Eleven Interrupt and Quantum Entanglement. Across the globe, millions experience the recurring eleven-eleven time prompt. Within the Urantia cosmology integrated by the Good Faith Paradigm, this signal represents the one thousand one hundred eleven loyal secondary Midwayers initiating a non-local quantum interrupt—breaking high-entropy particle thought loops and snapping human awareness back into the coherent wave state." },
+      { num: "14", start: 403.9, time: "06:44 – 07:20", dur: "36.5s", title: "Cosmological Exegesis: The Galactic Harp (Rev 15:2)", synthesis: "Rev 15:2 Milky Way Sea of Glass, Black Hole Fire & Harps of God Raffle", narration: "Slide Fourteen: Cosmological Exegesis—The Galactic Harp of Revelation fifteen-two. John of Patmos beheld a Sea of Glass mingled with fire, and those victorious standing with the Harps of God. Astrophysics reveals this vision on a macro-cosmic scale: the Sea of Glass is the luminous plane of our Milky Way galaxy; the Fire is the blazing accretion disk of the central supermassive black hole; and the Harps of God are the spiral dust filaments vibrating with harmonic gravitational waves—the cosmic inspiration for our NFT Harps of God Raffle." },
+      { num: "15", start: 440.4, time: "07:20 – 07:54", dur: "33.2s", title: "The 8-Domain Probability Matrix", synthesis: "Joint probability P = 2.50 × 10^-24 (78.40 bits Shannon complexity)", narration: "Slide Fifteen: The Eight-Domain Probability Matrix. Could this convergence across Abrahamic scripture, the Hindu Trimurti, the Wiccan Triple Goddess, Islamic Jannah, Mayan chronometry, Quantum Electrodynamics, mammalian embryology, and galactic astrophysics occur by coincidence? Evaluating the joint probability across all eight independent domains yields 2.50 × 10^-24—representing 78.40 bits of specified Shannon information." },
+      { num: "16", start: 473.6, time: "07:54 – 08:19", dur: "25.2s", title: "Bayesian Inference: Chance (H_C) vs. Design (H_D)", synthesis: "Bayes Factor BF_DC = 3.96 × 10^23, Posterior P(H_D | E) ≈ 1.0000", narration: "Slide Sixteen: Bayesian Inference—Chance versus Design. When we pit the Null Hypothesis of random coincidence against the Hypothesis of Intentional Teleological Design, the resulting Bayes Factor exceeds 3.96 × 10^23. This drives the posterior probability of coherent design to virtual certainty: 1.0000." },
+      { num: "17", start: 498.8, time: "08:19 – 08:51", dur: "32.2s", title: "Evolutionary Trajectory: Biosphere to Omega Point", synthesis: "Biosphere → Teilhard's Noosphere → Tipler's retrocausal Omega Point", narration: "Slide Seventeen: The Evolutionary Trajectory of Consciousness—from Biosphere to the Omega Point. Synthesizing Teilhard de Chardin and physicist Frank Tipler, evolution ascends from the biological Biosphere, through the planetary Noosphere of interconnected minds, toward the Omega Point. Rather than merely being pushed by past mutations, consciousness is drawn forward by a retrocausal strange attractor—enabling an Axolotl-like regeneration of the human spirit." },
+      { num: "18", start: 531.0, time: "08:51 – 09:18", dur: "26.6s", title: "Clinical Pathology: PTSD & Insomnia Restoration", synthesis: "Pharmaceutical-free neural restoration; honoring the Body as a Temple", narration: "Slide Eighteen: Clinical Pathology and Pneumatic Restoration. The ultimate proof of any paradigm is its power to heal. By combining rigorous scientific literacy, mission-based civic engagement, and pneumatic surrender, high-entropy trauma loops such as PTSD and chronic insomnia are resolved at their root—achieving pharmaceutical-free neural stability and honoring the human body as a living temple." },
+      { num: "19", start: 557.7, time: "09:18 – 09:45", dur: "27.0s", title: "Diagnostic Matrix: Theological Principles & Outcomes", synthesis: "Divine Design, Constant Flux, Living Wisdom, and Spiritual Identity", narration: "Slide Nineteen: The Diagnostic Matrix of Theological Principles and Clinical Outcomes. Here, four core axioms—recognizing Divine Design, embracing the Constant State of Flux, prioritizing living Wisdom over rigid moralism, and anchoring in Spiritual Identity—systematically re-index fear into resilience, transitioning the practitioner from psychikos fragmentation to pneumatikos peace." },
+      { num: "20", start: 584.7, time: "09:45 – 10:12", dur: "27.1s", title: "The Transition of the Fifth Sun & The Pneumatic Age", synthesis: "Mayan 13th Baktun convergence: 'The perceptual aperture is open.'", narration: "Slide Twenty: The Transition of the Fifth Sun and the Pneumatic Age. As the Mayan thirteenth Baktun marked the dawn of the Fifth Sun—the era of ether, light, and heart-centered consciousness—science and spirit now stand unified. We are not merely human beings having a spiritual experience; we are spiritual beings having a human experience. The perceptual aperture is open. The Sea of Glass awaits." }
+    ];
+
+    // STATE VARIABLES
+    let curH = 0;
+    let hAutoTimer = null;
+    let curP = 0;
+    let autoPlayP = false;
+    const audioEl = document.getElementById('p-audio');
+
+    // LEFT & RIGHT RAIL FLIP HANDLERS
+    function flipGHarp(side) {
+      const img = document.getElementById('g-harp-rail-img');
+      const lbl = document.getElementById('g-harp-side-label');
+      const bFront = document.getElementById('g-btn-front');
+      const bBack = document.getElementById('g-btn-back');
+      if (side === 'front') {
+        img.src = './assets/asset_g_harps_front.jpg';
+        lbl.textContent = 'FRONT: DOVE OF LIGHT';
+        bFront.className = 'py-1 px-2 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] transition';
+        bBack.className = 'py-1 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] border border-slate-700 transition';
+      } else {
+        img.src = './assets/asset_harps_of_god_both.jpg';
+        lbl.textContent = 'BACK: 7 WORLD FAITHS';
+        bBack.className = 'py-1 px-2 rounded-lg bg-amber-500 text-slate-950 font-bold text-[11px] transition';
+        bFront.className = 'py-1 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] border border-slate-700 transition';
+      }
+    }
+
+    function flipYHarp(side) {
+      const img = document.getElementById('y-harp-rail-img');
+      const lbl = document.getElementById('y-harp-side-label');
+      const bFront = document.getElementById('y-btn-front');
+      const bBack = document.getElementById('y-btn-back');
+      if (side === 'front') {
+        img.src = './assets/asset_y_harps_front.jpg';
+        lbl.textContent = 'FRONT: Y8 COSMIC HARP';
+        bFront.className = 'py-1 px-2 rounded-lg bg-emerald-500 text-slate-950 font-bold text-[11px] transition';
+        bBack.className = 'py-1 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] border border-slate-700 transition';
+      } else {
+        img.src = './assets/asset_y_harps_back.jpg';
+        lbl.textContent = 'BACK: CELEBRATION STRINGS';
+        bBack.className = 'py-1 px-2 rounded-lg bg-emerald-500 text-slate-950 font-bold text-[11px] transition';
+        bFront.className = 'py-1 px-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-[11px] border border-slate-700 transition';
+      }
+    }
+
+    // PRESENTATION MODE SWITCHER
+    function setPresentationMode(mode) {
+      const sHarps = document.getElementById('section-harps');
+      const sWidget = document.getElementById('section-widget');
+      const sPrismatic = document.getElementById('section-prismatic');
+
+      sHarps.classList.toggle('hidden', mode !== 'harps' && mode !== 'all');
+      sWidget.classList.toggle('hidden', mode !== 'widget' && mode !== 'all');
+      sPrismatic.classList.toggle('hidden', mode !== 'prismatic' && mode !== 'all');
+
+      ['harps', 'widget', 'prismatic', 'all'].forEach(m => {
+        const btn = document.getElementById(`mode-btn-${m}`);
+        if (m === mode) {
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 transition';
         } else {
-          buttons[k].className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition";
+          btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition';
         }
       });
     }
 
-    // Support URL hash deep linking (#harps, #widget, #prismatic)
-    const h = window.location.hash.replace('#', '');
-    if (['harps', 'widget', 'prismatic'].includes(h)) {
-      setView(h);
+    // MODULE 1: 16-SLIDE HARPS DECK RENDERER
+    function renderHSlide() {
+      const s = HARPS_SLIDES[curH];
+      document.getElementById('h-slide-badge').textContent = `SLIDE ${s.num} / 16`;
+      document.getElementById('h-slide-time').textContent = `Video @ ${s.time}`;
+      document.getElementById('h-slide-cat').textContent = s.category;
+      document.getElementById('h-slide-title').textContent = s.title;
+      document.getElementById('h-slide-subtitle').textContent = s.subtitle;
+      document.getElementById('h-img1').src = s.img1;
+      document.getElementById('h-cap1').textContent = s.cap1;
+      document.getElementById('h-img2').src = s.img2;
+      document.getElementById('h-cap2').textContent = s.cap2;
+      document.getElementById('h-slide-select').value = curH;
+
+      document.getElementById('h-video-points').innerHTML = s.video_points.map(p => `<li>${p}</li>`).join('');
+      document.getElementById('h-gfp-points').innerHTML = s.gfp_points.map(p => `<li>${p}</li>`).join('');
+
+      // Sync Left & Right NFT Marketing Rails with active slide context
+      document.getElementById('g-sync-slide-num').textContent = `SLIDE ${s.num}`;
+      document.getElementById('y-sync-slide-num').textContent = `SLIDE ${s.num}`;
+      document.getElementById('g-harp-context-text').textContent = s.g_sync;
+      document.getElementById('y-harp-context-text').textContent = s.y_sync;
+
+      // Render thumbnail strip
+      const strip = document.getElementById('h-thumb-strip');
+      strip.innerHTML = HARPS_SLIDES.map((item, idx) => `
+        <button onclick="goHSlide(${idx})" class="px-2.5 py-1 rounded text-xs font-mono shrink-0 border transition ${idx === curH ? 'bg-amber-500 text-slate-950 border-amber-400 font-extrabold' : 'bg-slate-950 text-slate-400 border-slate-800 hover:bg-slate-800'}">
+          ${item.num}
+        </button>
+      `).join('');
     }
+
+    function prevHSlide() { curH = (curH - 1 + HARPS_SLIDES.length) % HARPS_SLIDES.length; renderHSlide(); }
+    function nextHSlide() { curH = (curH + 1) % HARPS_SLIDES.length; renderHSlide(); }
+    function goHSlide(idx) { curH = idx; renderHSlide(); }
+
+    function toggleHSpeech() {
+      if (!('speechSynthesis' in window)) return;
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        document.getElementById('h-tts-btn').textContent = '🔊 Narrate';
+        return;
+      }
+      const s = HARPS_SLIDES[curH];
+      const text = `Slide ${s.num}. ${s.title}. ${s.video_points.join(' ')} Good Faith Paradigm Synthesis: ${s.gfp_points.join(' ')}`;
+      const u = new SpeechSynthesisUtterance(text);
+      u.onend = () => { document.getElementById('h-tts-btn').textContent = '🔊 Narrate'; };
+      document.getElementById('h-tts-btn').textContent = '⏹ Stop';
+      window.speechSynthesis.speak(u);
+    }
+
+    function toggleHAutoPlay() {
+      const btn = document.getElementById('h-auto-btn');
+      if (hAutoTimer) {
+        clearInterval(hAutoTimer);
+        hAutoTimer = null;
+        btn.textContent = '▶ Auto-Play';
+      } else {
+        btn.textContent = '⏸ Pause Auto';
+        hAutoTimer = setInterval(() => {
+          nextHSlide();
+        }, 7000);
+      }
+    }
+
+    // MODULE 2: GOLDEN PLATES LAB & 9 ANALOGIES
+    function updatePlateOverlay(val) {
+      const card = document.getElementById('harp-overlay-card');
+      const badge = document.getElementById('plate-year-badge');
+      const leftPx = 14 + (val / 100) * 215;
+      card.style.left = `${leftPx}px`;
+      if (val > 70) {
+        badge.textContent = "YEAR: 2001 ('1' REVEALED!)";
+        badge.className = "px-2.5 py-0.5 rounded text-xs font-mono font-extrabold bg-emerald-500 text-slate-950";
+      } else {
+        badge.textContent = "YEAR: 2000 ($20 + $100)";
+        badge.className = "px-2.5 py-0.5 rounded text-xs font-mono font-extrabold bg-amber-500 text-slate-950";
+      }
+    }
+
+    function togglePlateOverlay() {
+      const slider = document.getElementById('harp-slider');
+      slider.value = slider.value > 50 ? 0 : 88;
+      updatePlateOverlay(slider.value);
+    }
+
+    let sphinxInterval = null;
+    function runSphinxCount() {
+      if (sphinxInterval) clearInterval(sphinxInterval);
+      const cap = document.getElementById('sphinx-capstone');
+      const badge = document.getElementById('sphinx-dist-badge');
+      const txt = document.getElementById('sphinx-timer-text');
+      cap.setAttribute('transform', 'translate(0, 0)');
+      cap.setAttribute('opacity', '1');
+      let sec = 0;
+      badge.textContent = "0.0 mi";
+      txt.textContent = "Counting: 0s...";
+      sphinxInterval = setInterval(() => {
+        sec += 1;
+        const miles = (2000000 / 3600 * sec).toFixed(1);
+        badge.textContent = `${miles} mi`;
+        txt.textContent = `${sec}-one-thousand (${sec}s @ 2M mph = ${miles} miles)`;
+        if (sec >= 3) {
+          clearInterval(sphinxInterval);
+          txt.textContent = "3s Complete: Great Sphinx traveled 1,666.7 miles through space-time!";
+        }
+      }, 900);
+    }
+
+    function selectMnemonic(idx) {
+      MNEMONICS.forEach((_, i) => {
+        const b = document.getElementById(`mnem-btn-${i}`);
+        if (i === idx) {
+          b.className = "p-2 rounded-lg text-xs font-bold text-left bg-amber-500 text-slate-950 border border-amber-400 transition";
+        } else {
+          b.className = "p-2 rounded-lg text-xs font-semibold text-left bg-slate-900 text-slate-300 border border-slate-800 hover:bg-slate-800 transition";
+        }
+      });
+      const m = MNEMONICS[idx];
+      document.getElementById('mnem-step').textContent = `STAGE 0${m.id} OF 09`;
+      document.getElementById('mnem-time').textContent = `Video @ ${m.time}`;
+      document.getElementById('mnem-title').textContent = m.title;
+      document.getElementById('mnem-video').textContent = m.video;
+      document.getElementById('mnem-scripture').textContent = m.scripture;
+    }
+
+    // MODULE 3: PRISMATIC ARCHITECTURE 20-SLIDE STUDIO DECK
+    audioEl.addEventListener('ended', () => {
+      document.getElementById('p-play-btn').textContent = '🔊 Studio Narration';
+      if (autoPlayP && curP < PRISMATIC_SLIDES.length - 1) {
+        curP++;
+        renderPSlide(true);
+      } else if (autoPlayP) {
+        autoPlayP = false;
+        document.getElementById('p-auto-btn').textContent = '▶ Auto-Advance';
+      }
+    });
+
+    function renderPSlide(playImmediately = false) {
+      const s = PRISMATIC_SLIDES[curP];
+      document.getElementById('p-counter').textContent = `${s.num} / 20`;
+      document.getElementById('p-title').textContent = `Slide ${s.num}: ${s.title}`;
+      document.getElementById('p-img').src = `./slides_prismatic/slide_${s.num}.png`;
+      document.getElementById('p-timecode').textContent = `TIMECODE: ${s.time}`;
+      document.getElementById('p-dur').textContent = s.dur;
+      document.getElementById('p-synthesis').textContent = s.synthesis;
+      document.getElementById('p-narration').textContent = `"${s.narration}"`;
+      audioEl.src = `./audio_prismatic/slide_${s.num}.mp3`;
+
+      const strip = document.getElementById('p-strip');
+      strip.innerHTML = PRISMATIC_SLIDES.map((item, idx) =>
+        `<button onclick="goPSlide(${idx})" class="px-2.5 py-1 rounded text-xs font-mono shrink-0 border ${idx === curP ? 'bg-cyan-500 text-slate-950 border-cyan-400 font-bold' : 'bg-slate-900 text-slate-400 border-slate-800 hover:bg-slate-800'}">${item.num}</button>`
+      ).join('');
+
+      if (playImmediately) {
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause';
+      } else {
+        document.getElementById('p-play-btn').textContent = '🔊 Studio Narration';
+      }
+    }
+
+    function prevPSlide() { curP = (curP - 1 + PRISMATIC_SLIDES.length) % PRISMATIC_SLIDES.length; renderPSlide(autoPlayP); }
+    function nextPSlide() { curP = (curP + 1) % PRISMATIC_SLIDES.length; renderPSlide(autoPlayP); }
+    function goPSlide(i) { curP = i; renderPSlide(autoPlayP); }
+
+    function toggleStudioAudio() {
+      if (audioEl.paused) {
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause';
+      } else {
+        audioEl.pause();
+        document.getElementById('p-play-btn').textContent = '🔊 Studio Narration';
+      }
+    }
+
+    function toggleAutoPlay() {
+      autoPlayP = !autoPlayP;
+      const btn = document.getElementById('p-auto-btn');
+      if (autoPlayP) {
+        btn.textContent = '⏹ Stop Auto';
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause';
+      } else {
+        btn.textContent = '▶ Auto-Advance';
+        audioEl.pause();
+        document.getElementById('p-play-btn').textContent = '🔊 Studio Narration';
+      }
+    }
+
+    function seekVideoToSlide(idx) {
+      const v = document.getElementById('master-video');
+      v.currentTime = PRISMATIC_SLIDES[idx].start;
+      v.play();
+      v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function seekVideoToCurrentSlide() { seekVideoToSlide(curP); }
+
+    // VAULT MODAL & LIGHTBOX HANDLERS
+    function openVaultModal(highlight) {
+      const modal = document.getElementById('nft-vault-modal');
+      modal.classList.remove('hidden');
+      const gCard = document.getElementById('vault-card-g');
+      const yCard = document.getElementById('vault-card-y');
+      gCard.classList.toggle('ring-2', highlight === 'g');
+      gCard.classList.toggle('ring-amber-400', highlight === 'g');
+      yCard.classList.toggle('ring-2', highlight === 'y');
+      yCard.classList.toggle('ring-emerald-400', highlight === 'y');
+    }
+
+    function closeVaultModal() {
+      document.getElementById('nft-vault-modal').classList.add('hidden');
+    }
+
+    function copyContract() {
+      navigator.clipboard.writeText('0xd07dc4262bcdbf85190c01c996b4c06a461d2430');
+      const btn = document.getElementById('copy-btn');
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => { btn.textContent = '📋 Copy Contract'; }, 2000);
+    }
+
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption || '';
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    // KEYBOARD SHORTCUTS
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeVaultModal();
+      } else if (e.key === 'ArrowRight' && !document.getElementById('section-harps').classList.contains('hidden')) {
+        nextHSlide();
+      } else if (e.key === 'ArrowLeft' && !document.getElementById('section-harps').classList.contains('hidden')) {
+        prevHSlide();
+      }
+    });
+
+    // INITIALIZATION
+    function initPortal() {
+      const sel = document.getElementById('h-slide-select');
+      HARPS_SLIDES.forEach((s, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `Slide ${s.num}: ${s.title.substring(0, 32)}...`;
+        sel.appendChild(opt);
+      });
+
+      const mnemGrid = document.getElementById('mnemonic-buttons');
+      MNEMONICS.forEach((m, idx) => {
+        const btn = document.createElement('button');
+        btn.id = `mnem-btn-${idx}`;
+        btn.onclick = () => selectMnemonic(idx);
+        btn.textContent = m.name;
+        mnemGrid.appendChild(btn);
+      });
+
+      const tbody = document.getElementById('p-table-body');
+      tbody.innerHTML = PRISMATIC_SLIDES.map((s, idx) => `
+        <tr class="hover:bg-slate-900/80 transition">
+          <td class="py-2 px-2 font-mono font-bold text-amber-400">${s.num}</td>
+          <td class="py-2 px-2 font-mono text-cyan-300 whitespace-nowrap">${s.time}</td>
+          <td class="py-2 px-2 font-semibold text-white">${s.title}</td>
+          <td class="py-2 px-2 text-slate-300">${s.synthesis}</td>
+          <td class="py-2 px-2 text-right whitespace-nowrap space-x-1">
+            <button onclick="goPSlide(${idx}); document.getElementById('p-title').scrollIntoView({behavior:'smooth'});" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[11px] font-semibold text-slate-200">Slide</button>
+            <button onclick="seekVideoToSlide(${idx})" class="px-2 py-1 rounded bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-[11px] font-semibold text-amber-300">▶ Video</button>
+          </td>
+        </tr>
+      `).join('');
+
+      renderHSlide();
+      selectMnemonic(0);
+      renderPSlide(false);
+    }
+
+    initPortal();
   </script>
 </body>
 </html>
