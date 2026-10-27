@@ -1,8 +1,8 @@
 # Digital Golden Plates — NFT Harps of God Raffle & Good Faith Paradigm Presentations
 
 > 🌐 **Live Published Web Deployment (GitHub Pages)**: **[https://jasonsprouse.github.io/digital-golden-plates/](https://jasonsprouse.github.io/digital-golden-plates/)**  
-> 🛒 **Buy `G-Harps of God (#490643)` on Rarible**: **[https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643)**  
-> 🛒 **Buy `Y-Harps of God (#492856)` on Rarible**: **[https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856)**  
+> 🌿 **Buy `Green G Harps-of-God (#490643)` on Rarible**: **[https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643)**  
+> 💛 **Buy `Yellow Y Harps of God (#492856)` on Rarible**: **[https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856)**  
 > 🎥 **Source Video**: [NFT Harps of God Raffle Presentation (`YWelJDhywu0`)](https://www.youtube.com/watch?v=YWelJDhywu0)  
 > 🏛️ **Organization**: **Good Faith Paradigm (`GFP`)** — *Let's Evolve to a Type I Civilization*
 
@@ -10,12 +10,12 @@
 
 ## 🛒 Acquire the Harps of God NFTs & Enter the 2 oz Gold, Silver & Copper Medallion Raffle
 
-Both Digital Twin NFTs are marketed on the **Left and Right Screen Rails** of our live presentation portal (**[jasonsprouse.github.io/digital-golden-plates](https://jasonsprouse.github.io/digital-golden-plates/)**) and verified on Ethereum (`ERC-1155` contract `0xd07dc4262bcdbf85190c01c996b4c06a461d2430`):
+Both Digital Twin NFTs are marketed on the **Left (Green) and Right (Yellow) Screen Rails** of our live presentation portal (**[jasonsprouse.github.io/digital-golden-plates](https://jasonsprouse.github.io/digital-golden-plates/)**) and verified on Ethereum (`ERC-1155` contract `0xd07dc4262bcdbf85190c01c996b4c06a461d2430`):
 
-| Screen Rail | Digital Twin NFT | Artwork Preview | Collector Utility & Raffle Benefits | Direct Purchase Link |
+| Screen Rail & Theme | Digital Twin NFT | Front & Back Artwork | Collector Utility & Raffle Benefits | Direct Purchase Link |
 | :---: | :--- | :---: | :--- | :---: |
-| **⬅️ Left Screen Rail** | **G-Harps of God**<br/>`Token ID #490643` | ![G-Harps Front](./assets/asset_g_harps_front.jpg) | • **Raffle Entry**: 2 oz Gold, 2 oz Silver & 2 oz Copper Medallions<br/>• **VIP Museum Pass**: 1-Time Admission to the Solid-Gold Golden Plates Tour<br/>• **Syncretic Seal**: Dove of the Holy Spirit & 7 World Religions<br/>• **Web3 Key**: Y8 Wallet & The-Beach WebXR Oasis | **[🛒 Buy G-Harps (#490643) on Rarible ↗](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643)** |
-| **➡️ Right Screen Rail** | **Y-Harps of God**<br/>`Token ID #492856` | ![Y-Harps Front](./assets/asset_y_harps_front.jpg) | • **Raffle Entry**: 2 oz Gold, 2 oz Silver & 2 oz Copper Medallions<br/>• **Plate III Key**: Slides over `ART $20 MYSTERY $100` (`2000 → 2001`)<br/>• **Sphinx Capstone**: Crowns the \$1 Unfinished Pyramid at `2,000,000 mph`<br/>• **VIP Museum Pass**: 9 Cosmic Analogies + 1-Time Museum Tour Pass | **[🛒 Buy Y-Harps (#492856) on Rarible ↗](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856)** |
+| **⬅️ Left Screen Rail**<br/>🟢 **GREEN THEME** | **G Harps-of-God**<br/>`Token ID #490643`<br/>*(Green Card)* | ![Green G-Harps Front](./assets/card_green_g_harps_490643_front.jpg)<br/>![Green G-Harps Back](./assets/card_green_g_harps_490643_back.jpg) | • **Raffle Entry**: 2 oz Gold, 2 oz Silver & 2 oz Copper Medallions<br/>• **Plate III Key**: Slides over `ART $20 MYSTERY $100` (`2000 → 2001`)<br/>• **Sphinx Capstone**: Crowns the \$1 Unfinished Pyramid at `2,000,000 mph`<br/>• **VIP Museum Pass**: 9 Cosmic Analogies + 1-Time Museum Tour Pass | **[🌿 Buy Green G-Harps (#490643) on Rarible ↗](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643)** |
+| **➡️ Right Screen Rail**<br/>🟡 **YELLOW THEME** | **Y Harps of God**<br/>`Token ID #492856`<br/>*(Yellow Card)* | ![Yellow Y-Harps Front](./assets/card_yellow_y_harps_492856_front.jpg)<br/>![Yellow Y-Harps Back](./assets/card_yellow_y_harps_492856_back.jpg) | • **Raffle Entry**: 2 oz Gold, 2 oz Silver & 2 oz Copper Medallions<br/>• **VIP Museum Pass**: 1-Time Admission to the Solid-Gold Golden Plates Tour<br/>• **Syncretic Seal**: Yellow Good Faith Dove & 7 World Religions<br/>• **Web3 Key**: Y8 Wallet & The-Beach WebXR Oasis | **[💛 Buy Yellow Y-Harps (#492856) on Rarible ↗](https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856)** |
 
 ---
 
