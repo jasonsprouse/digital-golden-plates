@@ -1,4 +1,4 @@
-﻿# NFT Harps of God Raffle Presentation — Good Faith Paradigm
+# NFT Harps of God Raffle Presentation — Good Faith Paradigm
 
 > [!IMPORTANT]
 > **Expanded Slide Show Presentation (`16 Slides`)** — Displaying every visual demonstration from the [NFT Harps of God Raffle Presentation (`YWelJDhywu0`)](https://www.youtube.com/watch?v=YWelJDhywu0) by **Jason Sprouse / Good Faith Paradigm**, enhanced with the full scientific, theological, biological, and economic canon of the **Good Faith Paradigm (GFP)**.
@@ -64,8 +64,8 @@ Use the carousel controls below to step through all **16 slides** of the present
 * **Video Demonstration (`01:18–01:42`)**: Jason introduces the two **Harps of God** art cards (now minted as Digital Twin NFTs on Rarible for the medallion raffle) and cites **Revelation 15:2**:
   > *"And I saw as it were a sea of glass mingled with fire: and them that had gotten the victory over the beast, and over his image, and over his mark, and over the number of his name, stand on the sea of glass, having the harps of God."* ( Also linked with **Psalm 84:11** & **Isaiah 60:19–20**).
 * **Good Faith Paradigm Enhancement — On-Chain Provenance & Syncretic Iconography**:
-  * **G-Harps of God (Left — Rarible Token ID `0xd07dc426...490643`)**: Features the ascending Dove of the Holy Spirit illuminated by the uncreated Golden Light on the front, and **7 unified world religion symbols** (Christianity, Islam, Judaism, Jainism, Hinduism, Bahá'í, Taoism) on the back with the maxim: *"Beyond all the complex perspectives, life is pure and simple. — Jason Sprouse"*.
-  * **Y-Harps of God (Right — Rarible Token ID `0xd07dc426...492856`)**: Features the `y8 design` emblem with the purple `Y` singularity, infinity loop ($\infty$), grunge inkblot field, and *"IT'S A CELEBRATION"* cosmic harp strings on the reverse.
+  * **Y Harps of God (Yellow — Rarible Token ID `0xd07dc426...492856`)**: The **Yellow** card featuring the ascending Dove of the Holy Spirit illuminated by the uncreated Yellow/Golden Light on the front, and **7 unified world religion symbols** (Christianity, Islam, Judaism, Jainism, Hinduism, Bahá'í, Taoism) on the back with the maxim: *"Beyond all the complex perspectives, life is pure and simple. — Jason Sprouse"*.
+  * **G Harps-of-God (Green — Rarible Token ID `0xd07dc426...490643`)**: The **Green** card featuring the `y8 design` emblem with the purple `Y` singularity, infinity loop ($\infty$), grunge inkblot field, and *"IT'S A CELEBRATION"* cosmic harp strings on the reverse.
 <!-- slide -->
 ### Slide 07 — The Cosmic Mnemonic: 9 Scientific Analogies of the Universe
 ![Mnemonic Overlay in Video](../assets/vid_04_mnemonic_overlay.jpg)
@@ -196,8 +196,8 @@ flowchart TD
         M_GOLD["2 oz Gold Medallion<br/>(Masculine / Sun / Osiris Catalyst)"]
         M_SILV["2 oz Silver Medallion<br/>(Feminine / Moon / Isis Base)"]
         M_COPP["2 oz Copper Medallion<br/>(Conductive Earth / Aurora)"]
-        NFT_G["G-Harps of God NFT<br/>(Rarible #490643 — 7 Faiths & Dove)"]
-        NFT_Y["Y-Harps of God NFT<br/>(Rarible #492856 — y8 Design & Harp)"]
+        NFT_G["Green G Harps-of-God NFT<br/>(Rarible #490643 — Green y8 Design & Harp)"]
+        NFT_Y["Yellow Y Harps of God NFT<br/>(Rarible #492856 — Yellow Dove & 7 Faiths)"]
     end
 
     subgraph MIRACLES["2. 'The Miracles of The Holy Spirit' (2005 Photos)"]
