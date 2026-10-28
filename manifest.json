@@ -1,0 +1,25 @@
+{
+  "name": "Digital Golden Plates — NFT Harps of God Raffle & Good Faith Paradigm",
+  "short_name": "Golden Plates",
+  "description": "Interactive 16-Slide Harps of God Raffle Deck, Golden Plates Simulator, 20-Slide Prismatic Architecture 1080p Video & IndexedDB Web3 NFT Checkout.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#f59e0b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./assets/card_yellow_y_harps_492856_front.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/card_green_g_harps_490643_front.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

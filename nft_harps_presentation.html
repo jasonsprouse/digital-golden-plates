@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NFT Harps of God Raffle Presentation — Good Faith Paradigm (16-Slide Deck)</title>
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#f59e0b" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased min-h-screen flex flex-col">
@@ -31,6 +33,7 @@
         </div>
       </div>
       <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button onclick="window.GFPBasket && window.GFPBasket.open('basket')" class="px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 text-amber-300 font-bold transition">🛒 Basket (<span id="top-basket-count">0</span>)</button>
         <a href="./harps_inline_widget.html" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold transition">🎛️ Harps Inline Widget</a>
         <a href="./prismatic_architecture.html" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold transition">🎬 Prismatic 1080p Video</a>
       </div>
@@ -63,8 +66,11 @@
         <div class="mt-3 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-[11px] text-slate-200" id="y-sync-box">
           Includes 2 oz Gold, Silver &amp; Copper Medallion Raffle Entry + 1-Time VIP Museum Tour Admission Pass.
         </div>
-        <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="mt-3 w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg transition">
-          💛 Buy Yellow Y-Harps (#492856) ↗
+        <button onclick="window.GFPBasket && window.GFPBasket.add('token_492856_yellow', 1, true)" class="mt-3 w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg transition">
+          🛒 Add Yellow #492856 to Basket
+        </button>
+        <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:492856" target="_blank" rel="noopener" class="mt-1.5 w-full py-2 px-3 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 font-bold text-xs flex items-center justify-center gap-1.5 transition">
+          💛 Buy on Rarible ↗
         </a>
       </aside>
 
@@ -164,8 +170,11 @@
         <div class="mt-3 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-[11px] text-slate-200" id="g-sync-box">
           Includes 2 oz Gold, Silver &amp; Copper Medallion Raffle Entry + 2000→2001 Golden Plate III Overlay Key + VIP Museum Pass.
         </div>
-        <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="mt-3 w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg transition">
-          🌿 Buy Green G-Harps (#490643) ↗
+        <button onclick="window.GFPBasket && window.GFPBasket.add('token_490643_green', 1, true)" class="mt-3 w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg transition">
+          🛒 Add Green #490643 to Basket
+        </button>
+        <a href="https://rarible.com/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430:490643" target="_blank" rel="noopener" class="mt-1.5 w-full py-2 px-3 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 font-bold text-xs flex items-center justify-center gap-1.5 transition">
+          🌿 Buy on Rarible ↗
         </a>
       </aside>
 
@@ -324,5 +333,6 @@
 
     renderHSlide();
   </script>
+  <script src="./basket_pwa.js"></script>
 </body>
 </html>
