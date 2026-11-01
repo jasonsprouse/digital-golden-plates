@@ -97,9 +97,13 @@
           <button onclick="prevPSlide()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold">← Prev Slide</button>
           <span id="p-counter" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-amber-400">01 / 20</span>
           <button onclick="nextPSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">Next Slide →</button>
-          <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Narration Voice Model">
-            <option value="gtts-us">🌐 Google TTS (US Natural MP3)</option>
-            <option value="studio">🎙️ Studio Neural Voice (Ava)</option>
+          <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Gemini-TTS Voice Model">
+            <option value="gemini-kore">✨ Gemini-TTS: Kore (Warm &amp; Firm)</option>
+            <option value="gemini-puck">✨ Gemini-TTS: Puck (Upbeat &amp; Engaging)</option>
+            <option value="gemini-charon">✨ Gemini-TTS: Charon (Deep &amp; Authoritative)</option>
+            <option value="gemini-aoede">✨ Gemini-TTS: Aoede (Breezy &amp; Expressive)</option>
+            <option value="gemini-fenrir">✨ Gemini-TTS: Fenrir (Dynamic &amp; Resonant)</option>
+            <option value="gemini-zephyr">✨ Gemini-TTS: Zephyr (Calm &amp; Luminous)</option>
           </select>
           <button id="p-play-btn" onclick="toggleStudioAudio()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Play Narration</button>
           <button id="p-auto-btn" onclick="toggleAutoPlay()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold">▶ Auto-Advance Deck</button>
@@ -123,7 +127,7 @@
             <p id="p-synthesis" class="text-sm font-semibold text-white mb-3"></p>
             <div class="text-xs font-mono uppercase text-slate-400 mb-1">🎙️ Verbatim Narration</div>
             <blockquote id="p-narration" class="text-sm text-slate-300 italic leading-relaxed border-l-2 border-amber-500 pl-3"></blockquote>
-            <audio id="p-audio" controls class="w-full mt-4 h-9" src="./audio_prismatic_gtts/slide_01.mp3"></audio>
+            <audio id="p-audio" controls class="w-full mt-4 h-9" src="./audio_prismatic_kore/slide_01.mp3"></audio>
           </div>
           <button onclick="seekVideoToCurrentSlide()" class="w-full py-2 px-4 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-bold transition">
             🎬 Jump Master Video Player to This Slide
@@ -230,12 +234,21 @@
 
     let curP = 0;
     let autoPlay = false;
-    let pVoiceModel = 'gtts-us';
+    let pVoiceModel = 'gemini-kore';
     const audioEl = document.getElementById('p-audio');
 
+    const P_VOICE_FOLDERS = {
+      'gemini-kore': 'audio_prismatic_kore',
+      'gemini-puck': 'audio_prismatic_puck',
+      'gemini-charon': 'audio_prismatic_charon',
+      'gemini-aoede': 'audio_prismatic',
+      'gemini-fenrir': 'audio_prismatic_fenrir',
+      'gemini-zephyr': 'audio_prismatic_zephyr'
+    };
+
     function getPSlideAudioPath(num) {
-      if (pVoiceModel === 'gtts-us') return `./audio_prismatic_gtts/slide_${num}.mp3`;
-      return `./audio_prismatic/slide_${num}.mp3`;
+      const folder = P_VOICE_FOLDERS[pVoiceModel] || 'audio_prismatic_kore';
+      return `./${folder}/slide_${num}.mp3`;
     }
 
     audioEl.addEventListener('ended', () => {

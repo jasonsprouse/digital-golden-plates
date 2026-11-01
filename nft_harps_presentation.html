@@ -90,23 +90,26 @@
             <button onclick="prevHSlide()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold">← Prev</button>
             <select id="h-slide-select" onchange="goHSlide(parseInt(this.value))" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-amber-300 font-mono"></select>
             <button onclick="nextHSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold">Next →</button>
-            <select id="h-voice-model" onchange="changeHVoiceModel(this.value)" class="px-2 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Google TTS Narration Model">
-              <option value="gtts-us">🌐 Google TTS (US Natural MP3)</option>
-              <option value="gtts-uk">🌐 Google TTS (UK Natural MP3)</option>
-              <option value="browser-google">🎙️ Google Chrome Neural Voice</option>
+            <select id="h-voice-model" onchange="changeHVoiceModel(this.value)" class="px-2 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Gemini-TTS Narration Model">
+              <option value="gemini-kore">✨ Gemini-TTS: Kore (Warm &amp; Firm)</option>
+              <option value="gemini-puck">✨ Gemini-TTS: Puck (Upbeat &amp; Engaging)</option>
+              <option value="gemini-charon">✨ Gemini-TTS: Charon (Deep &amp; Authoritative)</option>
+              <option value="gemini-aoede">✨ Gemini-TTS: Aoede (Breezy &amp; Expressive)</option>
+              <option value="gemini-fenrir">✨ Gemini-TTS: Fenrir (Dynamic &amp; Resonant)</option>
+              <option value="gemini-zephyr">✨ Gemini-TTS: Zephyr (Calm &amp; Luminous)</option>
             </select>
             <button id="h-tts-btn" onclick="toggleHSpeech()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Narrate</button>
           </div>
         </div>
 
-        <!-- Embedded Google TTS Audio Bar -->
+        <!-- Embedded Gemini-TTS Audio Bar -->
         <div class="mb-4 px-3.5 py-2 rounded-xl bg-slate-950/90 border border-emerald-500/30 flex flex-wrap items-center justify-between gap-3">
           <div class="flex items-center gap-2 text-xs">
-            <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono font-bold">GOOGLE TTS NARRATION</span>
-            <span id="h-audio-label" class="text-slate-300 font-mono text-[11px]">Slide 01 — Google Translate TTS Neural MP3</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono font-bold">GEMINI-TTS NARRATION</span>
+            <span id="h-audio-label" class="text-slate-300 font-mono text-[11px]">Slide 01 — Gemini-TTS: Kore (Warm &amp; Firm)</span>
           </div>
           <audio id="h-audio" controls class="h-8 w-full sm:w-80">
-            <source id="h-audio-src" src="./audio_harps/slide_01.mp3" type="audio/mpeg" />
+            <source id="h-audio-src" src="./audio_harps_kore/slide_01.mp3" type="audio/mpeg" />
           </audio>
         </div>
 
@@ -223,11 +226,27 @@
       sel.appendChild(opt);
     });
 
-    let hVoiceModel = 'gtts-us';
+    let hVoiceModel = 'gemini-kore';
+    const H_VOICE_FOLDERS = {
+      'gemini-kore': 'audio_harps_kore',
+      'gemini-puck': 'audio_harps_puck',
+      'gemini-charon': 'audio_harps_charon',
+      'gemini-aoede': 'audio_harps_aoede',
+      'gemini-fenrir': 'audio_harps_fenrir',
+      'gemini-zephyr': 'audio_harps_zephyr'
+    };
+    const H_VOICE_NAMES = {
+      'gemini-kore': 'Gemini-TTS: Kore (Warm & Firm)',
+      'gemini-puck': 'Gemini-TTS: Puck (Upbeat & Engaging)',
+      'gemini-charon': 'Gemini-TTS: Charon (Deep & Authoritative)',
+      'gemini-aoede': 'Gemini-TTS: Aoede (Breezy & Expressive)',
+      'gemini-fenrir': 'Gemini-TTS: Fenrir (Dynamic & Resonant)',
+      'gemini-zephyr': 'Gemini-TTS: Zephyr (Calm & Luminous)'
+    };
 
     function getHSlideAudioPath(num) {
-      if (hVoiceModel === 'gtts-uk') return `./audio_harps_uk/slide_${num}.mp3`;
-      return `./audio_harps/slide_${num}.mp3`;
+      const folder = H_VOICE_FOLDERS[hVoiceModel] || 'audio_harps_kore';
+      return `./${folder}/slide_${num}.mp3`;
     }
 
     function renderHSlide(autoPlayAudio = false) {
@@ -255,10 +274,10 @@
         hAudioSrc.src = getHSlideAudioPath(s.num);
         hAudio.load();
         if (hAudioLabel) {
-          const modelName = hVoiceModel === 'gtts-uk' ? 'Google TTS UK Natural MP3' : (hVoiceModel === 'browser-google' ? 'Google Chrome Neural Voice' : 'Google TTS US Natural MP3');
+          const modelName = H_VOICE_NAMES[hVoiceModel] || 'Gemini-TTS: Kore';
           hAudioLabel.textContent = `Slide ${s.num} — ${modelName}`;
         }
-        if (autoPlayAudio && hVoiceModel !== 'browser-google') {
+        if (autoPlayAudio) {
           hAudio.play().catch(() => {});
         }
       }
@@ -285,35 +304,17 @@
     function toggleHSpeech() {
       const btn = document.getElementById('h-tts-btn');
       const hAudio = document.getElementById('h-audio');
-      if (hVoiceModel === 'gtts-us' || hVoiceModel === 'gtts-uk') {
-        if (hAudio && !hAudio.paused) {
-          hAudio.pause();
-          btn.textContent = '🔊 Narrate';
-          return;
-        }
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-        if (hAudio) {
-          hAudio.currentTime = 0;
-          btn.textContent = '⏹ Stop TTS';
-          hAudio.onended = () => { btn.textContent = '🔊 Narrate'; };
-          hAudio.play().catch(() => {});
-          return;
-        }
-      }
-      if (!('speechSynthesis' in window)) return;
-      if (window.speechSynthesis.speaking) {
-        window.speechSynthesis.cancel();
+      if (hAudio && !hAudio.paused) {
+        hAudio.pause();
         btn.textContent = '🔊 Narrate';
         return;
       }
-      const s = HARPS_SLIDES[curH];
-      const u = new SpeechSynthesisUtterance(`${s.title}. ${s.video_points.join(' ')} ${s.gfp_points.join(' ')}`);
-      const voices = window.speechSynthesis.getVoices();
-      const googleVoice = voices.find(v => v.name.includes('Google US English') || v.name.includes('Google UK English') || (v.name.includes('Google') && v.lang.startsWith('en')));
-      if (googleVoice) u.voice = googleVoice;
-      u.onend = () => { btn.textContent = '🔊 Narrate'; };
-      btn.textContent = '⏹ Stop TTS';
-      window.speechSynthesis.speak(u);
+      if (hAudio) {
+        hAudio.currentTime = 0;
+        btn.textContent = '⏹ Stop TTS';
+        hAudio.onended = () => { btn.textContent = '🔊 Narrate'; };
+        hAudio.play().catch(() => {});
+      }
     }
 
     function openLightbox(src, caption) {

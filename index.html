@@ -220,23 +220,26 @@
               <button onclick="prevHSlide()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold transition" title="Previous Slide (Left Arrow)">← Prev</button>
               <select id="h-slide-select" onchange="goHSlide(parseInt(this.value))" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-amber-300 font-mono"></select>
               <button onclick="nextHSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition" title="Next Slide (Right Arrow)">Next →</button>
-              <select id="h-voice-model" onchange="changeHVoiceModel(this.value)" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Google TTS Voice Model">
-                <option value="gtts-us">🌐 Google TTS (US Natural MP3)</option>
-                <option value="gtts-uk">🌐 Google TTS (UK Natural MP3)</option>
-                <option value="chrome-google">🎙️ Google Chrome Neural Voice</option>
+              <select id="h-voice-model" onchange="changeHVoiceModel(this.value)" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Gemini-TTS Voice Model">
+                <option value="gemini-kore">✨ Gemini-TTS: Kore (Warm &amp; Firm)</option>
+                <option value="gemini-puck">✨ Gemini-TTS: Puck (Upbeat &amp; Engaging)</option>
+                <option value="gemini-charon">✨ Gemini-TTS: Charon (Deep &amp; Authoritative)</option>
+                <option value="gemini-aoede">✨ Gemini-TTS: Aoede (Breezy &amp; Expressive)</option>
+                <option value="gemini-fenrir">✨ Gemini-TTS: Fenrir (Dynamic &amp; Resonant)</option>
+                <option value="gemini-zephyr">✨ Gemini-TTS: Zephyr (Calm &amp; Luminous)</option>
               </select>
               <button id="h-tts-btn" onclick="toggleHSpeech()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition">🔊 Narrate</button>
               <button id="h-auto-btn" onclick="toggleHAutoPlay()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition">▶ Auto-Play</button>
             </div>
           </div>
 
-          <!-- Hidden / Compact Google TTS Audio Element for 16-Slide Deck -->
+          <!-- Hidden / Compact Gemini-TTS Audio Element for 16-Slide Deck -->
           <div class="mb-4 px-3 py-2 rounded-xl bg-slate-950/90 border border-slate-800 flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2 text-xs">
-              <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] font-bold">GOOGLE TTS AUDIO</span>
-              <span id="h-audio-status" class="text-slate-300 text-xs">Ready — Click <strong>🔊 Narrate</strong> or press play on the Google TTS audio bar</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 font-mono text-[11px] font-bold">GEMINI-TTS AUDIO</span>
+              <span id="h-audio-status" class="text-slate-300 text-xs">Ready — Click <strong>🔊 Narrate</strong> or press play on the Gemini-TTS audio bar</span>
             </div>
-            <audio id="h-audio" controls class="h-8 w-full sm:w-72" src="./audio_harps/slide_01.mp3"></audio>
+            <audio id="h-audio" controls class="h-8 w-full sm:w-72" src="./audio_harps_kore/slide_01.mp3"></audio>
           </div>
 
           <!-- Dual Visual Showcase (Click any image for Full-Screen Lightbox) -->
@@ -477,9 +480,13 @@
                 <button onclick="prevPSlide()" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-semibold">← Prev</button>
                 <span id="p-counter" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 font-mono text-xs text-amber-400">01 / 20</span>
                 <button onclick="nextPSlide()" class="px-2.5 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">Next →</button>
-                <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1 rounded bg-slate-900 border border-emerald-500/50 text-xs text-emerald-300 font-mono">
-                  <option value="gtts">🌐 Google TTS (US Natural)</option>
-                  <option value="studio">🎙️ Studio Neural (AvaNeural)</option>
+                <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1 rounded bg-slate-900 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Gemini-TTS Voice Model">
+                  <option value="gemini-kore">✨ Gemini-TTS: Kore (Warm &amp; Firm)</option>
+                  <option value="gemini-puck">✨ Gemini-TTS: Puck (Upbeat &amp; Engaging)</option>
+                  <option value="gemini-charon">✨ Gemini-TTS: Charon (Deep &amp; Authoritative)</option>
+                  <option value="gemini-aoede">✨ Gemini-TTS: Aoede (Breezy &amp; Expressive)</option>
+                  <option value="gemini-fenrir">✨ Gemini-TTS: Fenrir (Dynamic &amp; Resonant)</option>
+                  <option value="gemini-zephyr">✨ Gemini-TTS: Zephyr (Calm &amp; Luminous)</option>
                 </select>
                 <button id="p-play-btn" onclick="toggleStudioAudio()" class="px-2.5 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Narrate</button>
                 <button id="p-auto-btn" onclick="toggleAutoPlay()" class="px-2.5 py-1 rounded bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold">▶ Auto-Advance</button>
@@ -500,7 +507,7 @@
                   <p id="p-synthesis" class="text-xs sm:text-sm font-bold text-white mb-2.5"></p>
                   <div class="text-[11px] font-mono uppercase text-slate-400">🎙️ Verbatim Narration</div>
                   <blockquote id="p-narration" class="text-xs text-slate-300 italic leading-relaxed border-l-2 border-amber-500 pl-2.5 mt-1"></blockquote>
-                  <audio id="p-audio" controls class="w-full mt-3 h-8" src="./audio_prismatic_gtts/slide_01.mp3"></audio>
+                  <audio id="p-audio" controls class="w-full mt-3 h-8" src="./audio_prismatic_kore/slide_01.mp3"></audio>
                 </div>
                 <button onclick="seekVideoToCurrentSlide()" class="w-full py-2 px-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-amber-300 text-xs font-bold transition">
                   🎬 Jump Master 1080p Video Player to This Slide
@@ -1157,12 +1164,12 @@
     // STATE VARIABLES
     let curH = 0;
     let hAutoPlay = false;
-    let hVoiceModel = 'gtts-us';
+    let hVoiceModel = 'gemini-kore';
     const hAudioEl = document.getElementById('h-audio');
 
     let curP = 0;
     let autoPlayP = false;
-    let pVoiceModel = 'gtts';
+    let pVoiceModel = 'gemini-kore';
     const audioEl = document.getElementById('p-audio');
 
     // LEFT RAIL (YELLOW Y-HARPS #492856) & RIGHT RAIL (GREEN G-HARPS #490643) FLIP HANDLERS
@@ -1222,10 +1229,28 @@
       });
     }
 
-    // GOOGLE TTS VOICE MODEL ENGINE FOR 16-SLIDE HARPS DECK
+    // GEMINI-TTS VOICE MODEL ENGINE FOR 16-SLIDE HARPS DECK
+    const GEMINI_VOICE_LABELS = {
+      'gemini-kore': 'Gemini-TTS: Kore (Warm & Firm)',
+      'gemini-puck': 'Gemini-TTS: Puck (Upbeat & Engaging)',
+      'gemini-charon': 'Gemini-TTS: Charon (Deep & Authoritative)',
+      'gemini-aoede': 'Gemini-TTS: Aoede (Breezy & Expressive)',
+      'gemini-fenrir': 'Gemini-TTS: Fenrir (Dynamic & Resonant)',
+      'gemini-zephyr': 'Gemini-TTS: Zephyr (Calm & Luminous)'
+    };
+
+    const HARPS_VOICE_FOLDERS = {
+      'gemini-kore': 'audio_harps_kore',
+      'gemini-puck': 'audio_harps_puck',
+      'gemini-charon': 'audio_harps_charon',
+      'gemini-aoede': 'audio_harps_aoede',
+      'gemini-fenrir': 'audio_harps_fenrir',
+      'gemini-zephyr': 'audio_harps_zephyr'
+    };
+
     function getHSlideAudioSrc(num) {
-      if (hVoiceModel === 'gtts-uk') return `./audio_harps_uk/slide_${num}.mp3`;
-      return `./audio_harps/slide_${num}.mp3`;
+      const folder = HARPS_VOICE_FOLDERS[hVoiceModel] || 'audio_harps_kore';
+      return `./${folder}/slide_${num}.mp3`;
     }
 
     function changeHVoiceModel(val) {
@@ -1235,7 +1260,7 @@
       const s = HARPS_SLIDES[curH];
       hAudioEl.src = getHSlideAudioSrc(s.num);
       document.getElementById('h-tts-btn').textContent = '🔊 Narrate';
-      document.getElementById('h-audio-status').innerHTML = `Model: <strong>${val === 'gtts-us' ? 'Google TTS (US Natural)' : val === 'gtts-uk' ? 'Google TTS (UK Natural)' : 'Google Chrome Neural TTS'}</strong>`;
+      document.getElementById('h-audio-status').innerHTML = `Voice: <strong>${GEMINI_VOICE_LABELS[val] || val}</strong>`;
     }
 
     hAudioEl.addEventListener('ended', () => {
@@ -1308,48 +1333,18 @@
 
     function playHSpeech() {
       const btn = document.getElementById('h-tts-btn');
-      if (hVoiceModel === 'chrome-google' && 'speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const s = HARPS_SLIDES[curH];
-        const text = `Slide ${s.num}. ${s.title}. ${s.video_points.join(' ')} Good Faith Paradigm Synthesis: ${s.gfp_points.join(' ')}`;
-        const u = new SpeechSynthesisUtterance(text);
-        const gVoice = selectBestGoogleBrowserVoice();
-        if (gVoice) u.voice = gVoice;
-        u.rate = 0.98;
-        u.pitch = 1.0;
-        u.onend = () => {
-          btn.textContent = '🔊 Narrate';
-          if (hAutoPlay && curH < HARPS_SLIDES.length - 1) {
-            curH++;
-            renderHSlide(true);
-          }
-        };
-        btn.textContent = '⏹ Stop';
-        document.getElementById('h-audio-status').innerHTML = `Speaking via <strong>${gVoice ? gVoice.name : 'Google Web Speech'}</strong>...`;
-        window.speechSynthesis.speak(u);
-      } else {
-        hAudioEl.play();
-        btn.textContent = '⏸ Pause';
-        document.getElementById('h-audio-status').innerHTML = `Playing <strong>Google TTS (${hVoiceModel === 'gtts-uk' ? 'en-GB' : 'en-US'})</strong> — Slide ${HARPS_SLIDES[curH].num}`;
-      }
+      hAudioEl.play().catch(() => {});
+      btn.textContent = '⏸ Pause';
+      document.getElementById('h-audio-status').innerHTML = `Playing <strong>${GEMINI_VOICE_LABELS[hVoiceModel] || 'Gemini-TTS'}</strong> — Slide ${HARPS_SLIDES[curH].num}`;
     }
 
     function toggleHSpeech() {
       const btn = document.getElementById('h-tts-btn');
-      if (hVoiceModel === 'chrome-google' && 'speechSynthesis' in window) {
-        if (window.speechSynthesis.speaking) {
-          window.speechSynthesis.cancel();
-          btn.textContent = '🔊 Narrate';
-          return;
-        }
-        playHSpeech();
+      if (!hAudioEl.paused) {
+        hAudioEl.pause();
+        btn.textContent = '🔊 Narrate';
       } else {
-        if (!hAudioEl.paused) {
-          hAudioEl.pause();
-          btn.textContent = '🔊 Narrate';
-        } else {
-          playHSpeech();
-        }
+        playHSpeech();
       }
     }
 
@@ -1429,10 +1424,18 @@
     }
 
     // MODULE 3: PRISMATIC ARCHITECTURE 20-SLIDE STUDIO DECK
+    const PRISMATIC_VOICE_FOLDERS = {
+      'gemini-kore': 'audio_prismatic_kore',
+      'gemini-puck': 'audio_prismatic_puck',
+      'gemini-charon': 'audio_prismatic_charon',
+      'gemini-aoede': 'audio_prismatic',
+      'gemini-fenrir': 'audio_prismatic_fenrir',
+      'gemini-zephyr': 'audio_prismatic_zephyr'
+    };
+
     function getPSlideAudioSrc(num) {
-      return pVoiceModel === 'gtts'
-        ? `./audio_prismatic_gtts/slide_${num}.mp3`
-        : `./audio_prismatic/slide_${num}.mp3`;
+      const folder = PRISMATIC_VOICE_FOLDERS[pVoiceModel] || 'audio_prismatic_kore';
+      return `./${folder}/slide_${num}.mp3`;
     }
 
     function changePVoiceModel(val) {
