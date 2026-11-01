@@ -91,9 +91,15 @@
             <select id="h-slide-select" onchange="goHSlide(parseInt(this.value))" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-amber-300 font-mono"></select>
             <button onclick="nextHSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold">Next →</button>
             <select id="h-voice-model" onchange="changeHVoiceModel(this.value)" class="px-2 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Google TTS Narration Model">
-              <option value="gtts-us">🌐 Google TTS (US Natural MP3)</option>
-              <option value="gtts-uk">🌐 Google TTS (UK Natural MP3)</option>
-              <option value="browser-google">🎙️ Google Chrome Neural Voice</option>
+              <option value="gtts-us">🌐 Google TTS — US English (Natural MP3)</option>
+              <option value="gtts-uk">🌐 Google TTS — UK British (Natural MP3)</option>
+              <option value="gtts-au">🌐 Google TTS — Australian (Natural MP3)</option>
+              <option value="gtts-ca">🌐 Google TTS — Canadian (Natural MP3)</option>
+              <option value="gtts-ie">🌐 Google TTS — Irish (Natural MP3)</option>
+              <option value="gtts-in">🌐 Google TTS — Indian (Natural MP3)</option>
+              <option value="browser-google-us">🎙️ Google Chrome Neural — US English</option>
+              <option value="browser-google-uk-f">🎙️ Google Chrome Neural — UK Female</option>
+              <option value="browser-google-uk-m">🎙️ Google Chrome Neural — UK Male</option>
             </select>
             <button id="h-tts-btn" onclick="toggleHSpeech()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Narrate</button>
           </div>
@@ -224,9 +230,25 @@
     });
 
     let hVoiceModel = 'gtts-us';
+    const H_VOICE_NAMES = {
+      'gtts-us': 'Google TTS — US English (Natural MP3)',
+      'gtts-uk': 'Google TTS — UK British (Natural MP3)',
+      'gtts-au': 'Google TTS — Australian (Natural MP3)',
+      'gtts-ca': 'Google TTS — Canadian (Natural MP3)',
+      'gtts-ie': 'Google TTS — Irish (Natural MP3)',
+      'gtts-in': 'Google TTS — Indian (Natural MP3)',
+      'browser-google-us': 'Google Chrome Neural — US English',
+      'browser-google-uk-f': 'Google Chrome Neural — UK Female',
+      'browser-google-uk-m': 'Google Chrome Neural — UK Male',
+      'browser-google': 'Google Chrome Neural Voice'
+    };
 
     function getHSlideAudioPath(num) {
       if (hVoiceModel === 'gtts-uk') return `./audio_harps_uk/slide_${num}.mp3`;
+      if (hVoiceModel === 'gtts-au') return `./audio_harps_au/slide_${num}.mp3`;
+      if (hVoiceModel === 'gtts-ca') return `./audio_harps_ca/slide_${num}.mp3`;
+      if (hVoiceModel === 'gtts-ie') return `./audio_harps_ie/slide_${num}.mp3`;
+      if (hVoiceModel === 'gtts-in') return `./audio_harps_in/slide_${num}.mp3`;
       return `./audio_harps/slide_${num}.mp3`;
     }
 
@@ -255,10 +277,10 @@
         hAudioSrc.src = getHSlideAudioPath(s.num);
         hAudio.load();
         if (hAudioLabel) {
-          const modelName = hVoiceModel === 'gtts-uk' ? 'Google TTS UK Natural MP3' : (hVoiceModel === 'browser-google' ? 'Google Chrome Neural Voice' : 'Google TTS US Natural MP3');
+          const modelName = H_VOICE_NAMES[hVoiceModel] || 'Google TTS US Natural MP3';
           hAudioLabel.textContent = `Slide ${s.num} — ${modelName}`;
         }
-        if (autoPlayAudio && hVoiceModel !== 'browser-google') {
+        if (autoPlayAudio && !hVoiceModel.startsWith('browser-google')) {
           hAudio.play().catch(() => {});
         }
       }
@@ -285,7 +307,7 @@
     function toggleHSpeech() {
       const btn = document.getElementById('h-tts-btn');
       const hAudio = document.getElementById('h-audio');
-      if (hVoiceModel === 'gtts-us' || hVoiceModel === 'gtts-uk') {
+      if (hVoiceModel.startsWith('gtts-')) {
         if (hAudio && !hAudio.paused) {
           hAudio.pause();
           btn.textContent = '🔊 Narrate';
@@ -309,7 +331,15 @@
       const s = HARPS_SLIDES[curH];
       const u = new SpeechSynthesisUtterance(`${s.title}. ${s.video_points.join(' ')} ${s.gfp_points.join(' ')}`);
       const voices = window.speechSynthesis.getVoices();
-      const googleVoice = voices.find(v => v.name.includes('Google US English') || v.name.includes('Google UK English') || (v.name.includes('Google') && v.lang.startsWith('en')));
+      let googleVoice = null;
+      if (hVoiceModel === 'browser-google-uk-f') {
+        googleVoice = voices.find(v => v.name === 'Google UK English Female') || voices.find(v => v.lang === 'en-GB');
+      } else if (hVoiceModel === 'browser-google-uk-m') {
+        googleVoice = voices.find(v => v.name === 'Google UK English Male') || voices.find(v => v.lang === 'en-GB');
+        u.pitch = 0.92;
+      } else {
+        googleVoice = voices.find(v => v.name.includes('Google US English') || v.name.includes('Google UK English') || (v.name.includes('Google') && v.lang.startsWith('en')));
+      }
       if (googleVoice) u.voice = googleVoice;
       u.onend = () => { btn.textContent = '🔊 Narrate'; };
       btn.textContent = '⏹ Stop TTS';

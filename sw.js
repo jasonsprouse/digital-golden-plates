@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gfp-golden-plates-v2';
+const CACHE_NAME = 'gfp-golden-plates-v3';
 const CORE_ASSETS = [
   './',
   './index.html',

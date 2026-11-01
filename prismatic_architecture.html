@@ -98,8 +98,13 @@
           <span id="p-counter" class="px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 font-mono text-xs text-amber-400">01 / 20</span>
           <button onclick="nextPSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">Next Slide →</button>
           <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Narration Voice Model">
-            <option value="gtts-us">🌐 Google TTS (US Natural MP3)</option>
-            <option value="studio">🎙️ Studio Neural Voice (Ava)</option>
+            <option value="gtts-us">🌐 Google TTS — US English (Natural MP3)</option>
+            <option value="gtts-uk">🌐 Google TTS — UK British (Natural MP3)</option>
+            <option value="gtts-au">🌐 Google TTS — Australian (Natural MP3)</option>
+            <option value="gtts-ca">🌐 Google TTS — Canadian (Natural MP3)</option>
+            <option value="gtts-ie">🌐 Google TTS — Irish (Natural MP3)</option>
+            <option value="gtts-in">🌐 Google TTS — Indian (Natural MP3)</option>
+            <option value="studio">🎙️ Studio Neural Voice (Ava MP3)</option>
           </select>
           <button id="p-play-btn" onclick="toggleStudioAudio()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Play Narration</button>
           <button id="p-auto-btn" onclick="toggleAutoPlay()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold">▶ Auto-Advance Deck</button>
@@ -234,8 +239,13 @@
     const audioEl = document.getElementById('p-audio');
 
     function getPSlideAudioPath(num) {
-      if (pVoiceModel === 'gtts-us') return `./audio_prismatic_gtts/slide_${num}.mp3`;
-      return `./audio_prismatic/slide_${num}.mp3`;
+      if (pVoiceModel === 'gtts-uk') return `./audio_prismatic_uk/slide_${num}.mp3`;
+      if (pVoiceModel === 'gtts-au') return `./audio_prismatic_au/slide_${num}.mp3`;
+      if (pVoiceModel === 'gtts-ca') return `./audio_prismatic_ca/slide_${num}.mp3`;
+      if (pVoiceModel === 'gtts-ie') return `./audio_prismatic_ie/slide_${num}.mp3`;
+      if (pVoiceModel === 'gtts-in') return `./audio_prismatic_in/slide_${num}.mp3`;
+      if (pVoiceModel === 'studio') return `./audio_prismatic/slide_${num}.mp3`;
+      return `./audio_prismatic_gtts/slide_${num}.mp3`;
     }
 
     audioEl.addEventListener('ended', () => {
