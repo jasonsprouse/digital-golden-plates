@@ -221,15 +221,9 @@
               <select id="h-slide-select" onchange="goHSlide(parseInt(this.value))" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-amber-300 font-mono"></select>
               <button onclick="nextHSlide()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-extrabold transition" title="Next Slide (Right Arrow)">Next →</button>
               <select id="h-voice-model" onchange="changeHVoiceModel(this.value)" class="px-2.5 py-1.5 rounded-lg bg-slate-950 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Google TTS Voice Model">
-                <option value="gtts-us">🌐 Google TTS — US English (Natural MP3)</option>
-                <option value="gtts-uk">🌐 Google TTS — UK British (Natural MP3)</option>
-                <option value="gtts-au">🌐 Google TTS — Australian (Natural MP3)</option>
-                <option value="gtts-ca">🌐 Google TTS — Canadian (Natural MP3)</option>
-                <option value="gtts-ie">🌐 Google TTS — Irish (Natural MP3)</option>
-                <option value="gtts-in">🌐 Google TTS — Indian (Natural MP3)</option>
-                <option value="chrome-google-us">🎙️ Google Chrome Neural — US English</option>
-                <option value="chrome-google-uk-f">🎙️ Google Chrome Neural — UK Female</option>
-                <option value="chrome-google-uk-m">🎙️ Google Chrome Neural — UK Male</option>
+                <option value="gtts-us">🌐 Google TTS (US Natural MP3)</option>
+                <option value="gtts-uk">🌐 Google TTS (UK Natural MP3)</option>
+                <option value="chrome-google">🎙️ Google Chrome Neural Voice</option>
               </select>
               <button id="h-tts-btn" onclick="toggleHSpeech()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition">🔊 Narrate</button>
               <button id="h-auto-btn" onclick="toggleHAutoPlay()" class="px-3 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold transition">▶ Auto-Play</button>
@@ -483,17 +477,9 @@
                 <button onclick="prevPSlide()" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-semibold">← Prev</button>
                 <span id="p-counter" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 font-mono text-xs text-amber-400">01 / 20</span>
                 <button onclick="nextPSlide()" class="px-2.5 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold">Next →</button>
-                <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1 rounded bg-slate-900 border border-emerald-500/50 text-xs text-emerald-300 font-mono" title="Select Google TTS Voice Model">
-                  <option value="gtts-us">🌐 Google TTS — US English (Natural MP3)</option>
-                  <option value="gtts-uk">🌐 Google TTS — UK British (Natural MP3)</option>
-                  <option value="gtts-au">🌐 Google TTS — Australian (Natural MP3)</option>
-                  <option value="gtts-ca">🌐 Google TTS — Canadian (Natural MP3)</option>
-                  <option value="gtts-ie">🌐 Google TTS — Irish (Natural MP3)</option>
-                  <option value="gtts-in">🌐 Google TTS — Indian (Natural MP3)</option>
-                  <option value="studio">🎙️ Studio Neural (AvaNeural MP3)</option>
-                  <option value="chrome-google-us">🎙️ Google Chrome Neural — US English</option>
-                  <option value="chrome-google-uk-f">🎙️ Google Chrome Neural — UK Female</option>
-                  <option value="chrome-google-uk-m">🎙️ Google Chrome Neural — UK Male</option>
+                <select id="p-voice-model" onchange="changePVoiceModel(this.value)" class="px-2 py-1 rounded bg-slate-900 border border-emerald-500/50 text-xs text-emerald-300 font-mono">
+                  <option value="gtts">🌐 Google TTS (US Natural)</option>
+                  <option value="studio">🎙️ Studio Neural (AvaNeural)</option>
                 </select>
                 <button id="p-play-btn" onclick="toggleStudioAudio()" class="px-2.5 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold">🔊 Narrate</button>
                 <button id="p-auto-btn" onclick="toggleAutoPlay()" class="px-2.5 py-1 rounded bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold">▶ Auto-Advance</button>
@@ -1176,7 +1162,7 @@
 
     let curP = 0;
     let autoPlayP = false;
-    let pVoiceModel = 'gtts-us';
+    let pVoiceModel = 'gtts';
     const audioEl = document.getElementById('p-audio');
 
     // LEFT RAIL (YELLOW Y-HARPS #492856) & RIGHT RAIL (GREEN G-HARPS #490643) FLIP HANDLERS
@@ -1237,30 +1223,8 @@
     }
 
     // GOOGLE TTS VOICE MODEL ENGINE FOR 16-SLIDE HARPS DECK
-    const GTTS_VOICE_LABELS = {
-      'gtts-us': 'Google TTS — US English (Natural MP3)',
-      'gtts-uk': 'Google TTS — UK British (Natural MP3)',
-      'gtts-au': 'Google TTS — Australian (Natural MP3)',
-      'gtts-ca': 'Google TTS — Canadian (Natural MP3)',
-      'gtts-ie': 'Google TTS — Irish (Natural MP3)',
-      'gtts-in': 'Google TTS — Indian (Natural MP3)',
-      'studio': 'Studio Neural (AvaNeural MP3)',
-      'chrome-google-us': 'Google Chrome Neural — US English',
-      'chrome-google-uk-f': 'Google Chrome Neural — UK Female',
-      'chrome-google-uk-m': 'Google Chrome Neural — UK Male',
-      'chrome-google': 'Google Chrome Neural TTS'
-    };
-
-    function isChromeSpeechModel(val) {
-      return val && val.startsWith('chrome-google');
-    }
-
     function getHSlideAudioSrc(num) {
       if (hVoiceModel === 'gtts-uk') return `./audio_harps_uk/slide_${num}.mp3`;
-      if (hVoiceModel === 'gtts-au') return `./audio_harps_au/slide_${num}.mp3`;
-      if (hVoiceModel === 'gtts-ca') return `./audio_harps_ca/slide_${num}.mp3`;
-      if (hVoiceModel === 'gtts-ie') return `./audio_harps_ie/slide_${num}.mp3`;
-      if (hVoiceModel === 'gtts-in') return `./audio_harps_in/slide_${num}.mp3`;
       return `./audio_harps/slide_${num}.mp3`;
     }
 
@@ -1271,7 +1235,7 @@
       const s = HARPS_SLIDES[curH];
       hAudioEl.src = getHSlideAudioSrc(s.num);
       document.getElementById('h-tts-btn').textContent = '🔊 Narrate';
-      document.getElementById('h-audio-status').innerHTML = `Model: <strong>${GTTS_VOICE_LABELS[val] || val}</strong>`;
+      document.getElementById('h-audio-status').innerHTML = `Model: <strong>${val === 'gtts-us' ? 'Google TTS (US Natural)' : val === 'gtts-uk' ? 'Google TTS (UK Natural)' : 'Google Chrome Neural TTS'}</strong>`;
     }
 
     hAudioEl.addEventListener('ended', () => {
@@ -1285,19 +1249,9 @@
       }
     });
 
-    function selectBestGoogleBrowserVoice(preferredModel) {
+    function selectBestGoogleBrowserVoice() {
       if (!('speechSynthesis' in window)) return null;
       const voices = window.speechSynthesis.getVoices();
-      if (preferredModel === 'chrome-google-uk-f') {
-        return voices.find(v => v.name === 'Google UK English Female') ||
-               voices.find(v => v.lang === 'en-GB' && v.name.includes('Google')) ||
-               voices.find(v => v.lang === 'en-GB');
-      }
-      if (preferredModel === 'chrome-google-uk-m') {
-        return voices.find(v => v.name === 'Google UK English Male') ||
-               voices.find(v => v.lang === 'en-GB' && v.name.includes('Google')) ||
-               voices.find(v => v.lang === 'en-GB');
-      }
       return voices.find(v => v.name === 'Google US English') ||
              voices.find(v => v.name === 'Google UK English Female') ||
              voices.find(v => v.name === 'Google UK English Male') ||
@@ -1306,7 +1260,7 @@
              voices.find(v => v.lang.startsWith('en'));
     }
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = () => selectBestGoogleBrowserVoice(hVoiceModel);
+      window.speechSynthesis.onvoiceschanged = selectBestGoogleBrowserVoice;
     }
 
     // MODULE 1: 16-SLIDE HARPS DECK RENDERER
@@ -1354,15 +1308,15 @@
 
     function playHSpeech() {
       const btn = document.getElementById('h-tts-btn');
-      if (isChromeSpeechModel(hVoiceModel) && 'speechSynthesis' in window) {
+      if (hVoiceModel === 'chrome-google' && 'speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         const s = HARPS_SLIDES[curH];
         const text = `Slide ${s.num}. ${s.title}. ${s.video_points.join(' ')} Good Faith Paradigm Synthesis: ${s.gfp_points.join(' ')}`;
         const u = new SpeechSynthesisUtterance(text);
-        const gVoice = selectBestGoogleBrowserVoice(hVoiceModel);
+        const gVoice = selectBestGoogleBrowserVoice();
         if (gVoice) u.voice = gVoice;
         u.rate = 0.98;
-        u.pitch = hVoiceModel === 'chrome-google-uk-m' ? 0.92 : 1.0;
+        u.pitch = 1.0;
         u.onend = () => {
           btn.textContent = '🔊 Narrate';
           if (hAutoPlay && curH < HARPS_SLIDES.length - 1) {
@@ -1371,18 +1325,18 @@
           }
         };
         btn.textContent = '⏹ Stop';
-        document.getElementById('h-audio-status').innerHTML = `Speaking via <strong>${gVoice ? gVoice.name : GTTS_VOICE_LABELS[hVoiceModel]}</strong>...`;
+        document.getElementById('h-audio-status').innerHTML = `Speaking via <strong>${gVoice ? gVoice.name : 'Google Web Speech'}</strong>...`;
         window.speechSynthesis.speak(u);
       } else {
         hAudioEl.play();
         btn.textContent = '⏸ Pause';
-        document.getElementById('h-audio-status').innerHTML = `Playing <strong>${GTTS_VOICE_LABELS[hVoiceModel] || 'Google TTS'}</strong> — Slide ${HARPS_SLIDES[curH].num}`;
+        document.getElementById('h-audio-status').innerHTML = `Playing <strong>Google TTS (${hVoiceModel === 'gtts-uk' ? 'en-GB' : 'en-US'})</strong> — Slide ${HARPS_SLIDES[curH].num}`;
       }
     }
 
     function toggleHSpeech() {
       const btn = document.getElementById('h-tts-btn');
-      if (isChromeSpeechModel(hVoiceModel) && 'speechSynthesis' in window) {
+      if (hVoiceModel === 'chrome-google' && 'speechSynthesis' in window) {
         if (window.speechSynthesis.speaking) {
           window.speechSynthesis.cancel();
           btn.textContent = '🔊 Narrate';
@@ -1476,18 +1430,13 @@
 
     // MODULE 3: PRISMATIC ARCHITECTURE 20-SLIDE STUDIO DECK
     function getPSlideAudioSrc(num) {
-      if (pVoiceModel === 'gtts-uk') return `./audio_prismatic_uk/slide_${num}.mp3`;
-      if (pVoiceModel === 'gtts-au') return `./audio_prismatic_au/slide_${num}.mp3`;
-      if (pVoiceModel === 'gtts-ca') return `./audio_prismatic_ca/slide_${num}.mp3`;
-      if (pVoiceModel === 'gtts-ie') return `./audio_prismatic_ie/slide_${num}.mp3`;
-      if (pVoiceModel === 'gtts-in') return `./audio_prismatic_in/slide_${num}.mp3`;
-      if (pVoiceModel === 'studio') return `./audio_prismatic/slide_${num}.mp3`;
-      return `./audio_prismatic_gtts/slide_${num}.mp3`;
+      return pVoiceModel === 'gtts'
+        ? `./audio_prismatic_gtts/slide_${num}.mp3`
+        : `./audio_prismatic/slide_${num}.mp3`;
     }
 
     function changePVoiceModel(val) {
       pVoiceModel = val;
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
       audioEl.pause();
       audioEl.src = getPSlideAudioSrc(PRISMATIC_SLIDES[curP].num);
       document.getElementById('p-play-btn').textContent = '🔊 Narrate';
@@ -1503,34 +1452,6 @@
         document.getElementById('p-auto-btn').textContent = '▶ Auto-Advance';
       }
     });
-
-    function playPSpeech() {
-      const btn = document.getElementById('p-play-btn');
-      if (isChromeSpeechModel(pVoiceModel) && 'speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const s = PRISMATIC_SLIDES[curP];
-        const u = new SpeechSynthesisUtterance(s.narration);
-        const gVoice = selectBestGoogleBrowserVoice(pVoiceModel);
-        if (gVoice) u.voice = gVoice;
-        u.rate = 0.98;
-        u.pitch = pVoiceModel === 'chrome-google-uk-m' ? 0.92 : 1.0;
-        u.onend = () => {
-          btn.textContent = '🔊 Narrate';
-          if (autoPlayP && curP < PRISMATIC_SLIDES.length - 1) {
-            curP++;
-            renderPSlide(true);
-          } else if (autoPlayP) {
-            autoPlayP = false;
-            document.getElementById('p-auto-btn').textContent = '▶ Auto-Advance';
-          }
-        };
-        btn.textContent = '⏹ Stop';
-        window.speechSynthesis.speak(u);
-      } else {
-        audioEl.play().catch(() => {});
-        btn.textContent = '⏸ Pause';
-      }
-    }
 
     function renderPSlide(playImmediately = false) {
       const s = PRISMATIC_SLIDES[curP];
@@ -1549,33 +1470,24 @@
       ).join('');
 
       if (playImmediately) {
-        playPSpeech();
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause';
       } else {
         document.getElementById('p-play-btn').textContent = '🔊 Narrate';
       }
     }
 
-    function prevPSlide() { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); curP = (curP - 1 + PRISMATIC_SLIDES.length) % PRISMATIC_SLIDES.length; renderPSlide(autoPlayP); }
-    function nextPSlide() { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); curP = (curP + 1) % PRISMATIC_SLIDES.length; renderPSlide(autoPlayP); }
-    function goPSlide(i) { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); curP = i; renderPSlide(autoPlayP); }
+    function prevPSlide() { curP = (curP - 1 + PRISMATIC_SLIDES.length) % PRISMATIC_SLIDES.length; renderPSlide(autoPlayP); }
+    function nextPSlide() { curP = (curP + 1) % PRISMATIC_SLIDES.length; renderPSlide(autoPlayP); }
+    function goPSlide(i) { curP = i; renderPSlide(autoPlayP); }
 
     function toggleStudioAudio() {
-      const btn = document.getElementById('p-play-btn');
-      if (isChromeSpeechModel(pVoiceModel) && 'speechSynthesis' in window) {
-        if (window.speechSynthesis.speaking) {
-          window.speechSynthesis.cancel();
-          btn.textContent = '🔊 Narrate';
-        } else {
-          playPSpeech();
-        }
-        return;
-      }
       if (audioEl.paused) {
-        audioEl.play().catch(() => {});
-        btn.textContent = '⏸ Pause';
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause';
       } else {
         audioEl.pause();
-        btn.textContent = '🔊 Narrate';
+        document.getElementById('p-play-btn').textContent = '🔊 Narrate';
       }
     }
 
@@ -1584,11 +1496,11 @@
       const btn = document.getElementById('p-auto-btn');
       if (autoPlayP) {
         btn.textContent = '⏹ Stop Auto';
-        playPSpeech();
+        audioEl.play();
+        document.getElementById('p-play-btn').textContent = '⏸ Pause';
       } else {
         btn.textContent = '▶ Auto-Advance';
         audioEl.pause();
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
         document.getElementById('p-play-btn').textContent = '🔊 Narrate';
       }
     }

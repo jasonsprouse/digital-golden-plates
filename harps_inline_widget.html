@@ -128,13 +128,9 @@
               <button onclick="prevSlide()" class="px-3 py-1.5 rounded text-xs font-semibold bg-[var(--secondary)] text-[var(--foreground)] border border-[var(--border)] hover:opacity-80">← Prev</button>
               <button onclick="nextSlide()" class="px-3 py-1.5 rounded text-xs font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90">Next →</button>
               <select id="w-voice-model" onchange="changeWVoiceModel(this.value)" class="px-2 py-1.5 rounded text-xs bg-[var(--card)] text-emerald-300 border border-emerald-500/40 font-mono">
-                <option value="gtts-us">🌐 Google TTS — US English (MP3)</option>
-                <option value="gtts-uk">🌐 Google TTS — UK British (MP3)</option>
-                <option value="gtts-au">🌐 Google TTS — Australian (MP3)</option>
-                <option value="gtts-ca">🌐 Google TTS — Canadian (MP3)</option>
-                <option value="gtts-ie">🌐 Google TTS — Irish (MP3)</option>
-                <option value="gtts-in">🌐 Google TTS — Indian (MP3)</option>
-                <option value="browser-google">🎙️ Google Chrome Neural Voice</option>
+                <option value="gtts-us">🌐 Google TTS (US MP3)</option>
+                <option value="gtts-uk">🌐 Google TTS (UK MP3)</option>
+                <option value="browser-google">🎙️ Google Chrome Voice</option>
               </select>
               <button id="btn-tts" onclick="toggleSpeech()" class="px-3 py-1.5 rounded text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500">🔊 Narrate</button>
             </div>
@@ -474,16 +470,7 @@
       const wAudio = document.getElementById('w-audio');
       const wAudioSrc = document.getElementById('w-audio-src');
       if (wAudio && wAudioSrc) {
-        const folderMap = {
-          'gtts-us': 'audio_harps',
-          'gtts-uk': 'audio_harps_uk',
-          'gtts-au': 'audio_harps_au',
-          'gtts-ca': 'audio_harps_ca',
-          'gtts-ie': 'audio_harps_ie',
-          'gtts-in': 'audio_harps_in'
-        };
-        const folder = folderMap[wVoiceModel] || 'audio_harps';
-        wAudioSrc.src = `./${folder}/slide_${s.num}.mp3`;
+        wAudioSrc.src = wVoiceModel === 'gtts-uk' ? `./audio_harps_uk/slide_${s.num}.mp3` : `./audio_harps/slide_${s.num}.mp3`;
         wAudio.load();
       }
     }
@@ -523,7 +510,7 @@
     function toggleSpeech() {
       const btn = document.getElementById('btn-tts');
       const wAudio = document.getElementById('w-audio');
-      if (wVoiceModel.startsWith('gtts-')) {
+      if (wVoiceModel === 'gtts-us' || wVoiceModel === 'gtts-uk') {
         if (wAudio && !wAudio.paused) {
           wAudio.pause();
           btn.textContent = '🔊 Narrate';
